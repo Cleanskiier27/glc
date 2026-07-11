@@ -153,6 +153,8 @@
                 const dpr = window.devicePixelRatio || 1;
                 docsCanvas.width = rect.width * dpr;
                 docsCanvas.height = 500 * dpr;
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
                 ctx.scale(dpr, dpr);
                 
                 // Reposition stars to the new width
@@ -272,8 +274,8 @@
                     const node = nodes[i];
                     const dist = Math.hypot(node.x - mouseX, node.y - mouseY);
                     
-                    const clickRadius = node.type === 'document' ? 14 : node.radius + 4;
-                    if (dist < clickRadius) {
+                    const interactionRadius = node.type === 'document' ? 14 : node.radius + 4;
+                    if (dist < interactionRadius) {
                         found = node;
                         break;
                     }
@@ -338,8 +340,8 @@
                 for (let i = nodes.length - 1; i >= 0; i--) {
                     const node = nodes[i];
                     const dist = Math.hypot(node.x - mouseX, node.y - mouseY);
-                    const clickRadius = node.type === 'document' ? 16 : node.radius + 8;
-                    if (dist < clickRadius) {
+                    const interactionRadius = node.type === 'document' ? 16 : node.radius + 8;
+                    if (dist < interactionRadius) {
                         found = node;
                         break;
                     }

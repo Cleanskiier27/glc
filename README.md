@@ -28,6 +28,11 @@ This repository now includes a GitHub Pages preview pipeline so website changes 
 2. GitHub Actions builds preview assets and indexed docs.
 3. The generated artifact is deployed to GitHub Pages.
 
+### Published Preview URLs
+
+- **GitHub Pages Site:** https://cleanskiier27.github.io/glc/
+- **Indexed Docs Page:** https://cleanskiier27.github.io/glc/documentation.html
+
 ### Local Preview
 
 ```bash

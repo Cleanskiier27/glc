@@ -13,6 +13,29 @@
 
 **📺 Watch on YouTube:** https://www.youtube.com/channel/daypirate1/networkbuster
 
+## 👀 Website Preview
+
+This repository now includes a GitHub Pages preview pipeline so website changes can be previewed directly from the repo.
+
+- **Workflow:** [website-preview.yml](.github/workflows/website-preview.yml)
+- **Build Script:** [build-web-preview.mjs](scripts/build-web-preview.mjs)
+- **Preview Source Directory:** [web-app](web-app)
+
+### How Preview Works
+
+1. Push to `main` (or run the workflow manually).
+2. GitHub Actions builds preview assets and indexed docs.
+3. The generated artifact is deployed to GitHub Pages.
+
+### Local Preview
+
+```bash
+node scripts/build-web-preview.mjs
+npm start
+```
+
+Then open `http://localhost:3000/documentation.html` to validate indexed docs behavior.
+
 ## 🥇 Why NetworkBuster Wins
 
 ### Four Complete Applications

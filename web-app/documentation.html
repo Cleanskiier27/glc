@@ -3,53 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
-        header { background: linear-gradient(135deg, #0066cc, #004499); color: white; padding: 40px 20px; text-align: center; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #0066cc; margin-bottom: 20px; }
-        .docs { margin: 30px 0; }
-        .doc-section { background: #f9f9f9; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #0066cc; }
-        footer { background: #f5f5f5; text-align: center; padding: 20px; margin-top: 60px; border-top: 1px solid #ddd; }
-    </style>
+    <title>NetworkBuster Docs Index</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Documentation</h1>
-        <p>Technical guides and API documentation</p>
+    <div class="background-animation"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-icon">DOC</div>
+                <div class="logo-text">
+                    <h1>NetworkBuster</h1>
+                    <p>Indexed Documentation</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/documentation.html" class="nav-link active">Docs</a>
+                <a href="/projects.html" class="nav-link">Projects</a>
+                <a href="/technology.html" class="nav-link">Technology</a>
+                <a href="/dashboard/" class="nav-link">Dashboard</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <div class="docs">
-            <div class="doc-section">
-                <h3>Getting Started</h3>
-                <p>Learn how to set up the NetworkBuster platform and integrate with your systems. Includes installation guides and basic configuration.</p>
-            </div>
-            <div class="doc-section">
-                <h3>API Reference</h3>
-                <p>Complete API documentation with endpoint definitions, request/response schemas, and code examples for all services.</p>
-            </div>
-            <div class="doc-section">
-                <h3>Architecture Guide</h3>
-                <p>Deep dive into system architecture, microservices design, and deployment patterns used across the platform.</p>
-            </div>
-            <div class="doc-section">
-                <h3>Configuration</h3>
-                <p>Configuration options for all services, environment variables, and deployment customization.</p>
-            </div>
-            <div class="doc-section">
-                <h3>Troubleshooting</h3>
-                <p>Common issues, solutions, and debugging techniques for resolving problems in production environments.</p>
-            </div>
-            <div class="doc-section">
-                <h3>Contributing</h3>
-                <p>Guidelines for contributing to NetworkBuster projects, code standards, and development workflow.</p>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Docs That Are Easy To Navigate</h1>
+            <p class="hero-description">Browse indexed markdown docs with search and category filters. Use quick buttons to switch pages.</p>
+            <div class="page-hub-grid">
+                <a class="page-hub-btn" href="/">Go Home</a>
+                <a class="page-hub-btn" href="/projects.html">Projects</a>
+                <a class="page-hub-btn" href="/flash-commands.html">Flash Commands</a>
+                <a class="page-hub-btn" href="/blog/">Blog</a>
             </div>
         </div>
-    </div>
-    <footer>
-        <p>&copy; 2025 NetworkBuster Research Division</p>
-    </footer>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="docs-toolbar">
+                <input id="docSearch" class="docs-search" type="search" placeholder="Search docs by title or file..." aria-label="Search docs">
+                <select id="docSection" class="docs-filter" aria-label="Filter docs by section">
+                    <option value="all">All Sections</option>
+                </select>
+            </div>
+            <p id="docsMeta" class="page-hub-subtitle">Loading documentation index...</p>
+            <div id="docsGrid" class="page-hub-grid"></div>
+        </div>
+    </section>
+
+    <script>
+        const docsGrid = document.getElementById('docsGrid');
+        const docsMeta = document.getElementById('docsMeta');
+        const searchInput = document.getElementById('docSearch');
+        const sectionSelect = document.getElementById('docSection');
+
+        let indexPayload = { sections: [] };
+
+        function flattenItems() {
+            const selected = sectionSelect.value;
+            const sections = selected === 'all'
+                ? indexPayload.sections
+                : indexPayload.sections.filter(s => s.id === selected);
+
+            return sections.flatMap(section =>
+                section.items.map(item => ({ ...item, section: section.label }))
+            );
+        }
+
+        function renderDocs() {
+            const q = searchInput.value.trim().toLowerCase();
+            const all = flattenItems();
+            const filtered = q
+                ? all.filter(item => (`${item.title} ${item.file}`).toLowerCase().includes(q))
+                : all;
+
+            docsGrid.innerHTML = '';
+
+            if (!filtered.length) {
+                docsGrid.innerHTML = '<p class="page-hub-subtitle">No docs match your search.</p>';
+                return;
+            }
+
+            filtered.forEach(item => {
+                const a = document.createElement('a');
+                a.className = 'page-hub-btn';
+                a.href = item.url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.textContent = `${item.title} - ${item.section}`;
+                docsGrid.appendChild(a);
+            });
+        }
+
+        async function loadDocsIndex() {
+            try {
+                let res = await fetch('/api/docs-index');
+                if (!res.ok) {
+                    res = await fetch('/docs-index.json');
+                }
+                if (!res.ok) throw new Error('index endpoint unavailable');
+                indexPayload = await res.json();
+
+                indexPayload.sections.forEach(section => {
+                    const opt = document.createElement('option');
+                    opt.value = section.id;
+                    opt.textContent = section.label;
+                    sectionSelect.appendChild(opt);
+                });
+
+                docsMeta.textContent = `${indexPayload.total} docs indexed - updated ${new Date(indexPayload.generatedAt).toLocaleString()}`;
+                renderDocs();
+            } catch (err) {
+                docsMeta.textContent = 'Unable to load docs index in this environment.';
+            }
+        }
+
+        searchInput.addEventListener('input', renderDocs);
+        sectionSelect.addEventListener('change', renderDocs);
+        loadDocsIndex();
+    </script>
 </body>
 </html>

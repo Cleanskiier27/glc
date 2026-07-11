@@ -1,0 +1,8 @@
+# Link your local repository to GitHub
+git remote add origin https://github.com/Cleanskiier27/codicon.css.git
+
+# Ensure your primary branch is named 'main'
+git branch -M main
+
+# Push your code and set the upstream tracking branch
+git push -u origin main

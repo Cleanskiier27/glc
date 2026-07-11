@@ -1,0 +1,1 @@
+mkdir -p Z:/.antigravity-ide/extensions/googlecloudtools.datacloud-0.5.2-universal/codicons

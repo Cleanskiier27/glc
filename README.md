@@ -56,6 +56,34 @@ npm run preview:viewer:open
 
 Indexed docs page: http://localhost:3000/documentation.html
 
+## 🔗 Preciseliens Integration
+
+This repository includes a connected Preciseliens model-suite workspace and sync automation.
+
+- **Preciseliens Source Repo:** https://github.com/Cleanskiier27/Preciseliens
+- **Integrated Workspace:** [challengerepo/preciseliens-money-main](challengerepo/preciseliens-money-main)
+- **Model Suite Readme:** [challengerepo/integration/model-suite/README.md](challengerepo/integration/model-suite/README.md)
+
+### Automation Commands
+
+Use these scripts to sync/update the model suite from Preciseliens.
+
+Windows PowerShell:
+
+```powershell
+pwsh ./challengerepo/scripts/source-model-suite.ps1
+```
+
+Linux/macOS:
+
+```bash
+bash ./challengerepo/scripts/source-model-suite.sh
+```
+
+GitHub Actions workflow:
+
+- [challengerepo/.github/workflows/source-model-suite.yml](challengerepo/.github/workflows/source-model-suite.yml)
+
 ## 🥇 Why NetworkBuster Wins
 
 ### Four Complete Applications

@@ -63,7 +63,7 @@ async function collectRootMarkdownFiles() {
     .map(entry => ({
       title: toTitle(entry.name),
       file: entry.name,
-      url: `/root-docs/${entry.name}`
+      url: `root-docs/${entry.name}`
     }))
     .sort((a, b) => a.file.localeCompare(b.file));
 }
@@ -90,8 +90,8 @@ async function main() {
     await fs.copyFile(src, dst);
   }
 
-  const docsFiles = await collectMarkdownFiles(sourceDocs, '/docs-files');
-  const azureFiles = await collectMarkdownFiles(sourceAzureDocs, '/azure-docs');
+  const docsFiles = await collectMarkdownFiles(sourceDocs, 'docs-files');
+  const azureFiles = await collectMarkdownFiles(sourceAzureDocs, 'azure-docs');
 
   const sections = [
     { id: 'docs', label: 'Core Docs', items: docsFiles },

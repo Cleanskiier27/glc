@@ -26,7 +26,8 @@ This repository now includes a GitHub Pages preview pipeline so website changes 
 
 1. Push to `main` (or run the workflow manually).
 2. GitHub Actions builds preview assets and indexed docs.
-3. The generated artifact is deployed to GitHub Pages.
+3. The workflow publishes `web-app` to the `gh-pages` branch.
+4. In GitHub repo settings, set Pages source to `Deploy from a branch` -> `gh-pages` / `/ (root)`.
 
 ### Published Preview URLs
 

@@ -19,12 +19,11 @@
                 </div>
             </div>
             <nav class="main-nav">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/documentation.html" class="nav-link active">Docs</a>
-                <a href="/projects.html" class="nav-link">Projects</a>
-                <a href="/technology.html" class="nav-link">Technology</a>
-                <a href="/dashboard/" class="nav-link">Dashboard</a>
-                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./documentation.html" class="nav-link active">Docs</a>
+                <a href="./projects.html" class="nav-link">Projects</a>
+                <a href="./technology.html" class="nav-link">Technology</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
@@ -34,10 +33,10 @@
             <h1 class="hero-title">Docs That Are Easy To Navigate</h1>
             <p class="hero-description">Browse indexed markdown docs with search and category filters. Use quick buttons to switch pages.</p>
             <div class="page-hub-grid">
-                <a class="page-hub-btn" href="/">Go Home</a>
-                <a class="page-hub-btn" href="/projects.html">Projects</a>
-                <a class="page-hub-btn" href="/flash-commands.html">Flash Commands</a>
-                <a class="page-hub-btn" href="/blog/">Blog</a>
+                <a class="page-hub-btn" href="./index.html">Go Home</a>
+                <a class="page-hub-btn" href="./projects.html">Projects</a>
+                <a class="page-hub-btn" href="./flash-commands.html">Flash Commands</a>
+                <a class="page-hub-btn" href="./technology.html">Technology</a>
             </div>
         </div>
     </section>
@@ -101,9 +100,9 @@
 
         async function loadDocsIndex() {
             try {
-                let res = await fetch('/api/docs-index');
+                let res = await fetch('api/docs-index');
                 if (!res.ok) {
-                    res = await fetch('/docs-index.json');
+                    res = await fetch('docs-index.json');
                 }
                 if (!res.ok) throw new Error('index endpoint unavailable');
                 indexPayload = await res.json();

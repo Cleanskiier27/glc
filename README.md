@@ -19,6 +19,7 @@ This repository now includes a GitHub Pages preview pipeline so website changes 
 
 - **Workflow:** [website-preview.yml](.github/workflows/website-preview.yml)
 - **Build Script:** [build-web-preview.mjs](scripts/build-web-preview.mjs)
+- **Viewer Script:** [preview-viewer.mjs](scripts/preview-viewer.mjs)
 - **Preview Source Directory:** [web-app](web-app)
 
 ### How Preview Works
@@ -30,11 +31,24 @@ This repository now includes a GitHub Pages preview pipeline so website changes 
 ### Local Preview
 
 ```bash
-node scripts/build-web-preview.mjs
-npm start
+npm run preview:repo
 ```
 
-Then open `http://localhost:3000/documentation.html` to validate indexed docs behavior.
+### Automated Preview Viewer
+
+In another terminal while the server is running:
+
+```bash
+npm run preview:viewer
+```
+
+To auto-open the indexed docs page in your default browser:
+
+```bash
+npm run preview:viewer:open
+```
+
+Indexed docs page: http://localhost:3000/documentation.html
 
 ## 🥇 Why NetworkBuster Wins
 

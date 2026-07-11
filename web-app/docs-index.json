@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-07-11T03:57:36.159Z",
+  "total": 35,
+  "sections": [
+    {
+      "id": "docs",
+      "label": "Core Docs",
+      "items": [
+        {
+          "title": "AI TRAINING AND DATA PERSONALIZATION",
+          "file": "AI_TRAINING_AND_DATA_PERSONALIZATION.md",
+          "url": "docs-files/AI_TRAINING_AND_DATA_PERSONALIZATION.md"
+        },
+        {
+          "title": "Lunar Conditions",
+          "file": "environmental-data/lunar-conditions.md",
+          "url": "docs-files/environmental-data/lunar-conditions.md"
+        },
+        {
+          "title": "IMPLEMENTATION GUIDE",
+          "file": "IMPLEMENTATION_GUIDE.md",
+          "url": "docs-files/IMPLEMENTATION_GUIDE.md"
+        },
+        {
+          "title": "Standard Operation",
+          "file": "operational-protocols/standard-operation.md",
+          "url": "docs-files/operational-protocols/standard-operation.md"
+        },
+        {
+          "title": "Bibliography",
+          "file": "research/bibliography.md",
+          "url": "docs-files/research/bibliography.md"
+        },
+        {
+          "title": "Material Processing",
+          "file": "technical-specs/material-processing.md",
+          "url": "docs-files/technical-specs/material-processing.md"
+        },
+        {
+          "title": "System Architecture",
+          "file": "technical-specs/system-architecture.md",
+          "url": "docs-files/technical-specs/system-architecture.md"
+        }
+      ]
+    },
+    {
+      "id": "azure",
+      "label": "Azure Docs",
+      "items": [
+        {
+          "title": "00 Index",
+          "file": "00-index.md",
+          "url": "azure-docs/00-index.md"
+        },
+        {
+          "title": "01 Executive Summary",
+          "file": "01-executive-summary.md",
+          "url": "azure-docs/01-executive-summary.md"
+        },
+        {
+          "title": "02 Hidden Tools",
+          "file": "02-hidden-tools.md",
+          "url": "azure-docs/02-hidden-tools.md"
+        },
+        {
+          "title": "03 Exposed Secrets",
+          "file": "03-exposed-secrets.md",
+          "url": "azure-docs/03-exposed-secrets.md"
+        },
+        {
+          "title": "04 Azure Infrastructure",
+          "file": "04-azure-infrastructure.md",
+          "url": "azure-docs/04-azure-infrastructure.md"
+        },
+        {
+          "title": "05 Cicd Pipelines",
+          "file": "05-cicd-pipelines.md",
+          "url": "azure-docs/05-cicd-pipelines.md"
+        },
+        {
+          "title": "06 Docker Config",
+          "file": "06-docker-config.md",
+          "url": "azure-docs/06-docker-config.md"
+        },
+        {
+          "title": "07 Git Hooks",
+          "file": "07-git-hooks.md",
+          "url": "azure-docs/07-git-hooks.md"
+        },
+        {
+          "title": "08 Api Server",
+          "file": "08-api-server.md",
+          "url": "azure-docs/08-api-server.md"
+        },
+        {
+          "title": "09 Frontend Apps",
+          "file": "09-frontend-apps.md",
+          "url": "azure-docs/09-frontend-apps.md"
+        },
+        {
+          "title": "10 Deployment Status",
+          "file": "10-deployment-status.md",
+          "url": "azure-docs/10-deployment-status.md"
+        },
+        {
+          "title": "11 Security Audit",
+          "file": "11-security-audit.md",
+          "url": "azure-docs/11-security-audit.md"
+        },
+        {
+          "title": "12 Quick Reference",
+          "file": "12-quick-reference.md",
+          "url": "azure-docs/12-quick-reference.md"
+        }
+      ]
+    },
+    {
+      "id": "root",
+      "label": "Root Guides",
+      "items": [
+        {
+          "title": "AZURE STORAGE SETUP Cleanskiier27",
+          "file": "AZURE_STORAGE_SETUP_cleanskiier27.md",
+          "url": "root-docs/AZURE_STORAGE_SETUP_cleanskiier27.md"
+        },
+        {
+          "title": "D DRIVE BACKUP SUMMARY",
+          "file": "D_DRIVE_BACKUP_SUMMARY.md",
+          "url": "root-docs/D_DRIVE_BACKUP_SUMMARY.md"
+        },
+        {
+          "title": "DATA STORAGE AND VISITOR TRACKING",
+          "file": "DATA_STORAGE_AND_VISITOR_TRACKING.md",
+          "url": "root-docs/DATA_STORAGE_AND_VISITOR_TRACKING.md"
+        },
+        {
+          "title": "DATACENTRA STATUS",
+          "file": "DATACENTRA-STATUS.md",
+          "url": "root-docs/DATACENTRA-STATUS.md"
+        },
+        {
+          "title": "DEPENDENCIES",
+          "file": "DEPENDENCIES.md",
+          "url": "root-docs/DEPENDENCIES.md"
+        },
+        {
+          "title": "FLASH COMMANDS GUIDE",
+          "file": "FLASH-COMMANDS-GUIDE.md",
+          "url": "root-docs/FLASH-COMMANDS-GUIDE.md"
+        },
+        {
+          "title": "OPTIMIZATION COMPLETE",
+          "file": "OPTIMIZATION_COMPLETE.md",
+          "url": "root-docs/OPTIMIZATION_COMPLETE.md"
+        },
+        {
+          "title": "PROJECT SUMMARY",
+          "file": "PROJECT-SUMMARY.md",
+          "url": "root-docs/PROJECT-SUMMARY.md"
+        },
+        {
+          "title": "PUBLIC VISIBILITY",
+          "file": "PUBLIC-VISIBILITY.md",
+          "url": "root-docs/PUBLIC-VISIBILITY.md"
+        },
+        {
+          "title": "PUSH DATACENTRA",
+          "file": "PUSH-DATACENTRA.md",
+          "url": "root-docs/PUSH-DATACENTRA.md"
+        },
+        {
+          "title": "README ANNOUNCEMENT",
+          "file": "README-ANNOUNCEMENT.md",
+          "url": "root-docs/README-ANNOUNCEMENT.md"
+        },
+        {
+          "title": "README DATACENTRA",
+          "file": "README-DATACENTRA.md",
+          "url": "root-docs/README-DATACENTRA.md"
+        },
+        {
+          "title": "README",
+          "file": "README.md",
+          "url": "root-docs/README.md"
+        },
+        {
+          "title": "RELEASE V1.0.1",
+          "file": "RELEASE-v1.0.1.md",
+          "url": "root-docs/RELEASE-v1.0.1.md"
+        },
+        {
+          "title": "SOURCE LOG CLEANED",
+          "file": "SOURCE_LOG_CLEANED.md",
+          "url": "root-docs/SOURCE_LOG_CLEANED.md"
+        }
+      ]
+    }
+  ]
+}

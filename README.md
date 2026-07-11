@@ -101,6 +101,7 @@ npm start
 | Service | URL |
 |---------|-----|
 | Main Portal | / |
+| Overlay App | /overlay-app.html |
 | Real-Time Overlay | /overlay |
 | Dashboard | /dashboard |
 | Blog | /blog |

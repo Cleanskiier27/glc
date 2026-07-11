@@ -38,6 +38,18 @@ On Linux/macOS, use the shell variant:
 - `bash flash-commands.sh docs`
 - `bash flash-commands.sh optimize`
 
+## Host Categories
+
+Add `.devcontainers` as a host category for app build tasks.
+
+- Host category: `.devcontainers`
+- Build target: `vite app`
+	Command: `npm run build` (from the Vite app directory, for example `dashboard/`)
+- Build target: `express app`
+	Command: `npm run start` for run validation or `node server.js` from repo root
+
+When the user asks to build Vite or Express in this repository, prefer using the `.devcontainers` host category context first.
+
 ## Communication Rules
 
 - State assumptions when requirements are ambiguous.

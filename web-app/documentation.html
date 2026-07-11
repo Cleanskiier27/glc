@@ -56,6 +56,18 @@
         </div>
     </section>
 
+    <!-- Interactive Document Map Visualizer -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Interactive Document Map</h2>
+            <p class="page-hub-subtitle" style="margin-bottom: 20px;">Explore the lunar document orbits. Hover a node to inspect, click to open. Type in search or select filters above to automatically highlight, enlarge, and focus matching documentation.</p>
+            <div class="visualizer-card" style="position: relative; background: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--border-radius-lg); padding: 16px; backdrop-filter: blur(12px); box-shadow: var(--shadow-lg); overflow: hidden;">
+                <canvas id="docsCanvas" style="width: 100%; height: 500px; display: block; background: transparent;"></canvas>
+                <div class="visualizer-tooltip" id="visualizerTooltip" style="display: none; position: absolute; pointer-events: none; background: rgba(15, 23, 42, 0.95); border: 1px solid var(--color-primary); padding: 10px 14px; border-radius: var(--border-radius-sm); font-size: 0.85em; box-shadow: var(--shadow-glow); color: var(--color-text-primary); z-index: 10; backdrop-filter: blur(8px); max-width: 280px;"></div>
+            </div>
+        </div>
+    </section>
+
     <script>
         const docsGrid = document.getElementById('docsGrid');
         const docsMeta = document.getElementById('docsMeta');
@@ -86,6 +98,7 @@
 
             if (!filtered.length) {
                 docsGrid.innerHTML = '<p class="page-hub-subtitle">No docs match your search.</p>';
+                if (window.updateVisualizerMatches) window.updateVisualizerMatches(q, sectionSelect.value);
                 return;
             }
 
@@ -98,6 +111,452 @@
                 a.textContent = `${item.title} - ${item.section}`;
                 docsGrid.appendChild(a);
             });
+
+            if (window.updateVisualizerMatches) window.updateVisualizerMatches(q, sectionSelect.value);
+        }
+
+        let nodes = [];
+        let links = [];
+        let stars = [];
+        let draggedNode = null;
+        let hoveredNode = null;
+        let mouseX = 0;
+        let mouseY = 0;
+        let activeQuery = '';
+        let activeSection = 'all';
+        let orbitPhase = 0;
+
+        const docsCanvas = document.getElementById('docsCanvas');
+        const ctx = docsCanvas.getContext('2d');
+        const tooltip = document.getElementById('visualizerTooltip');
+
+        function initVisualizer() {
+            if (!indexPayload || !indexPayload.sections || !indexPayload.sections.length) return;
+
+            nodes = [];
+            links = [];
+            stars = [];
+
+            // Initialize starfield
+            for (let i = 0; i < 40; i++) {
+                stars.push({
+                    x: Math.random() * 1200,
+                    y: Math.random() * 500,
+                    size: Math.random() * 1.5 + 0.5,
+                    speed: Math.random() * 0.04 + 0.01
+                });
+            }
+
+            // Set up canvas size (with DPR scaling)
+            function resize() {
+                const rect = docsCanvas.parentElement.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                docsCanvas.width = rect.width * dpr;
+                docsCanvas.height = 500 * dpr;
+                ctx.scale(dpr, dpr);
+                
+                // Reposition stars to the new width
+                stars.forEach(star => {
+                    if (star.x > rect.width) star.x = Math.random() * rect.width;
+                });
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            const rect = docsCanvas.getBoundingClientRect();
+            const cx = rect.width / 2;
+            const cy = 250;
+
+            // Hub Node
+            const hubNode = {
+                id: 'hub',
+                label: 'NLRS Document Hub',
+                type: 'hub',
+                x: cx,
+                y: cy,
+                targetX: cx,
+                targetY: cy,
+                radius: 24,
+                color: '#f8fafc',
+                glowColor: 'rgba(255, 255, 255, 0.25)',
+                currentRadius: 24
+            };
+            nodes.push(hubNode);
+
+            const categoryColors = {
+                docs: '#6366f1',
+                azure: '#8b5cf6',
+                root: '#ec4899'
+            };
+            const categoryGlows = {
+                docs: 'rgba(99, 102, 241, 0.4)',
+                azure: 'rgba(139, 92, 246, 0.4)',
+                root: 'rgba(236, 72, 153, 0.4)'
+            };
+
+            const sections = indexPayload.sections;
+            sections.forEach((section, sIdx) => {
+                const angle = sIdx * (2 * Math.PI / sections.length);
+                const catNode = {
+                    id: section.id,
+                    label: section.label,
+                    type: 'category',
+                    sectionId: section.id,
+                    x: cx + 130 * Math.cos(angle),
+                    y: cy + 130 * Math.sin(angle),
+                    targetX: cx + 130 * Math.cos(angle),
+                    targetY: cy + 130 * Math.sin(angle),
+                    radius: 16,
+                    color: categoryColors[section.id] || '#cbd5e1',
+                    glowColor: categoryGlows[section.id] || 'rgba(255, 255, 255, 0.25)',
+                    currentRadius: 16
+                };
+                nodes.push(catNode);
+                links.push({ source: hubNode, target: catNode, color: 'rgba(255, 255, 255, 0.15)' });
+
+                const items = section.items;
+                items.forEach((item, itemIdx) => {
+                    const docAngle = itemIdx * (2 * Math.PI / items.length);
+                    const docNode = {
+                        id: `${section.id}-${itemIdx}`,
+                        label: item.title,
+                        file: item.file,
+                        type: 'document',
+                        sectionId: section.id,
+                        url: item.url,
+                        x: catNode.x + 80 * Math.cos(docAngle),
+                        y: catNode.y + 80 * Math.sin(docAngle),
+                        targetX: catNode.x + 80 * Math.cos(docAngle),
+                        targetY: catNode.y + 80 * Math.sin(docAngle),
+                        radius: 7,
+                        color: catNode.color,
+                        glowColor: catNode.glowColor,
+                        currentRadius: 7
+                    };
+                    nodes.push(docNode);
+                    links.push({ source: catNode, target: docNode, color: 'rgba(255, 255, 255, 0.08)' });
+                });
+            });
+
+            // Update function called from search
+            window.updateVisualizerMatches = function(q, sectionVal) {
+                activeQuery = q.toLowerCase();
+                activeSection = sectionVal;
+            };
+
+            // Event Listeners
+            function getMousePos(e) {
+                const rect = docsCanvas.getBoundingClientRect();
+                let clientX = e.clientX;
+                let clientY = e.clientY;
+                if (e.touches && e.touches.length) {
+                    clientX = e.touches[0].clientX;
+                    clientY = e.touches[0].clientY;
+                }
+                return {
+                    x: clientX - rect.left,
+                    y: clientY - rect.top,
+                    pageX: clientX + window.scrollX,
+                    pageY: clientY + window.scrollY
+                };
+            }
+
+            docsCanvas.addEventListener('mousemove', e => {
+                const pos = getMousePos(e);
+                mouseX = pos.x;
+                mouseY = pos.y;
+
+                // Collision detection
+                let found = null;
+                for (let i = nodes.length - 1; i >= 0; i--) {
+                    const node = nodes[i];
+                    const dist = Math.hypot(node.x - mouseX, node.y - mouseY);
+                    
+                    const clickRadius = node.type === 'document' ? 14 : node.radius + 4;
+                    if (dist < clickRadius) {
+                        found = node;
+                        break;
+                    }
+                }
+
+                hoveredNode = found;
+
+                if (hoveredNode) {
+                    docsCanvas.style.cursor = 'pointer';
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = `${pos.x + 15}px`;
+                    tooltip.style.top = `${pos.y + 15}px`;
+
+                    if (hoveredNode.type === 'hub') {
+                        tooltip.innerHTML = `
+                            <div style="font-weight: bold; color: #fff;">NetworkBuster NLRS</div>
+                            <div style="color: var(--color-text-muted); font-size: 0.9em; margin-top: 2px;">Repository Documentation Hub</div>
+                        `;
+                    } else if (hoveredNode.type === 'category') {
+                        const count = nodes.filter(n => n.type === 'document' && n.sectionId === hoveredNode.id).length;
+                        tooltip.innerHTML = `
+                            <div style="font-weight: bold; color: ${hoveredNode.color};">${hoveredNode.label}</div>
+                            <div style="color: var(--color-text-muted); font-size: 0.9em; margin-top: 2px;">${count} indexed markdown guides</div>
+                        `;
+                    } else {
+                        const secLabel = hoveredNode.sectionId === 'docs' ? 'Core Docs' : (hoveredNode.sectionId === 'azure' ? 'Azure Docs' : 'Root Guides');
+                        tooltip.innerHTML = `
+                            <div style="font-size: 0.8em; text-transform: uppercase; color: ${hoveredNode.color}; font-weight: bold;">${secLabel}</div>
+                            <div style="font-weight: bold; color: #fff; margin: 2px 0 4px 0;">${hoveredNode.label}</div>
+                            <div style="font-family: var(--font-mono); font-size: 0.85em; color: var(--color-text-muted); word-break: break-all;">${hoveredNode.file}</div>
+                            <div style="color: var(--color-success); font-size: 0.8em; font-weight: bold; margin-top: 6px;">✦ Click to read document</div>
+                        `;
+                    }
+                } else {
+                    docsCanvas.style.cursor = 'default';
+                    tooltip.style.display = 'none';
+                }
+            });
+
+            docsCanvas.addEventListener('mousedown', e => {
+                if (hoveredNode) {
+                    draggedNode = hoveredNode;
+                }
+            });
+
+            window.addEventListener('mouseup', () => {
+                draggedNode = null;
+            });
+
+            docsCanvas.addEventListener('click', e => {
+                if (hoveredNode && hoveredNode.type === 'document' && hoveredNode.url) {
+                    window.open(hoveredNode.url, '_blank', 'noopener noreferrer');
+                }
+            });
+
+            // Touch events
+            docsCanvas.addEventListener('touchstart', e => {
+                const pos = getMousePos(e);
+                mouseX = pos.x;
+                mouseY = pos.y;
+                let found = null;
+                for (let i = nodes.length - 1; i >= 0; i--) {
+                    const node = nodes[i];
+                    const dist = Math.hypot(node.x - mouseX, node.y - mouseY);
+                    const clickRadius = node.type === 'document' ? 16 : node.radius + 8;
+                    if (dist < clickRadius) {
+                        found = node;
+                        break;
+                    }
+                }
+                hoveredNode = found;
+                if (hoveredNode) {
+                    draggedNode = hoveredNode;
+                    e.preventDefault();
+                }
+            });
+
+            docsCanvas.addEventListener('touchmove', e => {
+                const pos = getMousePos(e);
+                mouseX = pos.x;
+                mouseY = pos.y;
+                if (draggedNode) {
+                    e.preventDefault();
+                }
+            });
+
+            docsCanvas.addEventListener('touchend', e => {
+                if (hoveredNode && hoveredNode.type === 'document' && !draggedNode && hoveredNode.url) {
+                    window.open(hoveredNode.url, '_blank', 'noopener noreferrer');
+                }
+                draggedNode = null;
+                hoveredNode = null;
+                tooltip.style.display = 'none';
+            });
+
+            // Start loop
+            tick();
+        }
+
+        function tick() {
+            requestAnimationFrame(tick);
+
+            const rect = docsCanvas.getBoundingClientRect();
+            const cx = rect.width / 2;
+            const cy = 250;
+
+            orbitPhase += 0.001;
+
+            // 1. Update targets and physics
+            const hub = nodes.find(n => n.id === 'hub');
+            if (hub) {
+                hub.targetX = cx;
+                hub.targetY = cy;
+            }
+
+            const cats = nodes.filter(n => n.type === 'category');
+            cats.forEach((cat, idx) => {
+                const angle = idx * (2 * Math.PI / cats.length) + orbitPhase * 0.8;
+                cat.targetX = cx + 130 * Math.cos(angle);
+                cat.targetY = cy + 130 * Math.sin(angle);
+            });
+
+            cats.forEach(cat => {
+                const docs = nodes.filter(n => n.type === 'document' && n.sectionId === cat.sectionId);
+                docs.forEach((doc, idx) => {
+                    const angle = idx * (2 * Math.PI / docs.length) - orbitPhase * 1.2;
+                    doc.targetX = cat.x + 90 * Math.cos(angle);
+                    doc.targetY = cat.y + 90 * Math.sin(angle);
+                });
+            });
+
+            // Smoothly move towards targets & handle drags
+            nodes.forEach(node => {
+                let isMatch = true;
+                if (activeSection !== 'all' && node.type !== 'hub' && node.sectionId !== activeSection && node.id !== activeSection) {
+                    isMatch = false;
+                }
+                if (isMatch && activeQuery && node.type === 'document') {
+                    const text = `${node.label} ${node.file}`.toLowerCase();
+                    if (!text.includes(activeQuery)) {
+                        isMatch = false;
+                    }
+                }
+
+                node.isMatch = isMatch;
+
+                let targetRadius = node.radius;
+                if (node === hoveredNode) {
+                    targetRadius = node.radius * 1.4;
+                } else if (node.type === 'document' && activeQuery && isMatch) {
+                    targetRadius = node.radius * 1.5;
+                }
+                node.currentRadius += (targetRadius - node.currentRadius) * 0.15;
+
+                if (node === draggedNode) {
+                    node.x += (mouseX - node.x) * 0.3;
+                    node.y += (mouseY - node.y) * 0.3;
+                } else {
+                    node.x += (node.targetX - node.x) * 0.08;
+                    node.y += (node.targetY - node.y) * 0.08;
+                }
+            });
+
+            // 2. Draw canvas
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, 0, rect.width, 500);
+
+            // Draw floating stars
+            ctx.fillStyle = '#475569';
+            stars.forEach(star => {
+                ctx.fillRect(star.x, star.y, star.size, star.size);
+                star.y -= star.speed;
+                if (star.y < 0) {
+                    star.y = 500;
+                    star.x = Math.random() * rect.width;
+                }
+            });
+
+            // Draw connection links
+            links.forEach(link => {
+                const src = link.source;
+                const tgt = link.target;
+                
+                let opacity = 0.12;
+                if (activeQuery || activeSection !== 'all') {
+                    if (src.isMatch && tgt.isMatch) {
+                        opacity = 0.5;
+                    } else {
+                        opacity = 0.02;
+                    }
+                } else if (src === hoveredNode || tgt === hoveredNode) {
+                    opacity = 0.4;
+                }
+
+                ctx.strokeStyle = tgt.color;
+                ctx.globalAlpha = opacity;
+                ctx.lineWidth = tgt.type === 'category' ? 2 : 1;
+                
+                ctx.beginPath();
+                ctx.moveTo(src.x, src.y);
+                ctx.lineTo(tgt.x, tgt.y);
+                ctx.stroke();
+            });
+
+            ctx.globalAlpha = 1.0;
+
+            // Draw nodes
+            nodes.forEach(node => {
+                let opacity = 1.0;
+                if (activeQuery || activeSection !== 'all') {
+                    if (node.type !== 'hub') {
+                        if (node.type === 'category') {
+                            const hasMatch = nodes.some(n => n.type === 'document' && n.sectionId === node.id && n.isMatch);
+                            opacity = hasMatch || activeSection === node.id ? 0.9 : 0.15;
+                        } else {
+                            opacity = node.isMatch ? 1.0 : 0.15;
+                        }
+                    }
+                }
+
+                ctx.globalAlpha = opacity;
+
+                if (node === hoveredNode || (node.type === 'document' && activeQuery && node.isMatch)) {
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = node.color;
+                } else {
+                    ctx.shadowBlur = 4;
+                    ctx.shadowColor = node.glowColor;
+                }
+
+                ctx.fillStyle = node.color;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.currentRadius, 0, 2 * Math.PI);
+                ctx.fill();
+
+                if (node.type === 'hub') {
+                    ctx.fillStyle = '#0f172a';
+                    ctx.font = 'bold 9px var(--font-primary)';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.shadowBlur = 0;
+                    ctx.fillText('NLRS', node.x, node.y);
+                }
+
+                if (node.type === 'category') {
+                    ctx.fillStyle = '#0f172a';
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.currentRadius * 0.6, 0, 2 * Math.PI);
+                    ctx.fill();
+                }
+
+                ctx.shadowBlur = 0;
+
+                let drawLabel = false;
+                let labelColor = 'var(--color-text-secondary)';
+                let labelFont = '11px var(--font-primary)';
+
+                if (node.type === 'hub') {
+                    drawLabel = true;
+                    labelColor = '#fff';
+                    labelFont = 'bold 12px var(--font-primary)';
+                } else if (node.type === 'category') {
+                    drawLabel = true;
+                    labelColor = '#fff';
+                    labelFont = 'bold 11px var(--font-primary)';
+                } else if (node === hoveredNode || (activeQuery && node.isMatch)) {
+                    drawLabel = true;
+                    labelColor = '#fff';
+                    labelFont = 'bold 10px var(--font-primary)';
+                }
+
+                if (drawLabel) {
+                    ctx.fillStyle = labelColor;
+                    ctx.font = labelFont;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'top';
+                    
+                    const offset = node.currentRadius + 6;
+                    ctx.fillText(node.label, node.x, node.y + offset);
+                }
+            });
+
+            ctx.globalAlpha = 1.0;
         }
 
         async function loadDocsIndex() {
@@ -118,6 +577,7 @@
 
                 docsMeta.textContent = `${indexPayload.total} docs indexed - updated ${new Date(indexPayload.generatedAt).toLocaleString()}`;
                 renderDocs();
+                initVisualizer();
             } catch (err) {
                 docsMeta.textContent = 'Unable to load docs index in this environment.';
             }

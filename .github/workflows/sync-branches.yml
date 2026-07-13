@@ -9,9 +9,11 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       
@@ -24,7 +26,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           git fetch origin
-          git checkout bigtree
+          git checkout bigtree || git checkout -b bigtree origin/main
           git merge origin/main --allow-unrelated-histories -m "Auto-sync: main → bigtree" || true
           git push origin bigtree || true
       
@@ -32,6 +34,6 @@ jobs:
         if: github.ref == 'refs/heads/bigtree'
         run: |
           git fetch origin
-          git checkout main
+          git checkout main || git checkout -b main origin/bigtree
           git merge origin/bigtree --allow-unrelated-histories -m "Auto-sync: bigtree → main" || true
           git push origin main || true

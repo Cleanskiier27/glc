@@ -64,14 +64,14 @@ PORT: 3000
 
 ### Build Command
 ```bash
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest -f Dockerfile .
+docker build -t your-registry-name.azurecr.io/networkbuster-server:latest -f Dockerfile .
 ```
 
 ### Run Command (Local Testing)
 ```bash
 docker run -p 3000:3000 \
   -e NODE_ENV=production \
-  networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
+  your-registry-name.azurecr.io/networkbuster-server:latest
 ```
 
 ### Health Check URL
@@ -130,7 +130,7 @@ Serve Tool: serve package (global)
 
 ### Build Command
 ```bash
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest \
+docker build -t your-registry-name.azurecr.io/networkbuster-overlay:latest \
   -f Dockerfile \
   ./challengerepo/real-time-overlay
 ```
@@ -138,7 +138,7 @@ docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:late
 ### Run Command (Local Testing)
 ```bash
 docker run -p 3000:3000 \
-  networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+  your-registry-name.azurecr.io/networkbuster-overlay:latest
 ```
 
 ### Health Check URL
@@ -222,37 +222,37 @@ docker build -t networkbuster-overlay:latest \
 ### Step 2: Tag for Registry
 ```bash
 docker tag networkbuster-server:latest \
-  networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
+  your-registry-name.azurecr.io/networkbuster-server:latest
 
 docker tag networkbuster-server:latest \
-  networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:v1.0.0
+  your-registry-name.azurecr.io/networkbuster-server:v1.0.0
 
 docker tag networkbuster-overlay:latest \
-  networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+  your-registry-name.azurecr.io/networkbuster-overlay:latest
 
 docker tag networkbuster-overlay:latest \
-  networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:v1.0.0
+  your-registry-name.azurecr.io/networkbuster-overlay:v1.0.0
 ```
 
 ### Step 3: Login to ACR
 ```bash
-az acr login --name networkbusterlo25gft5nqwzg
+az acr login --name your-registry-name
 ```
 
 ### Step 4: Push to Registry
 ```bash
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:v1.0.0
+docker push your-registry-name.azurecr.io/networkbuster-server:latest
+docker push your-registry-name.azurecr.io/networkbuster-server:v1.0.0
 
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:v1.0.0
+docker push your-registry-name.azurecr.io/networkbuster-overlay:latest
+docker push your-registry-name.azurecr.io/networkbuster-overlay:v1.0.0
 ```
 
 ### Step 5: Verify in Registry
 ```bash
-az acr repository list --name networkbusterlo25gft5nqwzg
-az acr repository show-tags --name networkbusterlo25gft5nqwzg --repository networkbuster-server
-az acr repository show-tags --name networkbusterlo25gft5nqwzg --repository networkbuster-overlay
+az acr repository list --name your-registry-name
+az acr repository show-tags --name your-registry-name --repository networkbuster-server
+az acr repository show-tags --name your-registry-name --repository networkbuster-overlay
 ```
 
 ---
@@ -263,7 +263,7 @@ az acr repository show-tags --name networkbusterlo25gft5nqwzg --repository netwo
 ```
 Name: networkbuster-server
 Tags: latest, v1.0.0, {git-sha}
-Repository: networkbusterlo25gft5nqwzg.azurecr.io
+Repository: your-registry-name.azurecr.io
 Size: ~200MB
 Layers: 8-10
 Compression: Alpine optimization
@@ -276,7 +276,7 @@ Healthcheck: /health endpoint
 ```
 Name: networkbuster-overlay
 Tags: latest, v1.0.0, {git-sha}
-Repository: networkbusterlo25gft5nqwzg.azurecr.io
+Repository: your-registry-name.azurecr.io
 Size: ~150MB
 Layers: 9-11
 Compression: Alpine optimization
@@ -365,14 +365,14 @@ Total: ~250MB
 ### Container Apps Configuration
 ```yaml
 Main Server:
-  Image: networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
+  Image: your-registry-name.azurecr.io/networkbuster-server:latest
   CPU: 0.5 cores
   Memory: 1Gi
   Port: 3000
   Replicas: 1-5
 
 Overlay UI:
-  Image: networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+  Image: your-registry-name.azurecr.io/networkbuster-overlay:latest
   CPU: 0.25 cores
   Memory: 0.5Gi
   Port: 3000
@@ -386,8 +386,8 @@ Overlay UI:
 
 ### Registry Authentication
 ```
-Registry: networkbusterlo25gft5nqwzg.azurecr.io
-Username: networkbusterlo25gft5nqwzg
+Registry: your-registry-name.azurecr.io
+Username: your-registry-name
 Password: [Managed secret]
 Auth Method: Admin user (not recommended for production)
 ```
@@ -398,22 +398,22 @@ Auth Method: Admin user (not recommended for production)
 
 ### List Images
 ```bash
-az acr repository list --name networkbusterlo25gft5nqwzg
+az acr repository list --name your-registry-name
 ```
 
 ### Delete Images
 ```bash
-az acr repository delete --name networkbusterlo25gft5nqwzg --image networkbuster-server:old-tag
+az acr repository delete --name your-registry-name --image networkbuster-server:old-tag
 ```
 
 ### Get Image Details
 ```bash
-az acr repository show --name networkbusterlo25gft5nqwzg --image networkbuster-server:latest
+az acr repository show --name your-registry-name --image networkbuster-server:latest
 ```
 
 ### Purge Old Images
 ```bash
-az acr purge --name networkbusterlo25gft5nqwzg --filter 'networkbuster-server:.*' --ago 30d
+az acr purge --name your-registry-name --filter 'networkbuster-server:.*' --ago 30d
 ```
 
 ---

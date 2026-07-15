@@ -11,8 +11,8 @@ env:
   REGISTRY_LOGIN_SERVER: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER || 'skipped' }}
   REGISTRY_USERNAME: ${{ secrets.AZURE_REGISTRY_USERNAME || 'skipped' }}
   REGISTRY_PASSWORD: ${{ secrets.AZURE_REGISTRY_PASSWORD || 'skipped' }}
-  RESOURCE_GROUP: networkbuster-rg
-  CONTAINER_APP_ENV: networkbuster-env
+  RESOURCE_GROUP: your-resource-group
+  CONTAINER_APP_ENV: your-container-app-environment
 
 jobs:
   check-secrets:

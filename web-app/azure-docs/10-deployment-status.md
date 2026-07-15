@@ -15,9 +15,9 @@
 
 | Platform | Service | Status | URL | Last Deploy |
 |----------|---------|--------|-----|-------------|
-| **Vercel** | Main Web App | ✅ LIVE | https://networkbuster-bhxd2dnzq-networkbuster.vercel.app | Dec 14 12:00 |
+| **Vercel** | Main Web App | ✅ LIVE | https://your-app.vercel.app | Dec 14 12:00 |
 | **Vercel** | bigtree (staging) | ✅ SYNCED | Automatic sync | Dec 14 12:00 |
-| **Azure ACR** | Container Registry | ✅ READY | networkbusterlo25gft5nqwzg.azurecr.io | Dec 14 12:58 |
+| **Azure ACR** | Container Registry | ✅ READY | your-registry-name.azurecr.io | Dec 14 12:58 |
 | **Azure Container Apps** | Main Server | ⏳ PENDING | Not deployed | N/A |
 | **Azure Container Apps** | Overlay UI | ⏳ PENDING | Not deployed | N/A |
 
@@ -36,7 +36,7 @@ Region: Global CDN (Edge Network)
 
 ### Current Deployment
 ```
-URL: https://networkbuster-bhxd2dnzq-networkbuster.vercel.app
+URL: https://your-app.vercel.app
 Status: ✅ LIVE
 Uptime: 99.99%
 Build Time: ~2-3 minutes
@@ -107,7 +107,7 @@ Last Sync: Dec 14 12:45 UTC
 
 ### Container Registry
 ```
-Name: networkbusterlo25gft5nqwzg
+Name: your-registry-name
 Status: ✅ ACTIVE
 Location: eastus
 SKU: Basic
@@ -119,7 +119,7 @@ Admin User: Enabled
 
 ### Container App Environment
 ```
-Name: networkbuster-env
+Name: your-container-app-environment
 Status: ✅ CREATED
 Location: eastus
 Provisioning: Succeeded
@@ -130,7 +130,7 @@ Log Analytics: Connected
 
 ### Log Analytics Workspace
 ```
-Name: networkbuster-logs
+Name: your-log-analytics-workspace
 Status: ✅ ACTIVE
 Retention: 30 days
 Daily Ingestion: 0 GB
@@ -198,7 +198,7 @@ Status: Awaiting setup
 ### Web Application
 ```
 Status: ✅ DEPLOYED (Vercel)
-URL: https://networkbuster-bhxd2dnzq-networkbuster.vercel.app
+URL: https://your-app.vercel.app
 Availability: 99.99%
 Response Time: <200ms
 Health: ✅ HEALTHY
@@ -207,7 +207,7 @@ Health: ✅ HEALTHY
 ### API Server
 ```
 Status: ✅ DEPLOYED (Vercel)
-Endpoint: https://networkbuster-bhxd2dnzq-networkbuster.vercel.app/api
+Endpoint: https://your-app.vercel.app/api
 Health Check: /health
 Response Time: <100ms
 Status: ✅ HEALTHY

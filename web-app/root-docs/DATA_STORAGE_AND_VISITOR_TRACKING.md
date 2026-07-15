@@ -27,10 +27,10 @@
 #### **Azure Log Analytics Workspace**
 ```
 Service: Log Analytics Workspace
-Name: networkbuster-logs
+Name: your-log-analytics-workspace
 Region: eastus
 Retention: 30 days (configurable)
-Subscription: cdb580bc-e2e9-4866-aac2-aa86f0a25cb3
+Subscription: your-subscription-id
 ```
 
 **What's Logged:**
@@ -55,7 +55,7 @@ ContainerAppConsoleLogs
 #### **Azure Container Registry**
 ```
 Service: Container Registry
-Name: networkbusterlo25gft5nqwzg
+Name: your-registry-name
 Type: Basic tier
 Region: eastus
 ```
@@ -100,7 +100,7 @@ vercel inspect <deployment-id>
 
 ### **Method 2: Azure Log Analytics (Full IP Capture)**
 
-**Access Point:** Azure Portal → Log Analytics Workspaces → networkbuster-logs
+**Access Point:** Azure Portal → Log Analytics Workspaces → your-log-analytics-workspace
 
 **Query to Extract All Visitor IPs:**
 ```kusto
@@ -177,7 +177,7 @@ ContainerAppConsoleLogs
 ```powershell
 # Connect to Azure
 Connect-AzAccount
-Set-AzContext -Subscription "cdb580bc-e2e9-4866-aac2-aa86f0a25cb3"
+Set-AzContext -Subscription "your-subscription-id"
 
 # Query Log Analytics for visitor IPs
 $Query = @"
@@ -189,14 +189,14 @@ ContainerAppConsoleLogs
 | order by Count desc
 "@
 
-Invoke-AzOperationalInsightsQuery -WorkspaceName "networkbuster-logs" -ResourceGroupName "networkbuster-rg" -Query $Query
+Invoke-AzOperationalInsightsQuery -WorkspaceName "your-log-analytics-workspace" -ResourceGroupName "your-resource-group" -Query $Query
 ```
 
 ### **Azure CLI Method**
 ```bash
 # Query last 24 hours of IP traffic
 az monitor log-analytics query \
-  --workspace "networkbuster-logs" \
+  --workspace "your-log-analytics-workspace" \
   --analytics-query "
     ContainerAppConsoleLogs 
     | where TimeGenerated > ago(24h)

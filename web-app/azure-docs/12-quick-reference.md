@@ -64,16 +64,16 @@ az account list --output table
 az account set --subscription "subscription-id"
 
 # Create resource group
-az group create --name networkbuster-rg --location eastus
+az group create --name your-resource-group --location eastus
 
 # Deploy infrastructure
-az deployment group create --resource-group networkbuster-rg --template-file infra/main.bicep
+az deployment group create --resource-group your-resource-group --template-file infra/main.bicep
 
 # Login to registry
-az acr login --name networkbusterlo25gft5nqwzg
+az acr login --name your-registry-name
 
 # Push image
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
+docker push your-registry-name.azurecr.io/networkbuster-server:latest
 ```
 
 ### Vercel Operations
@@ -98,7 +98,7 @@ vercel logs
 - **Primary Branch:** main
 
 ### Deployments
-- **Vercel Production:** https://networkbuster-bhxd2dnzq-networkbuster.vercel.app
+- **Vercel Production:** https://your-app.vercel.app
 - **Azure Portal:** https://portal.azure.com
 - **GitHub Actions:** https://github.com/NetworkBuster/networkbuster.net/actions
 
@@ -121,17 +121,17 @@ vercel logs
 
 ### Azure Credentials
 ```
-Subscription ID: cdb580bc-e2e9-4866-aac2-aa86f0a25cb3
-Tenant ID: e06af08b-87ac-4220-b55e-6bac69aa8d84
-Resource Group: networkbuster-rg
+Subscription ID: your-subscription-id
+Tenant ID: your-tenant-id
+Resource Group: your-resource-group
 Region: eastus
 ```
 
 ### Container Registry
 ```
-Name: networkbusterlo25gft5nqwzg
-Login Server: networkbusterlo25gft5nqwzg.azurecr.io
-Username: networkbusterlo25gft5nqwzg
+Name: your-registry-name
+Login Server: your-registry-name.azurecr.io
+Username: your-registry-name
 SKU: Basic
 ```
 

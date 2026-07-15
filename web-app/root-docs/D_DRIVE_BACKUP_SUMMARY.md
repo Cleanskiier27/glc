@@ -149,9 +149,9 @@ b022b12 - Remove invalid envPrefix property from vercel.json
 ⚠️ **WARNING:** The following sensitive information is included in the backup:
 
 **Azure:**
-- Subscription ID: `cdb580bc-e2e9-4866-aac2-aa86f0a25cb3`
-- Tenant ID: `e06af08b-87ac-4220-b55e-6bac69aa8d84`
-- Registry: `networkbusterlo25gft5nqwzg.azurecr.io`
+- Subscription ID: `your-subscription-id`
+- Tenant ID: `your-tenant-id`
+- Registry: `your-registry-name.azurecr.io`
 
 **Note:** These are development credentials. Rotate before production.
 

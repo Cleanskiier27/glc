@@ -11,10 +11,10 @@ Your NetworkBuster application now has a complete Azure Container Apps runtime i
 ### Infrastructure Layer
 | Resource | Name | Status |
 |----------|------|--------|
-| **Resource Group** | networkbuster-rg | ✅ Created |
-| **Container Registry** | networkbusterlo25gft5nqwzg | ✅ Created |
-| **Container App Environment** | networkbuster-env | ✅ Created |
-| **Log Analytics Workspace** | networkbuster-logs | ✅ Created |
+| **Resource Group** | your-resource-group | ✅ Created |
+| **Container Registry** | your-registry-name | ✅ Created |
+| **Container App Environment** | your-container-app-environment | ✅ Created |
+| **Log Analytics Workspace** | your-log-analytics-workspace | ✅ Created |
 
 ### Deployment Files
 | File | Purpose | Location |
@@ -38,16 +38,16 @@ Your NetworkBuster application now has a complete Azure Container Apps runtime i
 ## 🏗️ Architecture Overview
 
 ```
-Azure Subscription (cdb580bc-e2e9-4866-aac2-aa86f0a25cb3)
+Azure Subscription (your-subscription-id)
 └─ East US Region
-   └─ networkbuster-rg (Resource Group)
-      ├─ networkbusterlo25gft5nqwzg (Container Registry)
+   └─ your-resource-group (Resource Group)
+      ├─ your-registry-name (Container Registry)
       │  ├─ networkbuster-server:latest
       │  └─ networkbuster-overlay:latest
-      ├─ networkbuster-env (Container App Environment)
+      ├─ your-container-app-environment (Container App Environment)
       │  ├─ networkbuster-server (1-5 replicas, 0.5 CPU, 1GB RAM)
       │  └─ networkbuster-overlay (1-3 replicas, 0.25 CPU, 0.5GB RAM)
-      └─ networkbuster-logs (Log Analytics - 30 day retention)
+      └─ your-log-analytics-workspace (Log Analytics - 30 day retention)
 ```
 
 ---
@@ -67,7 +67,7 @@ This will:
 ```powershell
 # After images are pushed, deploy container apps using Bicep
 az deployment group create `
-  --resource-group networkbuster-rg `
+  --resource-group your-resource-group `
   --template-file infra/container-apps.bicep `
   --parameters [credentials...]
 ```
@@ -196,7 +196,7 @@ networkbuster.net/
 - **Bicep Language**: https://learn.microsoft.com/azure/azure-resource-manager/bicep/
 - **Azure CLI**: https://learn.microsoft.com/cli/azure/
 - **Your Resources**: 
-  - Registry: https://portal.azure.com/#resource/subscriptions/cdb580bc-e2e9-4866-aac2-aa86f0a25cb3/resourceGroups/networkbuster-rg
+  - Registry: https://portal.azure.com/#resource/subscriptions/your-subscription-id/resourceGroups/your-resource-group
   - Container Apps: https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.App%2FcontainerApps
 
 ---

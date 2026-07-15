@@ -4,11 +4,11 @@
 ✅ **Azure Infrastructure Deployed Successfully!**
 
 ### What Was Created:
-- **Container Registry**: `networkbusterlo25gft5nqwzg.azurecr.io`
-- **Container App Environment**: `networkbuster-env` 
-- **Log Analytics**: `networkbuster-logs`
-- **Resource Group**: `networkbuster-rg` (East US)
-- **Subscription**: `cdb580bc-e2e9-4866-aac2-aa86f0a25cb3`
+- **Container Registry**: `your-registry-name.azurecr.io`
+- **Container App Environment**: `your-container-app-environment` 
+- **Log Analytics**: `your-log-analytics-workspace`
+- **Resource Group**: `your-resource-group` (East US)
+- **Subscription**: `your-subscription-id`
 
 ---
 
@@ -17,13 +17,13 @@
 ### 1. Check Resources Created
 ```powershell
 # List all resources
-az resource list --resource-group networkbuster-rg --output table
+az resource list --resource-group your-resource-group --output table
 
 # Check Container Apps
-az containerapp list --resource-group networkbuster-rg
+az containerapp list --resource-group your-resource-group
 
 # View Log Analytics
-az monitor log-analytics workspace show --resource-group networkbuster-rg --workspace-name networkbuster-logs
+az monitor log-analytics workspace show --resource-group your-resource-group --workspace-name your-log-analytics-workspace
 ```
 
 ### 2. Build Docker Images (When Docker is Available)
@@ -32,28 +32,28 @@ az monitor log-analytics workspace show --resource-group networkbuster-rg --work
 .\deploy-azure.ps1
 
 # Or manually build
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest -f Dockerfile .
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest -f challengerepo\real-time-overlay\Dockerfile .\challengerepo\real-time-overlay
+docker build -t your-registry-name.azurecr.io/networkbuster-server:latest -f Dockerfile .
+docker build -t your-registry-name.azurecr.io/networkbuster-overlay:latest -f challengerepo\real-time-overlay\Dockerfile .\challengerepo\real-time-overlay
 
 # Push to registry
-az acr login --name networkbusterlo25gft5nqwzg
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+az acr login --name your-registry-name
+docker push your-registry-name.azurecr.io/networkbuster-server:latest
+docker push your-registry-name.azurecr.io/networkbuster-overlay:latest
 ```
 
 ### 3. Deploy Container Apps
 ```powershell
 # Get registry password
-$regPass = az acr credential show --name networkbusterlo25gft5nqwzg --query "passwords[0].value" -o tsv
+$regPass = az acr credential show --name your-registry-name --query "passwords[0].value" -o tsv
 
 # Deploy
 az deployment group create `
-  --resource-group networkbuster-rg `
+  --resource-group your-resource-group `
   --template-file infra/container-apps.bicep `
   --parameters `
-    containerAppEnvId="/subscriptions/cdb580bc-e2e9-4866-aac2-aa86f0a25cb3/resourceGroups/networkbuster-rg/providers/Microsoft.App/managedEnvironments/networkbuster-env" `
-    containerRegistryLoginServer="networkbusterlo25gft5nqwzg.azurecr.io" `
-    containerRegistryUsername="$(az acr credential show --name networkbusterlo25gft5nqwzg --query username -o tsv)" `
+    containerAppEnvId="/subscriptions/your-subscription-id/resourceGroups/your-resource-group/providers/Microsoft.App/managedEnvironments/your-container-app-environment" `
+    containerRegistryLoginServer="your-registry-name.azurecr.io" `
+    containerRegistryUsername="$(az acr credential show --name your-registry-name --query username -o tsv)" `
     containerRegistryPassword="$regPass" `
     registryPassword="$regPass"
 ```
@@ -61,19 +61,19 @@ az deployment group create `
 ### 4. View Deployment URLs
 ```powershell
 # Main Server
-az containerapp show --name networkbuster-server --resource-group networkbuster-rg --query 'properties.configuration.ingress.fqdn' -o tsv
+az containerapp show --name networkbuster-server --resource-group your-resource-group --query 'properties.configuration.ingress.fqdn' -o tsv
 
 # Overlay UI
-az containerapp show --name networkbuster-overlay --resource-group networkbuster-rg --query 'properties.configuration.ingress.fqdn' -o tsv
+az containerapp show --name networkbuster-overlay --resource-group your-resource-group --query 'properties.configuration.ingress.fqdn' -o tsv
 ```
 
 ### 5. View Logs
 ```powershell
 # Stream logs from Log Analytics
-az monitor log-analytics query --workspace networkbuster-logs --analytics-query "ContainerAppConsoleLogs_CL | tail 100"
+az monitor log-analytics query --workspace your-log-analytics-workspace --analytics-query "ContainerAppConsoleLogs_CL | tail 100"
 
 # Or check containerapp directly
-az containerapp logs show --name networkbuster-server --resource-group networkbuster-rg --follow
+az containerapp logs show --name networkbuster-server --resource-group your-resource-group --follow
 ```
 
 ---

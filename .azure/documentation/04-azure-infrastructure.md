@@ -7,7 +7,7 @@
 ## 📊 Resource Overview
 
 **Deployment Status:** ✅ IN PROGRESS  
-**Resource Group:** networkbuster-rg  
+**Resource Group:** your-resource-group  
 **Location:** eastus  
 **Total Resources:** 3 (Base Infrastructure)
 
@@ -16,24 +16,24 @@
 ## 🗂️ Resource Hierarchy
 
 ```
-Subscription: Azure subscription 1 (cdb580bc-e2e9-4866-aac2-aa86f0a25cb3)
+Subscription: Azure subscription 1 (your-subscription-id)
 │
-└── Resource Group: networkbuster-rg (eastus)
+└── Resource Group: your-resource-group (eastus)
     │
     ├── 📦 Container Registry
-    │   ├── Name: networkbusterlo25gft5nqwzg
+    │   ├── Name: your-registry-name
     │   ├── SKU: Basic
     │   ├── Type: Microsoft.ContainerRegistry/registries
     │   └── Status: Active
     │
     ├── 📊 Log Analytics Workspace
-    │   ├── Name: networkbuster-logs
+    │   ├── Name: your-log-analytics-workspace
     │   ├── Retention: 30 days
     │   ├── Type: Microsoft.OperationalInsights/workspaces
     │   └── Status: Active
     │
     ├── 🎯 Container App Environment
-    │   ├── Name: networkbuster-env
+    │   ├── Name: your-container-app-environment
     │   ├── Type: Microsoft.App/managedEnvironments
     │   ├── Logging: Log Analytics integration
     │   └── Status: Active
@@ -81,12 +81,12 @@ Subscription: Azure subscription 1 (cdb580bc-e2e9-4866-aac2-aa86f0a25cb3)
 
 **Outputs:**
 ```
-containerRegistryLoginServer: networkbusterlo25gft5nqwzg.azurecr.io
-containerRegistryName: networkbusterlo25gft5nqwzg
-containerAppEnvId: /subscriptions/.../networkbuster-env
-containerAppEnvName: networkbuster-env
-logAnalyticsId: /subscriptions/.../networkbuster-logs
-resourceGroupName: networkbuster-rg
+containerRegistryLoginServer: your-registry-name.azurecr.io
+containerRegistryName: your-registry-name
+containerAppEnvId: /subscriptions/.../your-container-app-environment
+containerAppEnvName: your-container-app-environment
+logAnalyticsId: /subscriptions/.../your-log-analytics-workspace
+resourceGroupName: your-resource-group
 ```
 
 ### Container Apps Template: `infra/container-apps.bicep`
@@ -98,7 +98,7 @@ resourceGroupName: networkbuster-rg
 #### 1. Main Server Container App
 ```yaml
 Name: networkbuster-server
-Image: networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
+Image: your-registry-name.azurecr.io/networkbuster-server:latest
 Resources:
   CPU: 0.5 cores
   Memory: 1Gi
@@ -117,7 +117,7 @@ Environment Variables:
 #### 2. Overlay UI Container App
 ```yaml
 Name: networkbuster-overlay
-Image: networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+Image: your-registry-name.azurecr.io/networkbuster-overlay:latest
 Resources:
   CPU: 0.25 cores
   Memory: 0.5Gi
@@ -153,7 +153,7 @@ Environment Variables:
 ### Step 1: Deploy Base Infrastructure
 ```powershell
 az deployment group create `
-  --resource-group networkbuster-rg `
+  --resource-group your-resource-group `
   --template-file infra/main.bicep `
   --parameters infra/parameters.json
 ```
@@ -163,18 +163,18 @@ az deployment group create `
 ### Step 2: Build Docker Images
 ```bash
 # Main Server
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest -f Dockerfile .
+docker build -t your-registry-name.azurecr.io/networkbuster-server:latest -f Dockerfile .
 
 # Overlay UI
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest -f challengerepo/real-time-overlay/Dockerfile ./challengerepo/real-time-overlay
+docker build -t your-registry-name.azurecr.io/networkbuster-overlay:latest -f challengerepo/real-time-overlay/Dockerfile ./challengerepo/real-time-overlay
 ```
 
 **Status:** ⏳ PENDING (Docker required)
 
 ### Step 3: Push Images to ACR
 ```bash
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+docker push your-registry-name.azurecr.io/networkbuster-server:latest
+docker push your-registry-name.azurecr.io/networkbuster-overlay:latest
 ```
 
 **Status:** ⏳ PENDING (After Step 2)
@@ -182,7 +182,7 @@ docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
 ### Step 4: Deploy Container Apps
 ```powershell
 az deployment group create `
-  --resource-group networkbuster-rg `
+  --resource-group your-resource-group `
   --template-file infra/container-apps.bicep `
   --parameters infra/parameters.json
 ```
@@ -354,13 +354,13 @@ Overlay UI:
 
 ### Create Resource Group
 ```bash
-az group create --name networkbuster-rg --location eastus
+az group create --name your-resource-group --location eastus
 ```
 
 ### Deploy Base Infrastructure
 ```bash
 az deployment group create \
-  --resource-group networkbuster-rg \
+  --resource-group your-resource-group \
   --template-file infra/main.bicep \
   --parameters infra/parameters.json
 ```
@@ -368,25 +368,25 @@ az deployment group create \
 ### Build Docker Images
 ```bash
 # Server
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest -f Dockerfile .
+docker build -t your-registry-name.azurecr.io/networkbuster-server:latest -f Dockerfile .
 
 # Overlay
-docker build -t networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest \
+docker build -t your-registry-name.azurecr.io/networkbuster-overlay:latest \
   -f challengerepo/real-time-overlay/Dockerfile \
   ./challengerepo/real-time-overlay
 ```
 
 ### Push to Registry
 ```bash
-az acr login --name networkbusterlo25gft5nqwzg
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-server:latest
-docker push networkbusterlo25gft5nqwzg.azurecr.io/networkbuster-overlay:latest
+az acr login --name your-registry-name
+docker push your-registry-name.azurecr.io/networkbuster-server:latest
+docker push your-registry-name.azurecr.io/networkbuster-overlay:latest
 ```
 
 ### Deploy Container Apps
 ```bash
 az deployment group create \
-  --resource-group networkbuster-rg \
+  --resource-group your-resource-group \
   --template-file infra/container-apps.bicep \
   --parameters infra/parameters.json
 ```

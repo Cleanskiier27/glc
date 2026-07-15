@@ -30,7 +30,7 @@
 
 ```
 Infrastructure:  ✅ DEPLOYED (main.bicep)
-Container Reg:   ✅ ACTIVE (networkbusterlo25gft5nqwzg)
+Container Reg:   ✅ ACTIVE (your-registry-name)
 Log Analytics:   ✅ MONITORING (30-day retention)
 Vercel Config:   ✅ OPTIMIZED
 Documentation:   ✅ CONSOLIDATED

@@ -7,10 +7,10 @@
 set -e
 
 # Configuration
-RESOURCE_GROUP="networkbuster-rg"
+RESOURCE_GROUP="your-resource-group"
 LOCATION="eastus"
 PROJECT_NAME="networkbuster"
-SUBSCRIPTION_ID="cdb580bc-e2e9-4866-aac2-aa86f0a25cb3"
+SUBSCRIPTION_ID="your-subscription-id"
 
 echo "🚀 NetworkBuster Azure Storage Deployment"
 echo "=========================================="

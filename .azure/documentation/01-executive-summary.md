@@ -27,13 +27,13 @@
 ## 🔧 Systems Summary
 
 ### ✅ Production Deployment (Vercel)
-- **URL:** https://networkbuster-bhxd2dnzq-networkbuster.vercel.app
+- **URL:** https://your-app.vercel.app
 - **Branch:** main
 - **Auto-Sync:** bigtree branch
 - **Status:** Live with 99.99% uptime
 
 ### 📦 Container Registry (Azure)
-- **Registry:** networkbusterlo25gft5nqwzg.azurecr.io
+- **Registry:** your-registry-name.azurecr.io
 - **Location:** eastus
 - **Status:** Ready for image deployment
 

@@ -3,8 +3,8 @@
 # Usage: .\deploy-storage-azure.ps1
 
 param(
-    [string]$SubscriptionId = "cdb580bc-e2e9-4866-aac2-aa86f0a25cb3",
-    [string]$ResourceGroup = "networkbuster-rg",
+    [string]$SubscriptionId = "your-subscription-id",
+    [string]$ResourceGroup = "your-resource-group",
     [string]$Location = "eastus",
     [string]$ProjectName = "networkbuster",
     [string]$StorageSku = "Standard_LRS",

@@ -86,9 +86,9 @@ Error handling: Set -e trap
 
 **Parameters:**
 ```powershell
--ResourceGroup "networkbuster-rg"
+-ResourceGroup "your-resource-group"
 -Location "eastus"
--RegistryName "networkbusterlo25gft5nqwzg"
+-RegistryName "your-registry-name"
 ```
 
 **Functions:**

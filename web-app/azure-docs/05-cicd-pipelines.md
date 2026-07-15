@@ -63,7 +63,7 @@ Triggers:
 
 **Step 6: Verify Deployment**
 ```yaml
-- run: curl -f https://networkbuster-bhxd2dnzq-networkbuster.vercel.app/health || exit 1
+- run: curl -f https://your-app.vercel.app/health || exit 1
 ```
 
 ### Environment Variables
@@ -217,25 +217,25 @@ echo ${{ secrets.AZURE_REGISTRY_PASSWORD }} | docker login \
 ```bash
 az containerapp update \
   --name networkbuster-server \
-  --resource-group networkbuster-rg \
+  --resource-group your-resource-group \
   --image ${{ env.REGISTRY_LOGIN_SERVER }}/networkbuster-server:${{ github.sha }}
 
 az containerapp update \
   --name networkbuster-overlay \
-  --resource-group networkbuster-rg \
+  --resource-group your-resource-group \
   --image ${{ env.REGISTRY_LOGIN_SERVER }}/networkbuster-overlay:${{ github.sha }}
 ```
 
 **Step 8: Output URLs**
 ```bash
-echo "Main Server: $(az containerapp show --name networkbuster-server --resource-group networkbuster-rg --query 'properties.configuration.ingress.fqdn' -o tsv)"
-echo "Overlay UI: $(az containerapp show --name networkbuster-overlay --resource-group networkbuster-rg --query 'properties.configuration.ingress.fqdn' -o tsv)"
+echo "Main Server: $(az containerapp show --name networkbuster-server --resource-group your-resource-group --query 'properties.configuration.ingress.fqdn' -o tsv)"
+echo "Overlay UI: $(az containerapp show --name networkbuster-overlay --resource-group your-resource-group --query 'properties.configuration.ingress.fqdn' -o tsv)"
 ```
 
 ### Secrets Required
 ```yaml
-AZURE_REGISTRY_LOGIN_SERVER: networkbusterlo25gft5nqwzg.azurecr.io
-AZURE_REGISTRY_USERNAME: networkbusterlo25gft5nqwzg
+AZURE_REGISTRY_LOGIN_SERVER: your-registry-name.azurecr.io
+AZURE_REGISTRY_USERNAME: your-registry-name
 AZURE_REGISTRY_PASSWORD: [Container Registry password]
 AZURE_CREDENTIALS: [Service Principal JSON]
 ```

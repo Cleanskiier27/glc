@@ -56,7 +56,7 @@
 ## Deployment Checklist
 
 - [x] Azure subscription configured
-- [x] Resource group created (networkbuster-rg)
+- [x] Resource group created (your-resource-group)
 - [x] Base infrastructure deployed (22s)
 - [x] Container Registry active
 - [x] Log Analytics monitoring enabled

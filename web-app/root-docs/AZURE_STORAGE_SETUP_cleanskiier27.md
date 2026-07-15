@@ -66,8 +66,8 @@
 ```powershell
 cd networkbuster.net
 .\deploy-storage-azure.ps1 `
-  -SubscriptionId "cdb580bc-e2e9-4866-aac2-aa86f0a25cb3" `
-  -ResourceGroup "networkbuster-rg" `
+  -SubscriptionId "your-subscription-id" `
+  -ResourceGroup "your-resource-group" `
   -Location "eastus" `
   -ProjectName "networkbuster"
 ```
@@ -97,7 +97,7 @@ After deployment, credentials will be saved to `storage-credentials.env`:
 AZURE_STORAGE_ACCOUNT_NAME=networkbuster[random]sa
 AZURE_STORAGE_ACCOUNT_KEY=[base64-encoded-key]
 AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;...
-AZURE_STORAGE_RESOURCE_GROUP=networkbuster-rg
+AZURE_STORAGE_RESOURCE_GROUP=your-resource-group
 
 # Container names
 AZURE_STORAGE_CONTAINER_REALTIME=realtime-data
@@ -234,10 +234,10 @@ Visitor Tracking → Log Analytics → Processing → Analytics Tables → Dashb
 ```bash
 # PowerShell
 $context = New-AzStorageContext -StorageAccountName "networkbuster[random]sa" -UseConnectedAccount
-Get-AzStorageAccount -ResourceGroupName "networkbuster-rg" | Get-AzStorageUsage
+Get-AzStorageAccount -ResourceGroupName "your-resource-group" | Get-AzStorageUsage
 
 # Azure CLI
-az storage account show --name networkbusterxyz --resource-group networkbuster-rg --query "creation"
+az storage account show --name networkbusterxyz --resource-group your-resource-group --query "creation"
 ```
 
 ### **Backup & Restore**
@@ -260,7 +260,7 @@ az storage blob download \
 # Set lifecycle policy to delete data older than 90 days
 az storage account management-policy create \
   --account-name networkbuster[random]sa \
-  --resource-group networkbuster-rg \
+  --resource-group your-resource-group \
   --policy @lifecycle-policy.json
 ```
 
@@ -285,7 +285,7 @@ az storage account management-policy create \
 **Issue:** "Insufficient permissions"
 ```bash
 # Solution: Check role assignment
-az role assignment list --scope /subscriptions/[subid]/resourceGroups/networkbuster-rg
+az role assignment list --scope /subscriptions/[subid]/resourceGroups/your-resource-group
 ```
 
 **Issue:** "Container not found"

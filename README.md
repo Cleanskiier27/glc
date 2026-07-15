@@ -1,12 +1,12 @@
-# 🏆 NetworkBuster - Competition Winner
+# 🛰️ Space Economy Tax
 
-![Project Status](https://img.shields.io/badge/status-WINNER-brightgreen.svg)
-![Award](https://img.shields.io/badge/award-Innovation%20%26%20Excellence-gold.svg)
+![Project Status](https://img.shields.io/badge/status-Active-brightgreen.svg)
+![Focus](https://img.shields.io/badge/focus-Space%20Economy%20Tax-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 🥇 Award-Winning Advanced Networking Platform
+## 🧾 Space Economy Tax Research and Policy Hub
 
-**NetworkBuster** is the competition-winning advanced networking technology platform for space exploration and lunar operations. Featuring cutting-edge real-time visualization, interactive dashboards, and enterprise-grade automation.
+**Space Economy Tax** is a focused repository for documenting, visualizing, and exploring the emerging policy and operational landscape around space commerce, orbital activity, and frontier economic systems.
 
 ### 🎯 Live Demo & Video
 **Visit Now:** https://networkbuster-mez5d7bmv-networkbuster.vercel.app
@@ -84,7 +84,7 @@ GitHub Actions workflow:
 
 - [challengerepo/.github/workflows/source-model-suite.yml](challengerepo/.github/workflows/source-model-suite.yml)
 
-## 🥇 Why NetworkBuster Wins
+## 🧠 Why Space Economy Tax Matters
 
 ### Four Complete Applications
 - 📡 **Real-Time Overlay** - Advanced 3D visualization with React + Three.js
@@ -118,8 +118,8 @@ Visit: https://networkbuster-mez5d7bmv-networkbuster.vercel.app
 
 ### Clone & Run Locally
 ```bash
-git clone https://github.com/NetworkBuster/networkbuster.net.git
-cd networkbuster.net
+git clone https://github.com/Cleanskiier27/glc.git
+cd glc
 npm install
 npm start
 ```

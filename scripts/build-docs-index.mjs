@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile, access } from 'node:fs/promises';
+import { readdir, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -24,6 +24,7 @@ const rootDocs = [
   'README-DATACENTRA.md',
   'README.md',
   'RELEASE-v1.0.1.md',
+  'SECURITY.md',
   'SOURCE_LOG_CLEANED.md'
 ];
 

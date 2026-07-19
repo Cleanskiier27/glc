@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-19T04:35:40.966Z",
-  "total": 36,
+  "generatedAt": "2026-07-19T04:36:41.612Z",
+  "total": 37,
   "sections": [
     {
       "id": "docs",
@@ -192,6 +192,11 @@
           "title": "RELEASE V1.0.1",
           "file": "RELEASE-v1.0.1.md",
           "url": "root-docs/RELEASE-v1.0.1.md"
+        },
+        {
+          "title": "SECURITY",
+          "file": "SECURITY.md",
+          "url": "root-docs/SECURITY.md"
         },
         {
           "title": "SOURCE LOG CLEANED",

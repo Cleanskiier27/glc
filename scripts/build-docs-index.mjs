@@ -9,32 +9,33 @@ const outputPath = path.join(repoRoot, 'web-app', 'docs-index.json');
 const docsRoot = path.join(repoRoot, 'docs');
 const azureDocsRoot = path.join(repoRoot, '.azure', 'documentation');
 
-const rootDocs = [
-  'AZURE_STORAGE_SETUP_cleanskiier27.md',
-  'D_DRIVE_BACKUP_SUMMARY.md',
-  'DATA_STORAGE_AND_VISITOR_TRACKING.md',
-  'DATACENTRA-STATUS.md',
-  'DEPENDENCIES.md',
-  'FLASH-COMMANDS-GUIDE.md',
-  'OPTIMIZATION_COMPLETE.md',
-  'PROJECT-SUMMARY.md',
-  'PUBLIC-VISIBILITY.md',
-  'PUSH-DATACENTRA.md',
-  'README-ANNOUNCEMENT.md',
-  'README-DATACENTRA.md',
-  'README.md',
-  'RELEASE-v1.0.1.md',
-  'SECURITY.md',
-  'SOURCE_LOG_CLEANED.md'
-];
+const titleOverrides = new Map([
+  ['technical-specs/mathematical-models.md', 'Mathematical Models & Equations']
+]);
 
 function toTitle(relativePath) {
-  const base = path.basename(relativePath, path.extname(relativePath));
-  return base
+  const normalizedPath = relativePath.replace(/\\/g, '/');
+  const override = titleOverrides.get(normalizedPath);
+  if (override) {
+    return override;
+  }
+
+  const base = path.basename(normalizedPath, path.extname(normalizedPath));
+  const words = base
     .replace(/[-_]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
+    .split(' ')
+    .filter(Boolean);
+
+  return words
+    .map((word) => {
+      if (/^[A-Z0-9]{2,}$/.test(word)) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(' ');
 }
 
 async function walkMarkdownFiles(rootDir, baseTargetDir) {
@@ -66,7 +67,15 @@ async function walkMarkdownFiles(rootDir, baseTargetDir) {
 
 async function collectRootDocs() {
   const items = [];
-  for (const filename of rootDocs) {
+  const entries = await readdir(repoRoot, { withFileTypes: true });
+  const filenames = entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.md'))
+    .map((entry) => entry.name)
+    .filter((filename) => !filename.startsWith('.'))
+    .filter((filename) => filename !== 'LICENSE.md')
+    .sort();
+
+  for (const filename of filenames) {
     const fullPath = path.join(repoRoot, filename);
     try {
       await access(fullPath);

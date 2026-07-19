@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetworkBuster Overlay App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-icon">APP</div>
+                <div class="logo-text">
+                    <h1>NetworkBuster</h1>
+                    <p>Overlay App</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./overlay-app.html" class="nav-link active">Overlay App</a>
+                <a href="./documentation.html" class="nav-link">Docs</a>
+                <a href="./projects.html" class="nav-link">Projects</a>
+                <a href="./technology.html" class="nav-link">Technology</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1 class="section-title">Real-Time Overlay App</h1>
+            <p class="page-hub-subtitle">A focused app surface for operator telemetry, status checks, and fast navigation.</p>
+
+            <div class="overlay-app-grid">
+                <section class="overlay-panel">
+                    <h2>System Status</h2>
+                    <div class="overlay-status-list">
+                        <div class="overlay-status-item">
+                            <span>API Health</span>
+                            <strong id="healthStatus">Checking...</strong>
+                        </div>
+                        <div class="overlay-status-item">
+                            <span>Uptime</span>
+                            <strong id="healthUptime">-</strong>
+                        </div>
+                        <div class="overlay-status-item">
+                            <span>Request Count</span>
+                            <strong id="healthRequests">-</strong>
+                        </div>
+                        <div class="overlay-status-item">
+                            <span>Overlay Component</span>
+                            <strong id="overlayComponent">Checking...</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="overlay-panel">
+                    <h2>Overlay Controls</h2>
+                    <div class="page-hub-grid">
+                        <a class="page-hub-btn" href="./index.html">Back To Home</a>
+                        <a class="page-hub-btn" href="./dashboard/">Open Dashboard</a>
+                        <a class="page-hub-btn" href="./documentation.html">Open Indexed Docs</a>
+                        <a class="page-hub-btn" href="./blog/">Open Blog</a>
+                    </div>
+                    <div class="overlay-toggle-row">
+                        <button id="toggleGrid" class="page-hub-btn" type="button">Toggle Grid</button>
+                        <button id="togglePulse" class="page-hub-btn" type="button">Toggle Pulse</button>
+                    </div>
+                </section>
+            </div>
+
+            <section class="overlay-panel overlay-viewport-panel">
+                <h2>Overlay Viewport</h2>
+                <p class="page-hub-subtitle">App preview mode for overlay-centric visualization.</p>
+                <div id="overlayViewport" class="overlay-viewport overlay-grid-on overlay-pulse-on">
+                    <div class="overlay-reticle"></div>
+                    <div class="overlay-ring"></div>
+                    <div class="overlay-ring delay"></div>
+                    <div class="overlay-stats">
+                        <span>Signal 98.2%</span>
+                        <span>Latency 24ms</span>
+                        <span>Payload Stable</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="overlay-app.js"></script>
+</body>
+</html>

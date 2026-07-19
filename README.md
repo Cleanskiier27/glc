@@ -56,6 +56,16 @@ npm run preview:viewer:open
 
 Indexed docs page: http://localhost:3000/documentation.html
 
+### Regenerate the Docs Index
+
+The docs portal uses a generated index file so new documentation pages are discoverable without editing the JSON manually.
+
+```bash
+npm run docs:index
+```
+
+This rebuilds [web-app/docs-index.json](web-app/docs-index.json) from the repository docs content.
+
 ## 🔗 Preciseliens Integration
 
 This repository includes a connected Preciseliens model-suite workspace and sync automation.

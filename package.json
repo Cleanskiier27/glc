@@ -25,6 +25,7 @@
     "start": "node server.js",
     "dev": "node --watch server.js",
     "build": "npm install",
+    "docs:index": "node scripts/build-docs-index.mjs",
     "preview:build": "node scripts/build-web-preview.mjs",
     "preview:repo": "npm run preview:build && npm start",
     "preview:viewer": "node scripts/preview-viewer.mjs",

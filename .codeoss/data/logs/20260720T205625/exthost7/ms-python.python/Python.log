@@ -1,0 +1,7 @@
+2026-07-20 22:04:45.171 [warning] Dir "/home/daypirate2/.pixi/envs" is not watchable (directory does not exist)
+2026-07-20 22:04:50.188 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-20 22:04:50.228 [info] > conda info --json
+2026-07-20 22:04:50.237 [info] Python interpreter path: /bin/python
+2026-07-20 22:04:50.942 [info] > pyenv which python
+2026-07-20 22:04:50.942 [info] cwd: .
+2026-07-20 22:04:53.715 [info] Starting Jedi language server for daypirate2.

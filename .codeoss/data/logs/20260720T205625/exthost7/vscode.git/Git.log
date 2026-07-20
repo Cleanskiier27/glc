@@ -1,0 +1,48 @@
+2026-07-20 22:04:45.172 [info] [main] Log level: Info
+2026-07-20 22:04:45.172 [info] [main] Validating found git in: "git"
+2026-07-20 22:04:45.172 [info] [main] Using git "2.43.0" from "git"
+2026-07-20 22:04:45.172 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-20 22:04:45.172 [info] > git rev-parse --show-toplevel [56ms]
+2026-07-20 22:04:45.177 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [12ms]
+2026-07-20 22:04:46.262 [info] [Model][openRepository] Opened repository (path): /home/daypirate2
+2026-07-20 22:04:46.262 [info] [Model][openRepository] Opened repository (real path): /home/daypirate2
+2026-07-20 22:04:46.262 [info] [Model][openRepository] Opened repository (kind): repository
+2026-07-20 22:04:46.387 [info] > git rev-parse --show-toplevel [79ms]
+2026-07-20 22:04:46.391 [info] > git config --get commit.template [94ms]
+2026-07-20 22:04:47.296 [info] > git rev-parse --show-toplevel [705ms]
+2026-07-20 22:04:47.348 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [86ms]
+2026-07-20 22:04:50.185 [info] > git status -z -uall [2818ms]
+2026-07-20 22:04:50.186 [info] > git rev-parse --show-toplevel [2856ms]
+2026-07-20 22:04:50.308 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2925ms]
+2026-07-20 22:04:50.376 [info] > git check-ignore -v -z --stdin [180ms]
+2026-07-20 22:04:50.378 [info] > git check-ignore -v -z --stdin [168ms]
+2026-07-20 22:04:50.380 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [45ms]
+2026-07-20 22:04:50.388 [info] > git rev-parse --show-toplevel [151ms]
+2026-07-20 22:04:50.418 [info] > git config --get --local branch.main.vscode-merge-base [30ms]
+2026-07-20 22:04:50.418 [warning] [Git][config] git config failed: Failed to execute git
+2026-07-20 22:04:50.431 [info] > git config --get commit.template [63ms]
+2026-07-20 22:04:50.689 [info] > git reflog main --grep-reflog=branch: Created from *. [259ms]
+2026-07-20 22:04:50.740 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [41ms]
+2026-07-20 22:04:50.740 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2026-07-20 22:04:50.740 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2026-07-20 22:04:50.742 [info] > git rev-parse --show-toplevel [147ms]
+2026-07-20 22:04:50.885 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [173ms]
+2026-07-20 22:04:50.944 [info] > git status -z -uall [38ms]
+2026-07-20 22:04:50.945 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [27ms]
+2026-07-20 22:04:50.946 [info] > git rev-parse --show-toplevel [94ms]
+2026-07-20 22:04:51.028 [info] > git rev-parse --show-toplevel [60ms]
+2026-07-20 22:04:51.049 [info] > git rev-parse --show-toplevel [4ms]
+2026-07-20 22:04:51.051 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-20 22:04:51.089 [info] > git show --textconv :e62d0871f764c5d2832a96a6bd780fcb7d8131aa [25ms]
+2026-07-20 22:04:51.111 [info] > git ls-files --stage -- e62d0871f764c5d2832a96a6bd780fcb7d8131aa [33ms]
+2026-07-20 22:04:51.228 [info] > git cat-file -s 39edc0acf5d19a14204ad6d23e8eadd55ca313ba [102ms]
+2026-07-20 22:04:51.416 [info] > git check-ignore -v -z --stdin [7ms]
+2026-07-20 22:04:51.455 [info] > git blame --root --incremental e62d0871f764c5d2832a96a6bd780fcb7d8131aa -- e62d0871f764c5d2832a96a6bd780fcb7d8131aa [7ms]
+2026-07-20 22:04:51.456 [info] fatal: no such path e62d0871f764c5d2832a96a6bd780fcb7d8131aa in e62d0871f764c5d2832a96a6bd780fcb7d8131aa
+2026-07-20 22:04:51.530 [info] > git show --textconv HEAD:e62d0871f764c5d2832a96a6bd780fcb7d8131aa [32ms]
+2026-07-20 22:04:51.550 [info] > git ls-tree -l HEAD -- e62d0871f764c5d2832a96a6bd780fcb7d8131aa [27ms]
+2026-07-20 22:04:51.575 [info] > git hash-object -t tree /dev/null [26ms]
+2026-07-20 22:04:51.578 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/daypirate2/e62d0871f764c5d2832a96a6bd780fcb7d8131aa.git?%7B%22path%22%3A%22%2Fhome%2Fdaypirate2%2Fe62d0871f764c5d2832a96a6bd780fcb7d8131aa%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-07-20 22:04:51.616 [info] > git hash-object -t tree /dev/null [42ms]
+2026-07-20 22:04:51.617 [warning] [GitFileSystemProvider][stat] File not found - git:/home/daypirate2/e62d0871f764c5d2832a96a6bd780fcb7d8131aa.git?%7B%22path%22%3A%22%2Fhome%2Fdaypirate2%2Fe62d0871f764c5d2832a96a6bd780fcb7d8131aa%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-07-20 22:04:51.819 [info] > git check-ignore -v -z --stdin [8ms]

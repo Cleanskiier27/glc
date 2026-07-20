@@ -1,0 +1,352 @@
+2026-07-20 22:01:50.390 [info] [main] Log level: Info
+2026-07-20 22:01:50.391 [info] [main] Validating found git in: "git"
+2026-07-20 22:01:50.391 [info] [main] Using git "2.43.0" from "git"
+2026-07-20 22:01:50.391 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-20 22:01:50.391 [info] > git rev-parse --show-toplevel [81ms]
+2026-07-20 22:01:50.393 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [12ms]
+2026-07-20 22:01:51.098 [info] [Model][openRepository] Opened repository (path): /home/daypirate2
+2026-07-20 22:01:51.098 [info] [Model][openRepository] Opened repository (real path): /home/daypirate2
+2026-07-20 22:01:51.098 [info] [Model][openRepository] Opened repository (kind): repository
+2026-07-20 22:01:51.220 [info] > git rev-parse --show-toplevel [69ms]
+2026-07-20 22:01:51.221 [info] > git config --get commit.template [88ms]
+2026-07-20 22:01:54.358 [info] > git rev-parse --show-toplevel [3117ms]
+2026-07-20 22:01:54.950 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [706ms]
+2026-07-20 22:01:55.105 [info] > git status -z -uall [138ms]
+2026-07-20 22:01:55.109 [info] > git check-ignore -v -z --stdin [104ms]
+2026-07-20 22:01:55.111 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [128ms]
+2026-07-20 22:01:55.117 [info] > git rev-parse --show-toplevel [446ms]
+2026-07-20 22:01:55.369 [info] > git check-ignore -v -z --stdin [327ms]
+2026-07-20 22:01:55.502 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [62ms]
+2026-07-20 22:01:55.517 [info] > git rev-parse --show-toplevel [201ms]
+2026-07-20 22:01:55.720 [info] > git config --get --local branch.main.vscode-merge-base [203ms]
+2026-07-20 22:01:55.720 [warning] [Git][config] git config failed: Failed to execute git
+2026-07-20 22:01:55.742 [info] > git config --get commit.template [262ms]
+2026-07-20 22:01:55.835 [info] > git reflog main --grep-reflog=branch: Created from *. [94ms]
+2026-07-20 22:01:55.859 [info] > git rev-parse --show-toplevel [171ms]
+2026-07-20 22:01:55.994 [info] > git rev-parse --show-toplevel [21ms]
+2026-07-20 22:01:55.994 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [48ms]
+2026-07-20 22:01:56.047 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [189ms]
+2026-07-20 22:01:56.047 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2026-07-20 22:01:56.047 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2026-07-20 22:01:56.118 [info] > git status -z -uall [102ms]
+2026-07-20 22:01:56.122 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [76ms]
+2026-07-20 22:01:56.153 [info] > git rev-parse --show-toplevel [45ms]
+2026-07-20 22:01:56.609 [info] > git rev-parse --show-toplevel [394ms]
+2026-07-20 22:01:56.610 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-20 22:01:56.734 [info] > git show --textconv :e62d0871f764c5d2832a96a6bd780fcb7d8131aa [112ms]
+2026-07-20 22:01:56.738 [info] > git ls-files --stage -- e62d0871f764c5d2832a96a6bd780fcb7d8131aa [97ms]
+2026-07-20 22:01:56.784 [info] > git cat-file -s 39edc0acf5d19a14204ad6d23e8eadd55ca313ba [35ms]
+2026-07-20 22:01:56.971 [info] > git check-ignore -v -z --stdin [8ms]
+2026-07-20 22:01:57.008 [info] > git blame --root --incremental e62d0871f764c5d2832a96a6bd780fcb7d8131aa -- e62d0871f764c5d2832a96a6bd780fcb7d8131aa [6ms]
+2026-07-20 22:01:57.009 [info] fatal: no such path e62d0871f764c5d2832a96a6bd780fcb7d8131aa in e62d0871f764c5d2832a96a6bd780fcb7d8131aa
+2026-07-20 22:01:57.120 [info] > git show --textconv HEAD:e62d0871f764c5d2832a96a6bd780fcb7d8131aa [26ms]
+2026-07-20 22:01:57.151 [info] > git ls-tree -l HEAD -- e62d0871f764c5d2832a96a6bd780fcb7d8131aa [33ms]
+2026-07-20 22:01:57.188 [info] > git hash-object -t tree /dev/null [44ms]
+2026-07-20 22:01:57.188 [warning] [GitFileSystemProvider][readFile] File not found - git:/home/daypirate2/e62d0871f764c5d2832a96a6bd780fcb7d8131aa.git?%7B%22path%22%3A%22%2Fhome%2Fdaypirate2%2Fe62d0871f764c5d2832a96a6bd780fcb7d8131aa%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-07-20 22:01:57.223 [info] > git hash-object -t tree /dev/null [37ms]
+2026-07-20 22:01:57.224 [warning] [GitFileSystemProvider][stat] File not found - git:/home/daypirate2/e62d0871f764c5d2832a96a6bd780fcb7d8131aa.git?%7B%22path%22%3A%22%2Fhome%2Fdaypirate2%2Fe62d0871f764c5d2832a96a6bd780fcb7d8131aa%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-07-20 22:01:57.617 [info] > git check-ignore -v -z --stdin [6ms]
+2026-07-20 22:01:58.918 [info] > git config --get commit.template [94ms]
+2026-07-20 22:01:58.943 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2026-07-20 22:01:58.986 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [9ms]
+2026-07-20 22:01:59.004 [info] > git status -z -uall [45ms]
+2026-07-20 22:01:59.611 [info] > git check-ignore -v -z --stdin [4ms]
+2026-07-20 22:02:05.597 [info] > git check-ignore -v -z --stdin [5ms]
+2026-07-20 22:02:07.024 [info] > git config --get commit.template [97ms]
+2026-07-20 22:02:07.088 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [8ms]
+2026-07-20 22:02:07.215 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [12ms]
+2026-07-20 22:02:07.218 [info] > git status -z -uall [62ms]
+2026-07-20 22:02:08.650 [info] > git check-ignore -v -z --stdin [13ms]
+2026-07-20 22:02:11.290 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) refs/heads/main [36ms]
+2026-07-20 22:02:11.583 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [208ms]
+2026-07-20 22:02:11.780 [info] > git check-ignore -v -z --stdin [2ms]
+2026-07-20 22:02:12.893 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [3ms]
+2026-07-20 22:02:12.893 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:12.906 [info] > git config --get-all user.name [3ms]
+2026-07-20 22:02:12.921 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:12.984 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:12.984 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:12.996 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:02:13.006 [info] > git config --get-all user.email [1ms]
+2026-07-20 22:02:13.220 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:13.220 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:13.231 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:02:13.242 [info] > git config --get-all user.email [1ms]
+2026-07-20 22:02:13.706 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:13.707 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:13.720 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:02:13.731 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:14.543 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:14.544 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:14.555 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:02:14.567 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:15.830 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:15.830 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:15.841 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:02:15.852 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:17.668 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [4ms]
+2026-07-20 22:02:17.668 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:17.685 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:02:17.701 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:20.163 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:20.164 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:20.175 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:02:20.187 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:23.400 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:23.400 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:23.412 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:02:23.423 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:27.486 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [3ms]
+2026-07-20 22:02:27.486 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:27.497 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:02:27.509 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:32.522 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:02:32.522 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:02:32.534 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:02:32.545 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:02:32.560 [info] > git config --get commit.template [2ms]
+2026-07-20 22:02:32.572 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:02:32.596 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:02:32.602 [info] > git status -z -uall [18ms]
+2026-07-20 22:02:32.631 [info] > git config --get commit.template [7ms]
+2026-07-20 22:02:32.644 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:02:32.668 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-07-20 22:02:32.675 [info] > git status -z -uall [20ms]
+2026-07-20 22:02:33.224 [info] > git check-ignore -v -z --stdin [2ms]
+2026-07-20 22:02:33.484 [info] > git check-ignore -v -z --stdin [2ms]
+2026-07-20 22:02:37.729 [info] > git config --get commit.template [23ms]
+2026-07-20 22:02:37.730 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2026-07-20 22:02:37.768 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-07-20 22:02:37.773 [info] > git status -z -uall [25ms]
+2026-07-20 22:02:38.329 [info] > git check-ignore -v -z --stdin [3ms]
+2026-07-20 22:02:42.804 [info] > git config --get commit.template [12ms]
+2026-07-20 22:02:42.805 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:02:42.828 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:02:42.833 [info] > git status -z -uall [17ms]
+2026-07-20 22:02:43.423 [info] > git check-ignore -v -z --stdin [3ms]
+2026-07-20 22:02:47.863 [info] > git config --get commit.template [11ms]
+2026-07-20 22:02:47.864 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:02:47.887 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:02:47.892 [info] > git status -z -uall [18ms]
+2026-07-20 22:02:55.659 [info] > git config --get commit.template [10ms]
+2026-07-20 22:02:55.660 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-07-20 22:02:55.677 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-07-20 22:02:55.684 [info] > git status -z -uall [17ms]
+2026-07-20 22:03:00.706 [info] > git config --get commit.template [9ms]
+2026-07-20 22:03:00.708 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-07-20 22:03:00.726 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-07-20 22:03:00.734 [info] > git status -z -uall [19ms]
+2026-07-20 22:03:05.758 [info] > git config --get commit.template [9ms]
+2026-07-20 22:03:05.759 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:03:05.776 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:03:05.783 [info] > git status -z -uall [17ms]
+2026-07-20 22:05:31.371 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-07-20 22:05:31.372 [info] > git config --get commit.template [24ms]
+2026-07-20 22:05:31.433 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2026-07-20 22:05:31.439 [info] > git status -z -uall [35ms]
+2026-07-20 22:05:32.371 [info] > git check-ignore -v -z --stdin [6ms]
+2026-07-20 22:11:52.094 [info] > git config --get commit.template [2ms]
+2026-07-20 22:11:52.104 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:11:52.122 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:11:52.130 [info] > git status -z -uall [18ms]
+2026-07-20 22:11:53.824 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) refs/heads/main [2ms]
+2026-07-20 22:11:54.036 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [141ms]
+2026-07-20 22:11:57.156 [info] > git config --get commit.template [10ms]
+2026-07-20 22:11:57.157 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:11:57.173 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:11:57.182 [info] > git status -z -uall [18ms]
+2026-07-20 22:11:57.425 [info] > git check-ignore -v -z --stdin [3ms]
+2026-07-20 22:11:59.843 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:11:59.843 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:11:59.852 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:11:59.860 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:11:59.920 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:11:59.920 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:11:59.929 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:11:59.937 [info] > git config --get-all user.email [1ms]
+2026-07-20 22:12:00.148 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:00.148 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:00.156 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:12:00.165 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:12:00.625 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:00.625 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:00.634 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:12:00.643 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:12:01.453 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:01.453 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:01.462 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:12:01.471 [info] > git config --get-all user.email [1ms]
+2026-07-20 22:12:02.731 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:02.732 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:02.740 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:12:02.749 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:12:04.559 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:04.559 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:04.568 [info] > git config --get-all user.name [1ms]
+2026-07-20 22:12:04.578 [info] > git config --get-all user.email [1ms]
+2026-07-20 22:12:07.038 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:07.038 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:07.048 [info] > git config --get-all user.name [3ms]
+2026-07-20 22:12:07.057 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:12:10.269 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:10.269 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:10.279 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:12:10.290 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:12:14.351 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:14.351 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:14.360 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:12:14.369 [info] > git config --get-all user.email [1ms]
+2026-07-20 22:12:19.378 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [2ms]
+2026-07-20 22:12:19.379 [info] fatal: Unable to create '/home/daypirate2/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+2026-07-20 22:12:19.387 [info] > git config --get-all user.name [2ms]
+2026-07-20 22:12:19.396 [info] > git config --get-all user.email [2ms]
+2026-07-20 22:12:19.406 [info] > git config --get commit.template [2ms]
+2026-07-20 22:12:19.415 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-07-20 22:12:19.432 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:12:19.440 [info] > git status -z -uall [17ms]
+2026-07-20 22:12:29.742 [info] > git config --get commit.template [8ms]
+2026-07-20 22:12:29.743 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:12:29.761 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:12:29.769 [info] > git status -z -uall [17ms]
+2026-07-20 22:15:05.696 [info] > git config --get commit.template [2ms]
+2026-07-20 22:15:05.705 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2026-07-20 22:15:05.721 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:15:05.725 [info] > git status -z -uall [12ms]
+2026-07-20 22:15:05.863 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) refs/heads/main [3ms]
+2026-07-20 22:15:06.189 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [174ms]
+2026-07-20 22:15:10.745 [info] > git config --get commit.template [2ms]
+2026-07-20 22:15:10.753 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2026-07-20 22:15:10.768 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2026-07-20 22:15:10.772 [info] > git status -z -uall [12ms]

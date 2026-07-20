@@ -304,3 +304,7 @@ I0720 21:28:50.275740   10209 experiments.go:258] Applied experiment flag "DuetA
 I0720 21:28:50.275760   10209 experiments.go:262] Applied experiment flag "DuetAiLocalRag__substrings_to_identify_test_prompts" to substringsToIdentifyTestPrompts with value [test]
 I0720 21:28:50.276048   10209 conn_opt.go:96] jsonrpc2: <-- result #8: experiments/update: null
 I0720 21:28:50.324636   10209 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 795 bytes>
+I0720 21:38:44.359989   10209 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric
+I0720 21:48:44.360229   10209 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric
+I0720 21:58:44.360137   10209 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric
+I0720 22:08:44.360203   10209 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric

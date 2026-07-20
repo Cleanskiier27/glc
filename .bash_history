@@ -53,3 +53,14 @@ $ gcloud config set project VALUE
 e62d0871f764c5d2832a96a6bd780fcb7d8131aa
 git commit -a
 git commit -m "gcloud"
+git add .
+git add a.
+git add a .
+git add -a
+git add -f
+git add https://main-instance-159147526315-git.us-central1.sourcemanager.dev/source-root-7076/source-root.git
+ps aux | grep git
+kill -9 <git>
+rm -f .git/index.lock
+git status
+git commit -m "integrity"

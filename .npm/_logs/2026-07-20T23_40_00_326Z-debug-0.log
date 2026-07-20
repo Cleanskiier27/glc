@@ -4,10 +4,10 @@
 3 silly config load:file:/usr/local/nvm/versions/node/v24.16.0/lib/node_modules/npm/npmrc
 4 silly config load:file:/home/daypirate2/.npmrc
 5 silly config load:file:/usr/local/nvm/versions/node/v24.16.0/etc/npmrc
-6 verbose title npm exec git+https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git --mode=visualization
-7 verbose argv "exec" "--yes" "--" "git+https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git" "--mode=visualization"
-8 verbose logfile logs-max:10 dir:/home/daypirate2/.npm/_logs/2026-07-20T22_05_17_410Z-
-9 verbose logfile /home/daypirate2/.npm/_logs/2026-07-20T22_05_17_410Z-debug-0.log
+6 verbose title npm exec git+https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git --mode=notebook
+7 verbose argv "exec" "--yes" "--" "git+https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git" "--mode=notebook"
+8 verbose logfile logs-max:10 dir:/home/daypirate2/.npm/_logs/2026-07-20T23_40_00_326Z-
+9 verbose logfile /home/daypirate2/.npm/_logs/2026-07-20T23_40_00_326Z-debug-0.log
 10 silly logfile start cleaning logs, removing 2 files
 11 silly logfile done cleaning log files
 12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
@@ -31,4 +31,4 @@
 20 verbose npm  v12.0.1
 21 verbose exit 1
 22 verbose code 1
-23 error A complete log of this run can be found in: /home/daypirate2/.npm/_logs/2026-07-20T22_05_17_410Z-debug-0.log
+23 error A complete log of this run can be found in: /home/daypirate2/.npm/_logs/2026-07-20T23_40_00_326Z-debug-0.log

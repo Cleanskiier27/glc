@@ -66,3 +66,6 @@
 2026-07-20 21:28:44.930 [info] SparkMonitorPlugin: State change - experiment: true, setting: true, overall: true
 2026-07-20 21:28:44.931 [info] MCP config plugin: MCP config key: mcpServers
 2026-07-20 21:28:45.204 [info] SparkMonitorPlugin: Wrote filter config file with value: true
+2026-07-20 22:23:07.742 [info] proactively refreshing access token
+2026-07-20 22:28:45.068 [info] MCP config plugin: ideType: 6
+2026-07-20 22:28:45.071 [info] MCP config plugin: MCP config key: mcpServers

@@ -5,3 +5,7 @@
 2026-07-20 22:01:55.462 [info] > pyenv which python
 2026-07-20 22:01:55.462 [info] cwd: .
 2026-07-20 22:01:58.908 [info] Starting Jedi language server for daypirate2.
+2026-07-20 22:16:08.081 [error] Unable to find workspace for given file
+2026-07-20 22:16:08.789 [error] Unable to find workspace for given file
+2026-07-20 22:16:09.998 [error] Unable to find workspace for given file
+2026-07-20 22:16:13.516 [error] Unable to find workspace for given file

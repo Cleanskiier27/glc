@@ -1,9 +1,9 @@
 Starting background process...
-Background process started with PID 3334
-[INFO] 2026-07-20 20:57:11.153 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
-[ERROR] 2026-07-20 20:57:11.161 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[ERROR] 2026-07-20 20:57:11.162 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[INFO] 2026-07-20 20:57:11.163 PM -- Loading extension: vertex (version: 0.2.0)
+Background process started with PID 10226
+[INFO] 2026-07-20 21:28:47.015 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
+[ERROR] 2026-07-20 21:28:47.022 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[ERROR] 2026-07-20 21:28:47.023 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[INFO] 2026-07-20 21:28:47.023 PM -- Loading extension: vertex (version: 0.2.0)
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
 Ignore file not found: /home/daypirate2/.aiexclude, continue without it.
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
@@ -46,7 +46,9 @@ Hook system initialized successfully
     at ChildProcess.<anonymous> (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/a2a-server.mjs:300072:76)
     at ChildProcess.emit (node:events:519:28)
     at maybeClose (node:internal/child_process:1101:16)
-    at ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:519:28)
+    at Pipe.<anonymous> (node:net:346:12) {
   code: -32000,
   data: undefined
 }
@@ -66,14 +68,14 @@ Executing MCP context refresh...
 [DEBUG] [MemoryDiscovery] Successfully read and processed imports: /home/daypirate2/.gemini/extensions/vertex/GEMINI.md (Length: 55458)
 MCP context refresh complete.
 [STARTUP] StartupProfiler.flush() called with 1 phases
-[STARTUP] Recording metric for phase: discover_tools duration: 4552.516292
-[INFO] 2026-07-20 20:57:17.189 PM -- [Config] Using CCPA Auth:
-[INFO] 2026-07-20 20:57:17.189 PM -- [Config] Attempting COMPUTE_ADC first.
+[STARTUP] Recording metric for phase: discover_tools duration: 3335.0048260000003
+[INFO] 2026-07-20 21:28:51.422 PM -- [Config] Using CCPA Auth:
+[INFO] 2026-07-20 21:28:51.422 PM -- [Config] Attempting COMPUTE_ADC first.
 Failed to load credentials from /home/daypirate2/.gemini/oauth_creds.json: ENOENT: no such file or directory, open '/home/daypirate2/.gemini/oauth_creds.json'
 Attempting to authenticate via metadata server application default credentials.
 Authentication successful.
-[INFO] 2026-07-20 20:57:17.606 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
-[ERROR] 2026-07-20 20:57:17.607 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
+[INFO] 2026-07-20 21:28:51.773 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+[ERROR] 2026-07-20 21:28:51.773 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
 {
   "exitCode": 41,
   "name": "FatalAuthenticationError",
@@ -83,11 +85,11 @@ Authentication successful.
 Process exited with code 1 and signal null
 Process exited unexpectedly, attempting to restart in 5 seconds...
 Starting background process...
-Background process started with PID 3422
-[INFO] 2026-07-20 20:57:23.722 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
-[ERROR] 2026-07-20 20:57:23.730 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[ERROR] 2026-07-20 20:57:23.731 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[INFO] 2026-07-20 20:57:23.732 PM -- Loading extension: vertex (version: 0.2.0)
+Background process started with PID 10283
+[INFO] 2026-07-20 21:28:57.882 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
+[ERROR] 2026-07-20 21:28:57.887 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[ERROR] 2026-07-20 21:28:57.888 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[INFO] 2026-07-20 21:28:57.888 PM -- Loading extension: vertex (version: 0.2.0)
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
 Ignore file not found: /home/daypirate2/.aiexclude, continue without it.
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
@@ -118,9 +120,7 @@ Hook system initialized successfully
     at ChildProcess.<anonymous> (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/a2a-server.mjs:300072:76)
     at ChildProcess.emit (node:events:519:28)
     at maybeClose (node:internal/child_process:1101:16)
-    at Socket.<anonymous> (node:internal/child_process:456:11)
-    at Socket.emit (node:events:519:28)
-    at Pipe.<anonymous> (node:net:346:12) {
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5) {
   code: -32000,
   data: undefined
 }
@@ -152,14 +152,14 @@ Executing MCP context refresh...
 [DEBUG] [MemoryDiscovery] Successfully read and processed imports: /home/daypirate2/.gemini/extensions/vertex/GEMINI.md (Length: 55458)
 MCP context refresh complete.
 [STARTUP] StartupProfiler.flush() called with 1 phases
-[STARTUP] Recording metric for phase: discover_tools duration: 3210.2045550000003
-[INFO] 2026-07-20 20:57:27.981 PM -- [Config] Using CCPA Auth:
-[INFO] 2026-07-20 20:57:27.982 PM -- [Config] Attempting COMPUTE_ADC first.
+[STARTUP] Recording metric for phase: discover_tools duration: 2984.4210950000006
+[INFO] 2026-07-20 21:29:01.936 PM -- [Config] Using CCPA Auth:
+[INFO] 2026-07-20 21:29:01.936 PM -- [Config] Attempting COMPUTE_ADC first.
 Failed to load credentials from /home/daypirate2/.gemini/oauth_creds.json: ENOENT: no such file or directory, open '/home/daypirate2/.gemini/oauth_creds.json'
 Attempting to authenticate via metadata server application default credentials.
 Authentication successful.
-[INFO] 2026-07-20 20:57:28.346 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
-[ERROR] 2026-07-20 20:57:28.346 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
+[INFO] 2026-07-20 21:29:02.297 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+[ERROR] 2026-07-20 21:29:02.298 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
 {
   "exitCode": 41,
   "name": "FatalAuthenticationError",
@@ -169,11 +169,11 @@ Authentication successful.
 Process exited with code 1 and signal null
 Process exited unexpectedly, attempting to restart in 10 seconds...
 Starting background process...
-Background process started with PID 3474
-[INFO] 2026-07-20 20:57:39.569 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
-[ERROR] 2026-07-20 20:57:39.574 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[ERROR] 2026-07-20 20:57:39.575 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[INFO] 2026-07-20 20:57:39.576 PM -- Loading extension: vertex (version: 0.2.0)
+Background process started with PID 10323
+[INFO] 2026-07-20 21:29:13.442 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
+[ERROR] 2026-07-20 21:29:13.450 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[ERROR] 2026-07-20 21:29:13.451 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[INFO] 2026-07-20 21:29:13.452 PM -- Loading extension: vertex (version: 0.2.0)
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
 Ignore file not found: /home/daypirate2/.aiexclude, continue without it.
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
@@ -236,14 +236,14 @@ Executing MCP context refresh...
 [DEBUG] [MemoryDiscovery] Successfully read and processed imports: /home/daypirate2/.gemini/extensions/vertex/GEMINI.md (Length: 55458)
 MCP context refresh complete.
 [STARTUP] StartupProfiler.flush() called with 1 phases
-[STARTUP] Recording metric for phase: discover_tools duration: 3254.0107459999995
-[INFO] 2026-07-20 20:57:44.031 PM -- [Config] Using CCPA Auth:
-[INFO] 2026-07-20 20:57:44.032 PM -- [Config] Attempting COMPUTE_ADC first.
+[STARTUP] Recording metric for phase: discover_tools duration: 3336.2101730000004
+[INFO] 2026-07-20 21:29:17.823 PM -- [Config] Using CCPA Auth:
+[INFO] 2026-07-20 21:29:17.824 PM -- [Config] Attempting COMPUTE_ADC first.
 Failed to load credentials from /home/daypirate2/.gemini/oauth_creds.json: ENOENT: no such file or directory, open '/home/daypirate2/.gemini/oauth_creds.json'
 Attempting to authenticate via metadata server application default credentials.
 Authentication successful.
-[INFO] 2026-07-20 20:57:44.441 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
-[ERROR] 2026-07-20 20:57:44.441 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
+[INFO] 2026-07-20 21:29:18.244 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+[ERROR] 2026-07-20 21:29:18.245 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
 {
   "exitCode": 41,
   "name": "FatalAuthenticationError",
@@ -253,11 +253,11 @@ Authentication successful.
 Process exited with code 1 and signal null
 Process exited unexpectedly, attempting to restart in 20 seconds...
 Starting background process...
-Background process started with PID 3555
-[INFO] 2026-07-20 20:58:05.556 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
-[ERROR] 2026-07-20 20:58:05.561 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[ERROR] 2026-07-20 20:58:05.561 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[INFO] 2026-07-20 20:58:05.562 PM -- Loading extension: vertex (version: 0.2.0)
+Background process started with PID 10388
+[INFO] 2026-07-20 21:29:39.299 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
+[ERROR] 2026-07-20 21:29:39.304 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[ERROR] 2026-07-20 21:29:39.305 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[INFO] 2026-07-20 21:29:39.305 PM -- Loading extension: vertex (version: 0.2.0)
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
 Ignore file not found: /home/daypirate2/.aiexclude, continue without it.
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
@@ -320,14 +320,14 @@ Executing MCP context refresh...
 [DEBUG] [MemoryDiscovery] Successfully read and processed imports: /home/daypirate2/.gemini/extensions/vertex/GEMINI.md (Length: 55458)
 MCP context refresh complete.
 [STARTUP] StartupProfiler.flush() called with 1 phases
-[STARTUP] Recording metric for phase: discover_tools duration: 3142.0463919999997
-[INFO] 2026-07-20 20:58:09.735 PM -- [Config] Using CCPA Auth:
-[INFO] 2026-07-20 20:58:09.736 PM -- [Config] Attempting COMPUTE_ADC first.
+[STARTUP] Recording metric for phase: discover_tools duration: 2998.8893100000005
+[INFO] 2026-07-20 21:29:43.341 PM -- [Config] Using CCPA Auth:
+[INFO] 2026-07-20 21:29:43.341 PM -- [Config] Attempting COMPUTE_ADC first.
 Failed to load credentials from /home/daypirate2/.gemini/oauth_creds.json: ENOENT: no such file or directory, open '/home/daypirate2/.gemini/oauth_creds.json'
 Attempting to authenticate via metadata server application default credentials.
 Authentication successful.
-[INFO] 2026-07-20 20:58:10.106 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
-[ERROR] 2026-07-20 20:58:10.106 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
+[INFO] 2026-07-20 21:29:43.804 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+[ERROR] 2026-07-20 21:29:43.804 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
 {
   "exitCode": 41,
   "name": "FatalAuthenticationError",
@@ -337,11 +337,11 @@ Authentication successful.
 Process exited with code 1 and signal null
 Process exited unexpectedly, attempting to restart in 40 seconds...
 Starting background process...
-Background process started with PID 4095
-[INFO] 2026-07-20 20:58:51.289 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
-[ERROR] 2026-07-20 20:58:51.296 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[ERROR] 2026-07-20 20:58:51.297 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[INFO] 2026-07-20 20:58:51.297 PM -- Loading extension: vertex (version: 0.2.0)
+Background process started with PID 10479
+[INFO] 2026-07-20 21:30:24.875 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
+[ERROR] 2026-07-20 21:30:24.881 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[ERROR] 2026-07-20 21:30:24.882 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[INFO] 2026-07-20 21:30:24.882 PM -- Loading extension: vertex (version: 0.2.0)
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
 Ignore file not found: /home/daypirate2/.aiexclude, continue without it.
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
@@ -384,9 +384,7 @@ Hook system initialized successfully
     at ChildProcess.<anonymous> (file:///google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/agent/a2a-server.mjs:300072:76)
     at ChildProcess.emit (node:events:519:28)
     at maybeClose (node:internal/child_process:1101:16)
-    at Socket.<anonymous> (node:internal/child_process:456:11)
-    at Socket.emit (node:events:519:28)
-    at Pipe.<anonymous> (node:net:346:12) {
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5) {
   code: -32000,
   data: undefined
 }
@@ -406,14 +404,14 @@ Executing MCP context refresh...
 [DEBUG] [MemoryDiscovery] Successfully read and processed imports: /home/daypirate2/.gemini/extensions/vertex/GEMINI.md (Length: 55458)
 MCP context refresh complete.
 [STARTUP] StartupProfiler.flush() called with 1 phases
-[STARTUP] Recording metric for phase: discover_tools duration: 3074.9190710000003
-[INFO] 2026-07-20 20:58:55.446 PM -- [Config] Using CCPA Auth:
-[INFO] 2026-07-20 20:58:55.446 PM -- [Config] Attempting COMPUTE_ADC first.
+[STARTUP] Recording metric for phase: discover_tools duration: 3117.7595610000003
+[INFO] 2026-07-20 21:30:29.046 PM -- [Config] Using CCPA Auth:
+[INFO] 2026-07-20 21:30:29.046 PM -- [Config] Attempting COMPUTE_ADC first.
 Failed to load credentials from /home/daypirate2/.gemini/oauth_creds.json: ENOENT: no such file or directory, open '/home/daypirate2/.gemini/oauth_creds.json'
 Attempting to authenticate via metadata server application default credentials.
 Authentication successful.
-[INFO] 2026-07-20 20:58:55.823 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
-[ERROR] 2026-07-20 20:58:55.824 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
+[INFO] 2026-07-20 21:30:29.412 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+[ERROR] 2026-07-20 21:30:29.412 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
 {
   "exitCode": 41,
   "name": "FatalAuthenticationError",
@@ -423,11 +421,11 @@ Authentication successful.
 Process exited with code 1 and signal null
 Process exited unexpectedly, attempting to restart in 80 seconds...
 Starting background process...
-Background process started with PID 4712
-[INFO] 2026-07-20 21:00:16.934 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
-[ERROR] 2026-07-20 21:00:16.941 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[ERROR] 2026-07-20 21:00:16.941 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
-[INFO] 2026-07-20 21:00:16.942 PM -- Loading extension: vertex (version: 0.2.0)
+Background process started with PID 10521
+[INFO] 2026-07-20 21:31:50.498 PM -- [CoderAgentExecutor] Overriding workspace path to: /home/daypirate2
+[ERROR] 2026-07-20 21:31:50.505 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[ERROR] 2026-07-20 21:31:50.506 PM -- Warning: unexpected file /home/daypirate2/.gemini/extensions/extension-enablement.json in extensions directory.
+[INFO] 2026-07-20 21:31:50.507 PM -- Loading extension: vertex (version: 0.2.0)
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
 Ignore file not found: /home/daypirate2/.aiexclude, continue without it.
 Ignore file not found: /home/daypirate2/.geminiignore, continue without it.
@@ -490,14 +488,14 @@ Executing MCP context refresh...
 [DEBUG] [MemoryDiscovery] Successfully read and processed imports: /home/daypirate2/.gemini/extensions/vertex/GEMINI.md (Length: 55458)
 MCP context refresh complete.
 [STARTUP] StartupProfiler.flush() called with 1 phases
-[STARTUP] Recording metric for phase: discover_tools duration: 3058.1535489999997
-[INFO] 2026-07-20 21:00:21.018 PM -- [Config] Using CCPA Auth:
-[INFO] 2026-07-20 21:00:21.018 PM -- [Config] Attempting COMPUTE_ADC first.
+[STARTUP] Recording metric for phase: discover_tools duration: 3065.756714
+[INFO] 2026-07-20 21:31:54.560 PM -- [Config] Using CCPA Auth:
+[INFO] 2026-07-20 21:31:54.560 PM -- [Config] Attempting COMPUTE_ADC first.
 Failed to load credentials from /home/daypirate2/.gemini/oauth_creds.json: ENOENT: no such file or directory, open '/home/daypirate2/.gemini/oauth_creds.json'
 Attempting to authenticate via metadata server application default credentials.
 Authentication successful.
-[INFO] 2026-07-20 21:00:21.412 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
-[ERROR] 2026-07-20 21:00:21.413 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
+[INFO] 2026-07-20 21:31:54.941 PM -- [Config] COMPUTE_ADC failed or not available: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+[ERROR] 2026-07-20 21:31:54.941 PM -- [CoreAgent] Error during startup: COMPUTE_ADC failed: This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google. (LOGIN_WITH_GOOGLE fallback skipped due to headless mode. Run in an interactive terminal to use OAuth.)
 {
   "exitCode": 41,
   "name": "FatalAuthenticationError",

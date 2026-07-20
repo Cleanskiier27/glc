@@ -45,3 +45,11 @@ git commit --global
 git commit -m "integrity"
 Run
 omit -- global
+git commit -m "walle"
+gcloud update
+gcloud builds connections update github
+gcloud app update
+$ gcloud config set project VALUE
+e62d0871f764c5d2832a96a6bd780fcb7d8131aa
+git commit -a
+git commit -m "gcloud"

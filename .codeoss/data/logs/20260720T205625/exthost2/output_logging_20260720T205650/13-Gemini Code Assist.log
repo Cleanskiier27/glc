@@ -160,3 +160,13 @@ I0720 20:57:51.646310    3381 conn_opt.go:55] jsonrpc2: --> request #4: conversa
 I0720 20:57:51.646468    3381 conn_opt.go:80] jsonrpc2: <-- notif: telemetry/event: {"event_name":"cloudcode.aipp.languageserver.conversation.suggestions","event_data":{},"metadata":{"config_use_cloudcode_api":"true","config_use_rest":"false","duration_ms":"0","update_channel":"prod","using_channel_defaults":"true"}}
 I0720 20:57:51.646519    3381 conn_opt.go:96] jsonrpc2: <-- result #4: conversation/suggestions: {"items":null}
 I0720 20:57:51.649403    3381 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 872 bytes>
+I0720 20:58:47.895915    3381 conn_opt.go:55] jsonrpc2: --> request #5: conversation/suggestions: {"documentUri":"git:/home/daypirate2/.bash_history?%7B%22path%22%3A%22%2Fhome%2Fdaypirate2%2F.bash_history%22%2C%22ref%22%3A%22e62d0871f764c5d2832a96a6bd780fcb7d8131aa%22%7D","selectedRange":{"start":{"line":0,"character":0},"end":{"line":0,"character":0},"active":{"line":0,"character":0},"anchor":{"line":0,"character":0}}}
+I0720 20:58:47.896201    3381 conn_opt.go:80] jsonrpc2: <-- notif: telemetry/event: {"event_name":"cloudcode.aipp.languageserver.conversation.suggestions","event_data":{},"metadata":{"config_use_cloudcode_api":"true","config_use_rest":"false","duration_ms":"0","update_channel":"prod","using_channel_defaults":"true"}}
+I0720 20:58:47.896281    3381 conn_opt.go:96] jsonrpc2: <-- result #5: conversation/suggestions: {"items":null}
+I0720 20:58:47.898200    3381 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 872 bytes>
+I0720 20:59:14.025043    3381 conn_opt.go:55] jsonrpc2: --> request #6: conversation/suggestions: {}
+I0720 20:59:14.025204    3381 conn_opt.go:80] jsonrpc2: <-- notif: telemetry/event: {"event_name":"cloudcode.aipp.languageserver.conversation.suggestions","event_data":{},"metadata":{"config_use_cloudcode_api":"true","config_use_rest":"false","duration_ms":"0","update_channel":"prod","using_channel_defaults":"true"}}
+I0720 20:59:14.025270    3381 conn_opt.go:96] jsonrpc2: <-- result #6: conversation/suggestions: {"items":null}
+I0720 20:59:14.026995    3381 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 872 bytes>
+I0720 21:07:16.068937    3381 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric
+I0720 21:17:16.068216    3381 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric

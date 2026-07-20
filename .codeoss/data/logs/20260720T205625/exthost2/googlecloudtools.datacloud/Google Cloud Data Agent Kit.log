@@ -63,3 +63,18 @@
 2026-07-20 20:57:13.280 [info] Verified that user is logged in to gcloud CLI and ADC.
 2026-07-20 20:57:33.707 [info] [OnboardingStatus] Updating context key 'gDataCloud.alreadyOnboarded' to true
 2026-07-20 20:57:33.779 [info] [OnboardingPlugin] Opening webview with route: ONBOARDING_GET_STARTED and panel ID: gDataCloud.onboarding.getStarted
+2026-07-20 20:59:03.708 [info] hasGcloud: true
+2026-07-20 20:59:04.614 [info] gcloud version: 576.0.0, isCompatible: true
+2026-07-20 20:59:04.614 [info] Checking if logged in to gcloud...
+2026-07-20 20:59:04.614 [info] Getting gcloud config internal...
+2026-07-20 20:59:04.632 [info] Executing: gcloud config config-helper --format json
+2026-07-20 20:59:05.645 [info] Executing: gcloud auth application-default print-access-token
+2026-07-20 20:59:06.532 [info] Verified that user is logged in to gcloud CLI and ADC.
+2026-07-20 21:07:38.411 [info] proactively refreshing access token
+2026-07-20 21:21:54.866 [info] Deactivating bigquery
+2026-07-20 21:21:54.866 [info] Deactivating GCS
+2026-07-20 21:21:54.866 [info] Deactivating Databases
+2026-07-20 21:21:54.866 [info] Deactivating Catalog Feature
+2026-07-20 21:21:54.866 [info] Deactivating dataproc
+2026-07-20 21:21:54.866 [info] SparkMonitorPlugin: Deactivating...
+2026-07-20 21:21:54.866 [info] Deactivating settings

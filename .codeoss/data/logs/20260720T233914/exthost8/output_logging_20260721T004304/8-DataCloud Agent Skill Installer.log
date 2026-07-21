@@ -1,0 +1,10 @@
+[2026-07-21T00:43:10.338Z] Activating Agent Skill Installer
+[2026-07-21T00:43:10.356Z] appName: Code OSS for Cloud Shell, ideType: 6
+[2026-07-21T00:43:10.356Z] Profile antigravity-ide is NOT active
+[2026-07-21T00:43:10.356Z] Profile antigravity is NOT active
+[2026-07-21T00:43:10.356Z] Profile jetski is NOT active
+[2026-07-21T00:43:10.356Z] Profile cursor is NOT active
+[2026-07-21T00:43:10.356Z] Profile copilot is NOT active
+[2026-07-21T00:43:10.356Z] Profile gemini-code-assist is active
+[2026-07-21T00:43:14.819Z] Checking skills for Gemini Code Assist in /home/daypirate2/.gemini/skills. Force=false
+[2026-07-21T00:43:14.821Z] Bundle checksum match. Skipping installation.

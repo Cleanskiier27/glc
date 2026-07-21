@@ -1,0 +1,13 @@
+2026-07-21 00:43:06.618 [info] [main] Log level: Info
+2026-07-21 00:43:06.618 [info] [main] Validating found git in: "git"
+2026-07-21 00:43:06.618 [info] [main] Using git "2.43.0" from "git"
+2026-07-21 00:43:06.618 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-21 00:43:06.618 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-21 00:43:52.819 [info] > git clone https://github.com/Cleanskiier27/Searches.git /home/daypirate2/Searches --progress [321ms]
+2026-07-21 00:43:52.819 [info] Cloning into '/home/daypirate2/Searches'...
+remote: Enumerating objects: 8, done.        
+remote: Counting objects:  12% (1/8)        remote: Counting objects:  25% (2/8)        remote: Counting objects:  37% (3/8)        remote: Counting objects:  50% (4/8)        remote: Counting objects:  62% (5/8)        remote: Counting objects:  75% (6/8)        remote: Counting objects:  87% (7/8)        remote: Counting objects: 100% (8/8)        remote: Counting objects: 100% (8/8), done.        
+remote: Compressing objects:  12% (1/8)        remote: Compressing objects:  25% (2/8)        remote: Compressing objects:  37% (3/8)        remote: Compressing objects:  50% (4/8)        remote: Compressing objects:  62% (5/8)        remote: Compressing objects:  75% (6/8)        remote: Compressing objects:  87% (7/8)        remote: Compressing objects: 100% (8/8)        remote: Compressing objects: 100% (8/8), done.        
+remote: Total 8 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)        
+Receiving objects:  12% (1/8)Receiving objects:  25% (2/8)Receiving objects:  37% (3/8)Receiving objects:  50% (4/8)Receiving objects:  62% (5/8)Receiving objects:  75% (6/8)Receiving objects:  87% (7/8)Receiving objects: 100% (8/8)Receiving objects: 100% (8/8), 5.48 KiB | 5.48 MiB/s, done.
+Resolving deltas:   0% (0/1)Resolving deltas: 100% (1/1)Resolving deltas: 100% (1/1), done.

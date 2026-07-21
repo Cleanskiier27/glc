@@ -1,0 +1,29 @@
+2026-07-21 00:44:09.113 [warning] Dir "/home/daypirate2/Searches/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:44:09.113 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 00:44:09.663 [info] Starting Environment refresh
+2026-07-21 00:44:09.745 [info] Python interpreter path: /bin/python
+2026-07-21 00:44:09.761 [info] > hatch env show --json
+2026-07-21 00:44:09.762 [info] cwd: .
+2026-07-21 00:44:09.785 [info] > conda info --json
+2026-07-21 00:44:10.573 [info] Starting Environment refresh
+2026-07-21 00:44:10.842 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-07-21 00:44:10.843 [info] Environments refresh paths discovered: 1181 milliseconds
+2026-07-21 00:44:10.888 [info] Environments refresh paths discovered: 315 milliseconds
+2026-07-21 00:44:10.940 [info] Environments refresh finished (event): 1278 milliseconds
+2026-07-21 00:44:10.940 [info] Environments refresh finished (event): 368 milliseconds
+2026-07-21 00:44:10.947 [info] Environment refresh took 1286 milliseconds
+2026-07-21 00:44:10.956 [info] Environment refresh took 384 milliseconds
+2026-07-21 00:44:10.974 [info] > pyenv which python
+2026-07-21 00:44:10.974 [info] cwd: .
+2026-07-21 00:44:13.924 [info] Starting Jedi language server for Searches.
+2026-07-21 00:44:33.682 [info] Searching for interpreters in posix paths locator
+2026-07-21 00:44:33.687 [info] Searching for pyenv environments
+2026-07-21 00:44:33.687 [info] Searching for conda environments
+2026-07-21 00:44:33.688 [info] Searching for global virtual environments
+2026-07-21 00:44:33.688 [info] Searching for custom virtual environments
+2026-07-21 00:44:33.688 [warning] Dir "/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:44:33.706 [info] > hatch env show --json
+2026-07-21 00:44:33.706 [info] cwd: ~/https-github.com-GoogleCloudPlatform-cloud-code-vscode
+2026-07-21 00:44:33.725 [info] pyenv is not installed
+2026-07-21 00:44:33.725 [info] Finished searching for pyenv environments: 41 milliseconds
+2026-07-21 00:44:33.725 [info] Finished searching for custom virtual envs: 40 milliseconds

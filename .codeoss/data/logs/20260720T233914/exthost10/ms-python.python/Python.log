@@ -1,0 +1,18 @@
+2026-07-21 00:44:37.963 [warning] Dir "/home/daypirate2/Searches/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:44:37.963 [warning] Dir "/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:44:38.648 [info] Not enabling terminal env var experiment in multiroot remote workspaces
+2026-07-21 00:44:39.887 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 00:44:39.902 [info] Python interpreter path: /bin/python
+2026-07-21 00:44:42.129 [info] > conda info --json
+2026-07-21 00:44:42.152 [info] Starting Environment refresh
+2026-07-21 00:44:42.164 [info] > hatch env show --json
+2026-07-21 00:44:42.164 [info] cwd: ~/Searches
+2026-07-21 00:44:46.834 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-07-21 00:44:46.834 [info] Environments refresh paths discovered: 4683 milliseconds
+2026-07-21 00:44:46.938 [info] Environments refresh finished (event): 4787 milliseconds
+2026-07-21 00:44:46.977 [info] Environment refresh took 4826 milliseconds
+2026-07-21 00:44:46.987 [info] > pyenv which python
+2026-07-21 00:44:46.987 [info] cwd: ~/Searches
+2026-07-21 00:44:47.543 [info] Not enabling terminal env var experiment in multiroot remote workspaces
+2026-07-21 00:44:49.233 [info] Starting Jedi language server for Searches.
+2026-07-21 00:45:02.907 [error] Unable to find workspace for given file

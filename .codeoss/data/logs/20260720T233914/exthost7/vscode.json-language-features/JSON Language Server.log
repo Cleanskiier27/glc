@@ -13,3 +13,7 @@
 2026-07-21 00:37:06.106 [info] read schema from vscode: vscode://schemas/workspaceConfig
 2026-07-21 00:37:06.220 [info] read schema from vscode: vscode://schemas/launch
 2026-07-21 00:37:06.220 [info] read schema from vscode: vscode://schemas/settings/workspace
+2026-07-21 00:43:57.186 [info] schema change detected vscode://schemas/settings/resourceLanguage
+2026-07-21 00:43:57.252 [info] schema change detected vscode://schemas/settings/workspace
+2026-07-21 00:44:34.260 [info] schema change detected vscode://schemas/settings/resourceLanguage
+2026-07-21 00:44:34.311 [info] schema change detected vscode://schemas/settings/workspace

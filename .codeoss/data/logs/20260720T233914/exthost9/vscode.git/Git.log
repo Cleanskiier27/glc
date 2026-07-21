@@ -1,0 +1,50 @@
+2026-07-21 00:44:01.644 [info] [main] Log level: Info
+2026-07-21 00:44:01.644 [info] [main] Validating found git in: "git"
+2026-07-21 00:44:01.644 [info] [main] Using git "2.43.0" from "git"
+2026-07-21 00:44:01.644 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-21 00:44:01.644 [info] > git rev-parse --show-toplevel [2ms]
+2026-07-21 00:44:01.644 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [5ms]
+2026-07-21 00:44:01.644 [info] [Model][openRepository] Opened repository (path): /home/daypirate2/Searches
+2026-07-21 00:44:01.644 [info] [Model][openRepository] Opened repository (real path): /home/daypirate2/Searches
+2026-07-21 00:44:01.644 [info] [Model][openRepository] Opened repository (kind): repository
+2026-07-21 00:44:01.644 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-21 00:44:01.644 [info] > git config --get commit.template [12ms]
+2026-07-21 00:44:01.645 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2026-07-21 00:44:01.649 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/Searches/.git/refs/remotes/origin/main'
+2026-07-21 00:44:01.651 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2026-07-21 00:44:03.814 [info] > git status -z -uall [2158ms]
+2026-07-21 00:44:03.845 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2183ms]
+2026-07-21 00:44:03.887 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [16ms]
+2026-07-21 00:44:03.961 [info] > git config --get commit.template [77ms]
+2026-07-21 00:44:04.393 [info] > git config --get --local branch.main.vscode-merge-base [499ms]
+2026-07-21 00:44:04.393 [warning] [Git][config] git config failed: Failed to execute git
+2026-07-21 00:44:04.482 [info] > git check-ignore -v -z --stdin [65ms]
+2026-07-21 00:44:04.483 [info] > git reflog main --grep-reflog=branch: Created from *. [73ms]
+2026-07-21 00:44:04.967 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [474ms]
+2026-07-21 00:44:04.979 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [556ms]
+2026-07-21 00:44:04.996 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/Searches/.git/refs/remotes/origin/main'
+2026-07-21 00:44:05.006 [info] > git check-ignore -v -z --stdin [435ms]
+2026-07-21 00:44:05.007 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [30ms]
+2026-07-21 00:44:05.640 [info] > git rev-parse refs/remotes/origin/main [645ms]
+2026-07-21 00:44:05.799 [info] > git show --textconv :gemini-code-1783594877515.sh [173ms]
+2026-07-21 00:44:05.799 [info] > git status -z -uall [153ms]
+2026-07-21 00:44:05.802 [info] > git ls-files --stage -- gemini-code-1783594877515.sh [169ms]
+2026-07-21 00:44:05.813 [info] > git config --add --local branch.main.vscode-merge-base origin/main [792ms]
+2026-07-21 00:44:05.815 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [163ms] (cancelled)
+2026-07-21 00:44:06.430 [info] > git cat-file -s e97e9c3bd27765749f2ee83e851d9d65928a3c8b [618ms]
+2026-07-21 00:44:06.470 [info] > git config --get commit.template [275ms]
+2026-07-21 00:44:09.281 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [140ms]
+2026-07-21 00:44:09.297 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/Searches/.git/refs/remotes/origin/main'
+2026-07-21 00:44:09.307 [info] > git check-ignore -v -z --stdin [84ms]
+2026-07-21 00:44:09.307 [info] > git rev-parse refs/remotes/origin/main [10ms]
+2026-07-21 00:44:09.335 [info] > git status -z -uall [15ms]
+2026-07-21 00:44:09.364 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [34ms]
+2026-07-21 00:44:09.521 [info] > git show --textconv :httpsgithub.commicrosoftvscode-extension-samplestreemainwebview-codicons-sample.sh [16ms]
+2026-07-21 00:44:09.521 [info] > git merge-base refs/heads/main refs/remotes/origin/main [137ms]
+2026-07-21 00:44:09.533 [info] > git merge-base refs/heads/main refs/remotes/origin/main [159ms]
+2026-07-21 00:44:09.556 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 385e36a1817b4b8f9495df213465927b7f952d70...refs/remotes/origin/main -- [23ms]
+2026-07-21 00:44:09.558 [info] > git ls-files --stage -- httpsgithub.commicrosoftvscode-extension-samplestreemainwebview-codicons-sample.sh [43ms]
+2026-07-21 00:44:09.571 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [75ms]
+2026-07-21 00:44:09.583 [info] > git cat-file -s 4082793b8a5363581092ee7bfc1d4866c5352686 [13ms]
+2026-07-21 00:44:09.583 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 385e36a1817b4b8f9495df213465927b7f952d70...refs/remotes/origin/main -- [38ms]
+2026-07-21 00:44:11.393 [info] > git merge-base main origin/main [12ms]

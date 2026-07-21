@@ -144,3 +144,16 @@ git stash apply
 git add houston
 git add <houston>
 git commit -m "add fingerprint update"
+git add .
+git commit -m "add fingerprint update"
+git remote add origin git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+git remote add bigtree git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+git init
+git commit -m "integrity"
+update gcloud
+gcloud auth login --no-launch-browser
+gcloud config set project Source.root
+gcloud config set projectgit@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+gcloud config set project git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+gcloud config set project PROJECT_ID
+gcloud config set project source-503021

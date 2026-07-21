@@ -1,0 +1,97 @@
+2026-07-21 01:39:42.846 [info] Extension host with pid 20819 started
+2026-07-21 01:39:42.846 [error] Error: EEXIST: file already exists, open '/home/daypirate2/.codeoss/data/User/workspaceStorage/73e49855/vscode.lock'
+2026-07-21 01:39:42.846 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/73e49855/vscode.lock': Could not acquire lock, checking if the file is stale.
+2026-07-21 01:39:42.848 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/73e49855/vscode.lock': The pid 17125 appears to be gone.
+2026-07-21 01:39:42.848 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/73e49855/vscode.lock': Deleting a stale lock.
+2026-07-21 01:39:42.871 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/73e49855/vscode.lock': Lock acquired.
+2026-07-21 01:39:43.104 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-07-21 01:39:43.106 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-07-21 01:39:43.107 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2026-07-21 01:39:43.107 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2026-07-21 01:39:43.862 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-07-21 01:39:43.894 [info] ExtensionService#_doActivateExtension ms-python.python, startup: true, activationEvent: 'workspaceContains:requirements.txt'
+2026-07-21 01:39:44.343 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-07-21 01:39:44.343 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-07-21 01:39:44.645 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2026-07-21 01:39:44.697 [info] ExtensionService#_doActivateExtension vscjava.vscode-maven, startup: true, activationEvent: 'workspaceContains:**/pom.xml'
+2026-07-21 01:39:46.040 [info] Eager extensions activated
+2026-07-21 01:39:46.040 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 01:39:46.041 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 01:39:46.041 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2026-07-21 01:39:46.041 [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2026-07-21 01:39:46.042 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 01:39:46.042 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 01:39:46.042 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 01:39:48.565 [info] ExtensionService#_doActivateExtension googlecloudtools.datacloud, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2026-07-21 01:39:53.292 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2026-07-21 01:39:54.350 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-21 01:39:54.351 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-21 01:39:54.351 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-21 01:40:00.630 [error] Error: unauthorized.
+	at e.Authorization.authorize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloud-shell/dist/extension.js:1:6008)
+	at async CA.h (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:41743)
+	at async t.CloudShellTheiaAuth.promptForOrGetAuth (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11648310)
+	at async t.CloudShellTheiaAuth.runAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11647974)
+	at async t.CloudShellTheiaAuth.checkAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11647890)
+	at async t.CloudShellAuthProvider.checkAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11612408)
+	at async t.setGcloudStateContext (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11591227)
+	at async /google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12392872
+	at async t.Startup.event (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12426491)
+	at async t.globalActivate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12392806)
+	at async t.Startup.event (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12426491)
+	at async /google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12390133
+	at async t.Startup.event (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12426491)
+	at async t.activate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12389969)
+	at async mA.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:13398)
+	at async mA.m (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:13361)
+	at async mA.l (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:12817) cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2026-07-21 01:40:00.631 [error] Error: unauthorized.
+	at e.Authorization.authorize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloud-shell/dist/extension.js:1:6008)
+	at async CA.h (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:41743)
+	at async t.CloudShellTheiaAuth.promptForOrGetAuth (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11648310)
+	at async t.CloudShellTheiaAuth.runAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11647974)
+	at async t.CloudShellTheiaAuth.checkAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11647890)
+	at async t.CloudShellAuthProvider.checkAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11612408)
+	at async t.setGcloudStateContext (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:11591227)
+	at async /google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12392872
+	at async t.Startup.event (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12426491)
+	at async t.globalActivate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12392806)
+	at async t.Startup.event (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12426491)
+	at async /google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12390133
+	at async t.Startup.event (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12426491)
+	at async t.activate (/google/devshell/editor/code-oss-for-cloud-shell/extensions/geminicodeassist/dist/extension.js:14:12389969)
+	at async mA.n (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:13398)
+	at async mA.m (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:13361)
+	at async mA.l (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:12817) cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2026-07-21 01:40:00.644 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 01:40:09.395 [error] Error: unauthorized.
+    at e.Authorization.authorize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloud-shell/dist/extension.js:1:6008)
+    at CA.h (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:41743)
+    at t.CloudShellTheiaAuth.promptForOrGetAuth (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13193970)
+    at t.CloudShellTheiaAuth.runAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13193634)
+    at t.CloudShellAuthProvider.getAccessToken (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13159270)
+    at t.ExperimentationService.updateExperimentationDataCache (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13233643)
+    at t.ExperimentationService.updateExperimentationData (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13233499)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13884415
+    at qe (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13884386)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13882749 cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2026-07-21 01:40:14.479 [error] Error: unauthorized.
+    at e.Authorization.authorize (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloud-shell/dist/extension.js:1:6008)
+    at CA.h (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:116:41743)
+    at t.CloudShellTheiaAuth.promptForOrGetAuth (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13193970)
+    at t.CloudShellTheiaAuth.runAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13193634)
+    at t.CloudShellAuthProvider.getAccessToken (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13159270)
+    at t.ExperimentationService.updateExperimentationDataCache (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13233643)
+    at t.ExperimentationService.updateExperimentationData (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13233499)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13884415
+    at qe (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13884386)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13882893 cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2026-07-21 01:40:15.482 [error] Error: Error calling Cloud Shell Theia Authorization. unauthorized.
+    at t.CloudShellTheiaAuth.runAuthorization (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13193730)
+    at t.CloudShellAuthProvider.getAccessToken (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13159270)
+    at t.ExperimentationService.updateExperimentationDataCache (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13233643)
+    at t.ExperimentationService.updateExperimentationData (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13233499)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13884415
+    at qe (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13884386)
+    at /google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:13882893
+2026-07-21 01:40:30.166 [info] ExtensionService#_doActivateExtension vscode.simple-browser, startup: false, activationEvent: 'onOpenExternalUri:https'

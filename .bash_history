@@ -139,3 +139,8 @@ git commit -m "integrity"
 git push -m
 git push -a
 git push -A "ok"
+git stash save "houston"
+git stash apply
+git add houston
+git add <houston>
+git commit -m "add fingerprint update"

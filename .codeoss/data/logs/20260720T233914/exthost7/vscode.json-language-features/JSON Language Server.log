@@ -10,3 +10,6 @@
 2026-07-21 00:35:22.287 [info] read schema from vscode: vscode://schemas/workbench-colors
 2026-07-21 00:35:22.299 [info] schema change detected vscode://schemas/settings/workspace
 2026-07-21 00:35:31.268 [info] schema change detected vscode://schemas/launch
+2026-07-21 00:37:06.106 [info] read schema from vscode: vscode://schemas/workspaceConfig
+2026-07-21 00:37:06.220 [info] read schema from vscode: vscode://schemas/launch
+2026-07-21 00:37:06.220 [info] read schema from vscode: vscode://schemas/settings/workspace

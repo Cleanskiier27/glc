@@ -1,0 +1,46 @@
+2026-07-21 02:32:20.979 [info] [main] Log level: Info
+2026-07-21 02:32:20.979 [info] [main] Validating found git in: "git"
+2026-07-21 02:32:20.979 [info] [main] Using git "2.43.0" from "git"
+2026-07-21 02:32:20.979 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-21 02:32:20.979 [info] > git rev-parse --show-toplevel [112ms]
+2026-07-21 02:32:20.979 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [21ms]
+2026-07-21 02:32:21.056 [info] [Model][openRepository] Opened repository (path): /home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode
+2026-07-21 02:32:21.056 [info] [Model][openRepository] Opened repository (real path): /home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode
+2026-07-21 02:32:21.056 [info] [Model][openRepository] Opened repository (kind): submodule
+2026-07-21 02:32:21.073 [info] > git config --get commit.template [8ms]
+2026-07-21 02:32:21.074 [info] > git rev-parse --show-toplevel [5ms]
+2026-07-21 02:32:21.084 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [5ms]
+2026-07-21 02:32:21.085 [info] > git rev-parse --show-toplevel [2ms]
+2026-07-21 02:32:21.089 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.git/refs/remotes/origin/bigtree'
+2026-07-21 02:32:21.094 [info] > git rev-parse refs/remotes/origin/bigtree [5ms]
+2026-07-21 02:32:21.109 [info] > git rev-parse --show-toplevel [16ms]
+2026-07-21 02:32:21.114 [info] > git status -z -uall [15ms]
+2026-07-21 02:32:21.115 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [8ms]
+2026-07-21 02:32:21.157 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [13ms]
+2026-07-21 02:32:21.163 [info] > git rev-parse --show-toplevel [50ms]
+2026-07-21 02:32:21.169 [info] > git config --get commit.template [12ms]
+2026-07-21 02:32:21.170 [info] > git config --get --local branch.bigtree.vscode-merge-base [7ms]
+2026-07-21 02:32:21.179 [info] > git rev-parse --show-toplevel [11ms]
+2026-07-21 02:32:21.180 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-21 02:32:21.181 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/bigtree refs/remotes/origin/bigtree [6ms]
+2026-07-21 02:32:21.188 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [8ms]
+2026-07-21 02:32:21.188 [info] > git merge-base refs/heads/bigtree refs/remotes/origin/bigtree [2ms]
+2026-07-21 02:32:21.197 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.git/refs/remotes/origin/bigtree'
+2026-07-21 02:32:21.197 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% a44b00ca1657f3797b4b7d2c14a25a02f41db203...refs/remotes/origin/bigtree -- [5ms]
+2026-07-21 02:32:21.198 [info] > git rev-parse refs/remotes/origin/bigtree [2ms]
+2026-07-21 02:32:21.211 [info] > git status -z -uall [9ms]
+2026-07-21 02:32:21.211 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [5ms]
+2026-07-21 02:32:21.280 [info] > git fetch [225ms]
+2026-07-21 02:32:21.288 [info] > git config --get commit.template [3ms]
+2026-07-21 02:32:21.296 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [4ms]
+2026-07-21 02:32:21.300 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.git/refs/remotes/origin/bigtree'
+2026-07-21 02:32:21.312 [info] > git rev-parse refs/remotes/origin/bigtree [13ms]
+2026-07-21 02:32:21.323 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-07-21 02:32:21.326 [info] > git status -z -uall [11ms]
+2026-07-21 02:32:22.802 [info] > git check-ignore -v -z --stdin [27ms]
+2026-07-21 02:32:22.803 [info] > git config --get commit.template [19ms]
+2026-07-21 02:32:22.810 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [2ms]
+2026-07-21 02:32:22.814 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.git/refs/remotes/origin/bigtree'
+2026-07-21 02:32:22.815 [info] > git rev-parse refs/remotes/origin/bigtree [1ms]
+2026-07-21 02:32:22.827 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2026-07-21 02:32:22.828 [info] > git status -z -uall [8ms]

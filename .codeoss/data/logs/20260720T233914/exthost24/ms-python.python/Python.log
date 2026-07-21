@@ -1,0 +1,3 @@
+2026-07-21 03:24:54.866 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 03:24:55.518 [info] Python interpreter path: /bin/python
+2026-07-21 03:24:55.550 [info] > conda info --json

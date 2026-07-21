@@ -157,3 +157,22 @@ gcloud config set projectgit@main-instance-159147526315-ssh.us-central1.sourcema
 gcloud config set project git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
 gcloud config set project PROJECT_ID
 gcloud config set project source-503021
+git add .
+git commit -m "integrity"
+git push -m main
+source-503021
+git remote add origin git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+git push -u origin main
+gcloud config set project source-root-7076
+git init
+git checkout -b main
+git add README.md
+git commit -m "first commit"
+git remote add origin git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+git push -u origin main
+git remote add origin git@main-instance-159147526315-ssh.us-central1.sourcemanager.dev:source-root-7076/source-root.git
+git push -u origin main
+gcloud auth login && gcloud auth application-default login
+4/0AXEQxIC3xmiIPOAb_qrGelavaTd9E0_sdb2bVcZtzyXs0XbLRC_1AzD7vt9IqQ4tmOWP1Q
+gcloud auth login && gcloud auth application-default login
+git init

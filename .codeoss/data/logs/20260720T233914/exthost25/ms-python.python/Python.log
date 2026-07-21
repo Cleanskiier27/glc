@@ -1,0 +1,10 @@
+2026-07-21 03:25:29.134 [warning] Dir "/home/daypirate2/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 03:25:32.247 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 03:25:32.287 [info] > conda info --json
+2026-07-21 03:25:32.292 [info] Python interpreter path: /bin/python
+2026-07-21 03:25:32.380 [info] > pyenv which python
+2026-07-21 03:25:32.380 [info] cwd: .
+2026-07-21 03:25:35.431 [info] Starting Jedi language server for daypirate2.
+2026-07-21 03:25:36.062 [error] Unable to find workspace for given file
+2026-07-21 03:25:37.065 [error] Unable to find workspace for given file
+2026-07-21 03:25:37.514 [error] Unable to find workspace for given file

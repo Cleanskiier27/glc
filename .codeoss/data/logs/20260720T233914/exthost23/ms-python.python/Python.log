@@ -1,0 +1,11 @@
+2026-07-21 03:22:17.533 [warning] Dir "/home/daypirate2/Searches/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 03:22:17.533 [warning] Dir "/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 03:22:18.079 [info] Not enabling terminal env var experiment in multiroot remote workspaces
+2026-07-21 03:22:18.097 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 03:22:18.707 [info] Not enabling terminal env var experiment in multiroot remote workspaces
+2026-07-21 03:22:18.727 [info] Python interpreter path: /bin/python
+2026-07-21 03:22:22.660 [info] > conda info --json
+2026-07-21 03:22:22.708 [info] > pyenv which python
+2026-07-21 03:22:22.708 [info] cwd: ~/Searches
+2026-07-21 03:22:23.008 [info] Not enabling terminal env var experiment in multiroot remote workspaces
+2026-07-21 03:22:25.123 [info] Starting Jedi language server for Searches.

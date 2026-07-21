@@ -1,0 +1,4 @@
+2026-07-21 02:26:43.550 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 02:26:43.618 [info] > conda info --json
+2026-07-21 02:26:43.627 [info] Python interpreter path: /bin/python
+2026-07-21 02:26:45.002 [info] Starting Jedi language server for default.

@@ -1,0 +1,23 @@
+{
+    "window.menuBarVisibility": "classic",
+    "window.commandCenter": true,
+    "http.proxySupport": "off",
+    "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+    "redhat.telemetry.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "window.autoDetectColorScheme": true,
+    "chat.disableAIFeatures": true,
+    "http.systemCertificatesNode": true,
+    "cloudcode.beta.enableBigqueryExplorer": false,
+    "terminal.integrated.defaultProfile.linux": "Google Cloud Shell",
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "google.cloud.project": "source-503021",
+    "google.cloud.billingQuotaProject": "source-503021",
+    "jupyter.runStartupCommands": [
+        "import bigframes",
+        "%load_ext bigframes",
+        "bigframes.options.bigquery.project = \"source-503021\"",
+        "bigframes.options.bigquery.application_name = \"datacloud.code oss for cloud shell\""
+    ]
+}

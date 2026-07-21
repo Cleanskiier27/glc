@@ -86,3 +86,10 @@ to select an already authenticated account to use.
 
 2026-07-21 01:39:59.218 [info] Internal config has no access token.
 2026-07-21 01:39:59.258 [info] MCP config plugin: MCP config key: mcpServers
+2026-07-21 02:03:07.631 [info] Deactivating bigquery
+2026-07-21 02:03:07.631 [info] Deactivating GCS
+2026-07-21 02:03:07.631 [info] Deactivating Databases
+2026-07-21 02:03:07.631 [info] Deactivating Catalog Feature
+2026-07-21 02:03:07.631 [info] Deactivating dataproc
+2026-07-21 02:03:07.631 [info] SparkMonitorPlugin: Deactivating...
+2026-07-21 02:03:07.631 [info] Deactivating settings

@@ -1,0 +1,7 @@
+2026-07-21 02:32:20.978 [warning] Dir "/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 02:32:22.767 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 02:32:22.779 [info] Python interpreter path: /bin/python
+2026-07-21 02:32:25.064 [info] > conda info --json
+2026-07-21 02:32:25.098 [info] > pyenv which python
+2026-07-21 02:32:25.098 [info] cwd: .
+2026-07-21 02:32:27.595 [info] Starting Jedi language server for https-github.com-GoogleCloudPlatform-cloud-code-vscode.

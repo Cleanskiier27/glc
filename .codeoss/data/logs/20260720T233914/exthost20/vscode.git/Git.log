@@ -1,0 +1,42 @@
+2026-07-21 03:21:25.828 [info] [main] Log level: Info
+2026-07-21 03:21:25.828 [info] [main] Validating found git in: "git"
+2026-07-21 03:21:25.828 [info] [main] Using git "2.43.0" from "git"
+2026-07-21 03:21:25.828 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-21 03:21:25.828 [info] > git rev-parse --show-toplevel [1452ms]
+2026-07-21 03:21:25.830 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [5ms]
+2026-07-21 03:21:28.519 [info] [Model][openRepository] Opened repository (path): /home/daypirate2/Searches
+2026-07-21 03:21:28.519 [info] [Model][openRepository] Opened repository (real path): /home/daypirate2/Searches
+2026-07-21 03:21:28.519 [info] [Model][openRepository] Opened repository (kind): submodule
+2026-07-21 03:21:28.522 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-21 03:21:28.540 [info] > git config --get commit.template [7ms]
+2026-07-21 03:21:28.567 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [13ms]
+2026-07-21 03:21:28.575 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/Searches/.git/refs/remotes/origin/main'
+2026-07-21 03:21:28.577 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2026-07-21 03:21:28.619 [info] > git status -z -uall [34ms]
+2026-07-21 03:21:28.621 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [28ms]
+2026-07-21 03:21:29.036 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [384ms]
+2026-07-21 03:21:29.056 [info] > git config --get commit.template [27ms]
+2026-07-21 03:21:29.083 [info] > git fetch [564ms]
+2026-07-21 03:21:29.130 [info] > git config --get --local branch.main.vscode-merge-base [87ms]
+2026-07-21 03:21:29.443 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [298ms]
+2026-07-21 03:21:29.464 [info] > git config --get commit.template [356ms]
+2026-07-21 03:21:29.501 [info] > git check-ignore -v -z --stdin [19ms]
+2026-07-21 03:21:29.502 [info] > git merge-base refs/heads/main refs/remotes/origin/main [40ms]
+2026-07-21 03:21:29.515 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [359ms]
+2026-07-21 03:21:29.573 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/Searches/.git/refs/remotes/origin/main'
+2026-07-21 03:21:29.574 [info] > git check-ignore -v -z --stdin [77ms]
+2026-07-21 03:21:29.583 [info] > git rev-parse refs/remotes/origin/main [10ms]
+2026-07-21 03:21:29.603 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [70ms]
+2026-07-21 03:21:29.604 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 385e36a1817b4b8f9495df213465927b7f952d70...refs/remotes/origin/main -- [88ms]
+2026-07-21 03:21:29.623 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/Searches/.git/refs/remotes/origin/main'
+2026-07-21 03:21:29.640 [info] > git merge-base refs/heads/main refs/remotes/origin/main [45ms]
+2026-07-21 03:21:29.704 [info] > git show --textconv :httpsgithub.commicrosoftvscode-extension-samplestreemainwebview-codicons-sample.sh [16ms]
+2026-07-21 03:21:29.704 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% 385e36a1817b4b8f9495df213465927b7f952d70...refs/remotes/origin/main -- [45ms]
+2026-07-21 03:21:29.706 [info] > git rev-parse refs/remotes/origin/main [83ms]
+2026-07-21 03:21:29.898 [info] > git status -z -uall [182ms]
+2026-07-21 03:21:29.898 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [169ms]
+2026-07-21 03:21:29.904 [info] > git ls-files --stage -- httpsgithub.commicrosoftvscode-extension-samplestreemainwebview-codicons-sample.sh [202ms]
+2026-07-21 03:21:29.956 [info] > git cat-file -s 4082793b8a5363581092ee7bfc1d4866c5352686 [40ms]
+2026-07-21 03:21:30.357 [info] > git ls-files --stage -- httpsgithub.commicrosoftvscode-extension-samplestreemainwebview-codicons-sample.sh [117ms]
+2026-07-21 03:21:30.496 [info] > git cat-file -s 4082793b8a5363581092ee7bfc1d4866c5352686 [123ms]
+2026-07-21 03:21:30.740 [info] > git show --textconv :httpsgithub.commicrosoftvscode-extension-samplestreemainwebview-codicons-sample.sh [56ms]

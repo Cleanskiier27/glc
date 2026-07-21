@@ -1,0 +1,18 @@
+2026-07-21 00:01:47.880 [warning] Dir "/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:01:48.333 [info] Starting Environment refresh
+2026-07-21 00:01:49.533 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 00:01:49.551 [info] > hatch env show --json
+2026-07-21 00:01:49.551 [info] cwd: .
+2026-07-21 00:01:49.553 [info] Python interpreter path: /bin/python
+2026-07-21 00:01:49.593 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-07-21 00:01:49.595 [info] Environments refresh paths discovered: 1263 milliseconds
+2026-07-21 00:01:49.645 [info] Environments refresh finished (event): 1313 milliseconds
+2026-07-21 00:01:49.649 [info] Environment refresh took 1318 milliseconds
+2026-07-21 00:01:51.777 [info] > conda info --json
+2026-07-21 00:01:52.228 [info] Starting Environment refresh
+2026-07-21 00:01:57.780 [info] Environments refresh finished (event): 5553 milliseconds
+2026-07-21 00:01:57.780 [info] Environments refresh paths discovered: 5553 milliseconds
+2026-07-21 00:01:57.782 [info] Environment refresh took 5555 milliseconds
+2026-07-21 00:01:57.794 [info] > pyenv which python
+2026-07-21 00:01:57.794 [info] cwd: .
+2026-07-21 00:01:59.376 [info] Starting Jedi language server for https-github.com-GoogleCloudPlatform-cloud-code-vscode.

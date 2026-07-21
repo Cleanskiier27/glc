@@ -1,0 +1,19 @@
+2026-07-21 00:30:56.201 [warning] Dir "/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:31:01.242 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-07-21 00:31:01.286 [info] > conda info --json
+2026-07-21 00:31:01.300 [info] Python interpreter path: /bin/python
+2026-07-21 00:31:03.154 [info] > pyenv which python
+2026-07-21 00:31:03.154 [info] cwd: .
+2026-07-21 00:31:09.998 [info] Starting Jedi language server for https-github.com-GoogleCloudPlatform-cloud-code-vscode.
+2026-07-21 00:32:28.969 [error] Unable to find workspace for given file
+2026-07-21 00:32:29.560 [error] Unable to find workspace for given file
+2026-07-21 00:34:08.956 [info] Searching for interpreters in posix paths locator
+2026-07-21 00:34:08.984 [info] Searching for pyenv environments
+2026-07-21 00:34:08.984 [info] Searching for conda environments
+2026-07-21 00:34:08.985 [info] Searching for global virtual environments
+2026-07-21 00:34:08.985 [info] Searching for custom virtual environments
+2026-07-21 00:34:08.985 [warning] Dir "/home/daypirate2/.pixi/envs" is not watchable (directory does not exist)
+2026-07-21 00:34:09.017 [info] > hatch env show --json
+2026-07-21 00:34:09.017 [info] cwd: ~/https-github.com-GoogleCloudPlatform-cloud-code-vscode
+2026-07-21 00:34:09.017 [info] > hatch env show --json
+2026-07-21 00:34:09.017 [info] cwd: ~

@@ -1,0 +1,31 @@
+2026-07-21 00:30:40.342 [info] Extension host with pid 8033 started
+2026-07-21 00:30:40.355 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/-3657ce89/vscode.lock': Lock acquired.
+2026-07-21 00:30:40.567 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-07-21 00:30:40.569 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-07-21 00:30:40.759 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-07-21 00:30:40.781 [info] ExtensionService#_doActivateExtension ms-python.python, startup: true, activationEvent: 'workspaceContains:requirements.txt'
+2026-07-21 00:30:41.144 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-07-21 00:30:41.145 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-07-21 00:30:41.343 [info] ExtensionService#_doActivateExtension vscjava.vscode-maven, startup: true, activationEvent: 'workspaceContains:**/pom.xml'
+2026-07-21 00:30:42.051 [info] Eager extensions activated
+2026-07-21 00:30:42.051 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 00:30:42.052 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 00:30:42.052 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2026-07-21 00:30:42.052 [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2026-07-21 00:30:42.053 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 00:30:42.053 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 00:30:42.054 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 00:30:44.433 [info] ExtensionService#_doActivateExtension googlecloudtools.datacloud, startup: false, activationEvent: 'onStartupFinished', root cause: googlecloudtools.cloudcode
+2026-07-21 00:30:45.856 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2026-07-21 00:30:46.260 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-21 00:30:46.281 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-21 00:30:46.281 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-21 00:30:50.148 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2026-07-21 00:30:53.648 [info] Extension host terminating: received terminate message from renderer
+2026-07-21 00:30:53.650 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/-3657ce89/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2026-07-21 00:30:59.663 [error] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at DE (file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:262:6356)
+    at file:///google/devshell/editor/code-oss-for-cloud-shell/out/vs/workbench/api/node/extensionHostProcess.js:262:5282
+2026-07-21 00:30:59.663 [info] Lock '/home/daypirate2/.codeoss/data/User/workspaceStorage/-3657ce89/vscode.lock': The lock was lost unexpectedly.
+2026-07-21 00:30:59.912 [info] Extension host with pid 8033 exiting with code 0

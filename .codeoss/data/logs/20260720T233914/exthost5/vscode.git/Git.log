@@ -1,0 +1,34 @@
+2026-07-21 00:30:41.534 [info] [main] Log level: Info
+2026-07-21 00:30:41.534 [info] [main] Validating found git in: "git"
+2026-07-21 00:30:41.534 [info] [main] Using git "2.43.0" from "git"
+2026-07-21 00:30:41.534 [info] [Model][doInitialScan] Initial repository scan started
+2026-07-21 00:30:41.534 [info] > git rev-parse --show-toplevel [3ms]
+2026-07-21 00:30:41.534 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [33ms]
+2026-07-21 00:30:41.597 [info] [Model][openRepository] Opened repository (path): /home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode
+2026-07-21 00:30:41.597 [info] [Model][openRepository] Opened repository (real path): /home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode
+2026-07-21 00:30:41.597 [info] [Model][openRepository] Opened repository (kind): repository
+2026-07-21 00:30:41.613 [info] > git config --get commit.template [9ms]
+2026-07-21 00:30:41.614 [info] > git rev-parse --show-toplevel [6ms]
+2026-07-21 00:30:41.624 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [6ms]
+2026-07-21 00:30:41.626 [info] > git rev-parse --show-toplevel [2ms]
+2026-07-21 00:30:41.630 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.git/refs/remotes/origin/bigtree'
+2026-07-21 00:30:41.635 [info] > git rev-parse refs/remotes/origin/bigtree [5ms]
+2026-07-21 00:30:41.650 [info] > git rev-parse --show-toplevel [16ms]
+2026-07-21 00:30:41.657 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [9ms]
+2026-07-21 00:30:41.660 [info] > git rev-parse --show-toplevel [4ms]
+2026-07-21 00:30:41.668 [info] > git rev-parse --show-toplevel [2ms]
+2026-07-21 00:30:41.668 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-07-21 00:30:41.728 [info] > git status -z -uall [87ms]
+2026-07-21 00:30:41.766 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [14ms]
+2026-07-21 00:30:41.774 [info] > git config --get commit.template [8ms]
+2026-07-21 00:30:41.775 [info] > git config --get --local branch.bigtree.vscode-merge-base [4ms]
+2026-07-21 00:30:41.783 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/bigtree refs/remotes/origin/bigtree [5ms]
+2026-07-21 00:30:41.790 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/bigtree refs/remotes/bigtree [8ms]
+2026-07-21 00:30:41.795 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/daypirate2/https-github.com-GoogleCloudPlatform-cloud-code-vscode/.git/refs/remotes/origin/bigtree'
+2026-07-21 00:30:41.795 [info] > git merge-base refs/heads/bigtree refs/remotes/origin/bigtree [7ms]
+2026-07-21 00:30:41.800 [info] > git rev-parse refs/remotes/origin/bigtree [6ms]
+2026-07-21 00:30:41.809 [info] > git diff --raw --numstat --diff-filter=ADMR -z --find-renames=50% a44b00ca1657f3797b4b7d2c14a25a02f41db203...refs/remotes/origin/bigtree -- [10ms]
+2026-07-21 00:30:41.812 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [4ms]
+2026-07-21 00:30:41.885 [info] > git status -z -uall [80ms]
+2026-07-21 00:30:43.384 [info] > git check-ignore -v -z --stdin [6ms]
+2026-07-21 00:30:46.832 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [1006ms]

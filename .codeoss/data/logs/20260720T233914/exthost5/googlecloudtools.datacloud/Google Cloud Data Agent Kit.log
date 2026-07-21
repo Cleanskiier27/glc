@@ -1,0 +1,56 @@
+2026-07-21 00:30:53.640 [info] [OnboardingStatus] Updating context key 'gDataCloud.alreadyOnboarded' to true
+2026-07-21 00:30:53.640 [info] Getting gcloud config internal...
+2026-07-21 00:30:53.640 [info] Checking for gcloud binary path...
+2026-07-21 00:30:53.640 [info] Executing: which gcloud
+2026-07-21 00:30:53.640 [info] Getting gcloud config internal...
+2026-07-21 00:30:53.640 [info] Checking for gcloud binary path...
+2026-07-21 00:30:53.640 [info] Executing: which gcloud
+2026-07-21 00:30:53.640 [info] Checking for gcloud binary path...
+2026-07-21 00:30:53.640 [info] Executing: which gcloud
+2026-07-21 00:30:53.640 [info] Checking for gcloud binary path...
+2026-07-21 00:30:53.640 [info] Executing: which gcloud
+2026-07-21 00:30:53.640 [info] hasGcloud: true
+2026-07-21 00:30:53.640 [info] Syncing gcloud settings to extension
+2026-07-21 00:30:53.640 [info] hasGcloud: true
+2026-07-21 00:30:53.640 [info] Getting gcloud config internal...
+2026-07-21 00:30:53.640 [info] Executing: gcloud config config-helper --format json
+2026-07-21 00:30:53.640 [info] hasGcloud: true
+2026-07-21 00:30:53.640 [info] Executing: gcloud config config-helper --format json
+2026-07-21 00:30:53.640 [info] Executing: gcloud config config-helper --format json
+2026-07-21 00:30:53.640 [info] Activating bigquery
+2026-07-21 00:30:53.640 [info] ConversationalAnalyticsPlugin activated
+2026-07-21 00:30:53.640 [info] ConversationalAnalyticsPlugin: activate finished
+2026-07-21 00:30:53.640 [info] Activating Databases
+2026-07-21 00:30:53.640 [info] Activating Catalog Feature
+2026-07-21 00:30:53.640 [info] Activating dataplex universal catalog
+2026-07-21 00:30:53.640 [info] Activating dataproc
+2026-07-21 00:30:53.640 [info] Activating spark resource tree
+2026-07-21 00:30:53.640 [info] SparkMonitorPlugin: Activating...
+2026-07-21 00:30:53.640 [info] SparkMonitorPlugin: State change - experiment: true, setting: true, overall: true
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.264Z] Activating Agent Skill Installer
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] appName: Code OSS for Cloud Shell, ideType: 6
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] Profile antigravity-ide is NOT active
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] Profile antigravity is NOT active
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] Profile jetski is NOT active
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] Profile cursor is NOT active
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] Profile copilot is NOT active
+2026-07-21 00:30:53.640 [info] [2026-07-21T00:30:47.295Z] Profile gemini-code-assist is active
+2026-07-21 00:30:53.640 [info] [MCP Registry] Server 'notebooks' listening on IPC socket: /tmp/datacloud-mcp-notebooks-codeossforcloudshell.sock
+2026-07-21 00:30:53.640 [info] [MCP Registry] Server 'visualization' listening on IPC socket: /tmp/datacloud-mcp-visualization-codeossforcloudshell.sock
+2026-07-21 00:30:53.640 [info] Checking if identities match...Fetching ADC account name...
+2026-07-21 00:30:53.640 [info] gcloud version: 576.0.0, isCompatible: true
+2026-07-21 00:30:53.640 [info] Checking if logged in to gcloud...
+2026-07-21 00:30:53.640 [info] Getting gcloud config internal...
+2026-07-21 00:30:53.640 [info] Executing: gcloud config config-helper --format json
+2026-07-21 00:30:53.640 [info] MCP config plugin: MCP config key: mcpServers
+2026-07-21 00:30:53.640 [info] MCP config plugin: ideType: 6
+2026-07-21 00:30:59.056 [info] Deactivating bigquery
+2026-07-21 00:30:59.056 [info] Deactivating GCS
+2026-07-21 00:30:59.056 [info] Deactivating Databases
+2026-07-21 00:30:59.056 [info] Deactivating Catalog Feature
+2026-07-21 00:30:59.056 [info] Deactivating dataproc
+2026-07-21 00:30:59.056 [info] SparkMonitorPlugin: Deactivating...
+2026-07-21 00:30:59.056 [info] Deactivating settings
+2026-07-21 00:30:59.502 [info] Executing: gcloud auth application-default print-access-token
+2026-07-21 00:30:59.843 [info] MCP config plugin: MCP config key: mcpServers
+2026-07-21 00:30:59.847 [info] SparkMonitorPlugin: Wrote filter config file with value: true

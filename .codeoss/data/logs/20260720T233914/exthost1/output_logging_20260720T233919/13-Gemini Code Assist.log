@@ -165,3 +165,13 @@ I0720 23:42:47.881052    2611 conn_opt.go:80] jsonrpc2: <-- notif: telemetry/eve
 I0720 23:42:47.881132    2611 conn_opt.go:96] jsonrpc2: <-- result #5: conversation/suggestions: {"items":null}
 I0720 23:42:47.884691    2611 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 872 bytes>
 I0720 23:49:47.417286    2611 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric
+I0720 23:57:15.571501    2611 conn_opt.go:55] jsonrpc2: --> request #6: conversation/suggestions: {}
+I0720 23:57:15.571804    2611 conn_opt.go:80] jsonrpc2: <-- notif: telemetry/event: {"event_name":"cloudcode.aipp.languageserver.conversation.suggestions","event_data":{},"metadata":{"config_use_cloudcode_api":"true","config_use_rest":"false","duration_ms":"0","update_channel":"prod","using_channel_defaults":"true"}}
+I0720 23:57:15.571879    2611 conn_opt.go:96] jsonrpc2: <-- result #6: conversation/suggestions: {"items":null}
+I0720 23:57:15.599223    2611 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 872 bytes>
+I0720 23:57:16.540044    2611 conn_opt.go:55] jsonrpc2: --> request #7: conversation/suggestions: {"documentUri":"git:/home/daypirate2/.bash_history?%7B%22path%22%3A%22%2Fhome%2Fdaypirate2%2F.bash_history%22%2C%22ref%22%3A%229eb291d0a41e765968cfbca59696f68897327bd4%22%7D","selectedRange":{"start":{"line":66,"character":0},"end":{"line":66,"character":0},"active":{"line":66,"character":0},"anchor":{"line":66,"character":0}}}
+I0720 23:57:16.540227    2611 conn_opt.go:80] jsonrpc2: <-- notif: telemetry/event: {"event_name":"cloudcode.aipp.languageserver.conversation.suggestions","event_data":{},"metadata":{"config_use_cloudcode_api":"true","config_use_rest":"false","duration_ms":"0","update_channel":"prod","using_channel_defaults":"true"}}
+I0720 23:57:16.540304    2611 conn_opt.go:96] jsonrpc2: <-- result #7: conversation/suggestions: {"items":null}
+I0720 23:57:16.542480    2611 conn_opt.go:53] jsonrpc2: --> notif: telemetry/sendEvents: <truncated 872 bytes>
+I0720 23:59:47.417007    2611 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric
+I0721 00:09:47.416883    2611 life_cycle.go:454] aiCharsReportEvery: compute and send aicharsreport metric

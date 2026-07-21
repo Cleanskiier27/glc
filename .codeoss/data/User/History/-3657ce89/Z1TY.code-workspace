@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "daypirate2",
+			"uri": "vscode-remote://970-cs-a06f9096-8eff-4285-8623-af4cf03e51df.cs-us-central1-pits.cloudshell.dev/home/daypirate2"
+		}
+	],
+	"remoteAuthority": "970-cs-a06f9096-8eff-4285-8623-af4cf03e51df.cs-us-central1-pits.cloudshell.dev",
+	"settings": {
+		"files.exclude": {
+			"**/.*": true
+		}
+	}
+}

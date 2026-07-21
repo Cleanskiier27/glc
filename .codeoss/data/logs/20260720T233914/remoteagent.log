@@ -9,3 +9,46 @@
 2026-07-20 23:39:17.912 [info] [127.0.0.1][e0b969a6][ExtensionHostConnection] <1492> Launched Extension Host Process.
 2026-07-20 23:39:18.596 [info] [127.0.0.1][e0b969a6][ExtensionHostConnection] <1492> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
 
+2026-07-20 23:57:49.046 [info] [127.0.0.1][c49f3831][ManagementConnection] New connection established.
+2026-07-20 23:57:49.102 [info] [127.0.0.1][817f06bb][ExtensionHostConnection] New connection established.
+2026-07-20 23:57:49.106 [info] [127.0.0.1][817f06bb][ExtensionHostConnection] <5501> Launched Extension Host Process.
+2026-07-20 23:57:49.594 [info] [127.0.0.1][817f06bb][ExtensionHostConnection] <5501> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-07-21 00:01:43.445 [info] [127.0.0.1][c49f3831][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-07-21 00:01:43.854 [info] [127.0.0.1][817f06bb][ExtensionHostConnection] <5501> Extension Host Process exited with code: 0, signal: null.
+2026-07-21 00:01:44.782 [info] [127.0.0.1][6c9d162e][ManagementConnection] New connection established.
+2026-07-21 00:01:45.024 [info] [127.0.0.1][f93fd98e][ExtensionHostConnection] New connection established.
+2026-07-21 00:01:45.172 [info] [127.0.0.1][f93fd98e][ExtensionHostConnection] <6239> Launched Extension Host Process.
+2026-07-21 00:01:45.709 [info] [127.0.0.1][f93fd98e][ExtensionHostConnection] <6239> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-07-21 00:02:29.805 [error] Error: EISDIR: illegal operation on a directory, read
+2026-07-21 00:02:34.115 [info] [127.0.0.1][6c9d162e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-07-21 00:02:39.646 [info] [127.0.0.1][f93fd98e][ExtensionHostConnection] <6239> Extension Host Process exited with code: 0, signal: null.
+2026-07-21 00:12:32.269 [info] [127.0.0.1][b6b776e6][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-07-21 00:12:32.847 [info] [127.0.0.1][e0b969a6][ExtensionHostConnection] <1492> Extension Host Process exited with code: 0, signal: null.
+2026-07-21 00:29:38.294 [info] [127.0.0.1][3b01c32a][ManagementConnection] New connection established.
+2026-07-21 00:29:38.334 [info] [127.0.0.1][9aaccaf4][ExtensionHostConnection] New connection established.
+2026-07-21 00:29:38.341 [info] [127.0.0.1][9aaccaf4][ExtensionHostConnection] <7186> Launched Extension Host Process.
+2026-07-21 00:29:39.246 [info] [127.0.0.1][9aaccaf4][ExtensionHostConnection] <7186> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-07-21 00:30:37.173 [info] [127.0.0.1][3b01c32a][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-07-21 00:30:38.243 [info] [127.0.0.1][9bc82792][ManagementConnection] New connection established.
+2026-07-21 00:30:38.290 [info] [127.0.0.1][1a678488][ExtensionHostConnection] New connection established.
+2026-07-21 00:30:38.309 [info] [127.0.0.1][1a678488][ExtensionHostConnection] <8033> Launched Extension Host Process.
+2026-07-21 00:30:39.128 [info] [127.0.0.1][1a678488][ExtensionHostConnection] <8033> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-07-21 00:30:44.224 [info] [127.0.0.1][9aaccaf4][ExtensionHostConnection] <7186> Extension Host Process exited with code: 0, signal: null.
+2026-07-21 00:30:51.749 [info] [127.0.0.1][9bc82792][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-07-21 00:30:52.578 [info] [127.0.0.1][ca552b45][ManagementConnection] New connection established.
+2026-07-21 00:30:52.662 [info] [127.0.0.1][c91c7a95][ExtensionHostConnection] New connection established.
+2026-07-21 00:30:52.667 [info] [127.0.0.1][c91c7a95][ExtensionHostConnection] <8608> Launched Extension Host Process.
+2026-07-21 00:30:53.450 [info] [127.0.0.1][c91c7a95][ExtensionHostConnection] <8608> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-07-21 00:31:00.306 [info] [127.0.0.1][1a678488][ExtensionHostConnection] <8033> Extension Host Process exited with code: 0, signal: null.
+2026-07-21 00:34:08.943 [info] [127.0.0.1][ca552b45][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-07-21 00:34:09.499 [info] [127.0.0.1][c91c7a95][ExtensionHostConnection] <8608> Extension Host Process exited with code: 0, signal: null.
+2026-07-21 00:34:10.046 [info] [127.0.0.1][56f2945b][ManagementConnection] New connection established.
+2026-07-21 00:34:10.131 [info] [127.0.0.1][71341141][ExtensionHostConnection] New connection established.
+2026-07-21 00:34:10.135 [info] [127.0.0.1][71341141][ExtensionHostConnection] <10063> Launched Extension Host Process.
+2026-07-21 00:34:10.805 [info] [127.0.0.1][71341141][ExtensionHostConnection] <10063> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+

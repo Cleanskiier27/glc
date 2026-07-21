@@ -76,3 +76,9 @@
 2026-07-21 03:25:39.767 [info] MCP config plugin: MCP config key: mcpServers
 2026-07-21 03:25:39.956 [info] SparkMonitorPlugin: Wrote filter config file with value: true
 2026-07-21 03:25:40.345 [info] hasGcloud: true
+2026-07-21 03:25:42.978 [info] gcloud version: 576.0.0, isCompatible: true
+2026-07-21 03:25:42.978 [info] Checking if logged in to gcloud...
+2026-07-21 03:25:42.978 [info] Getting gcloud config internal...
+2026-07-21 03:25:42.996 [info] Executing: gcloud config config-helper --format json
+2026-07-21 03:25:45.171 [info] Executing: gcloud auth application-default print-access-token
+2026-07-21 03:25:46.876 [info] Verified that user is logged in to gcloud CLI and ADC.

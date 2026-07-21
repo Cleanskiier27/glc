@@ -176,3 +176,9 @@ gcloud auth login && gcloud auth application-default login
 4/0AXEQxIC3xmiIPOAb_qrGelavaTd9E0_sdb2bVcZtzyXs0XbLRC_1AzD7vt9IqQ4tmOWP1Q
 gcloud auth login && gcloud auth application-default login
 git init
+git add .
+git commit -m
+git commit -m codicon.css
+git commit -m code.oss
+git git add/rm -m codicon.css
+git init

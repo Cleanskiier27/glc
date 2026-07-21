@@ -7,9 +7,9 @@
 6 silly config load:file:/usr/local/nvm/versions/node/v24.16.0/etc/npmrc
 7 verbose title npm exec git+https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git --mode=notebook
 8 verbose argv "exec" "--yes" "--" "git+https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git" "--mode=notebook"
-9 verbose logfile logs-max:10 dir:/home/daypirate2/.npm/_logs/2026-07-21T00_33_18_948Z-
-10 verbose logfile /home/daypirate2/.npm/_logs/2026-07-21T00_33_18_948Z-debug-0.log
-11 silly logfile start cleaning logs, removing 2 files
+9 verbose logfile logs-max:10 dir:/home/daypirate2/.npm/_logs/2026-07-21T00_35_04_375Z-
+10 verbose logfile /home/daypirate2/.npm/_logs/2026-07-21T00_35_04_375Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
 12 silly logfile done cleaning log files
 13 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
 14 verbose stack Error: Fetching packages of type "git" have been disabled
@@ -32,4 +32,4 @@
 21 verbose npm  v12.0.1
 22 verbose exit 1
 23 verbose code 1
-24 error A complete log of this run can be found in: /home/daypirate2/.npm/_logs/2026-07-21T00_33_18_948Z-debug-0.log
+24 error A complete log of this run can be found in: /home/daypirate2/.npm/_logs/2026-07-21T00_35_04_375Z-debug-0.log

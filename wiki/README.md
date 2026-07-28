@@ -22,4 +22,4 @@ your editor/IDE's file search to jump directly to a page.
 
 ## References
 
-- [github.com/Cleanskiier27/blueprints](https://github.com/Cleanskiier27/blueprints) — related project repository
+- [github.com/nbs1/blueprints](https://github.com/nbs1/blueprints) — related project repository

@@ -19,3 +19,7 @@ the history, technology, and future of humanity's journey beyond Earth.
 This wiki is intended as a lightweight, easy-to-browse reference. Each page is a
 standalone Markdown document; follow the links above to explore a topic, or use
 your editor/IDE's file search to jump directly to a page.
+
+## References
+
+- [github.com/Cleanskiier27/blueprints](https://github.com/Cleanskiier27/blueprints) — related project repository

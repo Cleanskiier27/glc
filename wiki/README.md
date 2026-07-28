@@ -12,6 +12,7 @@ the history, technology, and future of humanity's journey beyond Earth.
 5. [Robotic Missions](Robotic-Missions.md)
 6. [The Solar System](Solar-System.md)
 7. [The Future of Space Exploration](Future-of-Space-Exploration.md)
+8. [The Artemis Accords](Artemis-Accords.md)
 
 ## About
 

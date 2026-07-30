@@ -1,6 +1,19 @@
 # NetworkBuster Complete Documentation
 ## 12-Page Comprehensive Directory
 
+## 🖼️ Visual Navigation
+
+[![Repository README](https://img.shields.io/badge/repo-README-0A66C2?logo=github&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/README.md)
+[![Git Hooks Guide](https://img.shields.io/badge/page-07%20Git%20Hooks-F59E0B?logo=git&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md)
+[![Docs Preview](https://img.shields.io/badge/preview-Documentation-10B981?logo=githubpages&logoColor=white)](https://cleanskiier27.github.io/glc/documentation.html)
+
+## 🔗 Reference Links
+
+- **Repository README:** https://github.com/Cleanskiier27/glc/blob/main/README.md
+- **Git Hooks & Automation:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md
+- **Preview Build Script:** https://github.com/Cleanskiier27/glc/blob/main/scripts/build-web-preview.mjs
+- **Website Preview Workflow:** https://github.com/Cleanskiier27/glc/blob/main/.github/workflows/website-preview.yml
+
 ---
 
 ## 📑 TABLE OF CONTENTS

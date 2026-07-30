@@ -1,12 +1,26 @@
-# 🏆 NetworkBuster - Competition Winner
+# 🛰️ Space Economy Tax
 
-![Project Status](https://img.shields.io/badge/status-WINNER-brightgreen.svg)
-![Award](https://img.shields.io/badge/award-Innovation%20%26%20Excellence-gold.svg)
+![Project Status](https://img.shields.io/badge/status-Active-brightgreen.svg)
+![Focus](https://img.shields.io/badge/focus-Space%20Economy%20Tax-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 🥇 Award-Winning Advanced Networking Platform
+## 🖼️ Visual Docs & Quick References
 
-**NetworkBuster** is the competition-winning advanced networking technology platform for space exploration and lunar operations. Featuring cutting-edge real-time visualization, interactive dashboards, and enterprise-grade automation.
+[![README Guide](https://img.shields.io/badge/guide-README-0A66C2?logo=github&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/README.md)
+[![Docs Index](https://img.shields.io/badge/docs-Index-6F42C1?logo=readthedocs&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md)
+[![Git Hooks](https://img.shields.io/badge/automation-Git%20Hooks-F59E0B?logo=git&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md)
+[![Docs Preview](https://img.shields.io/badge/preview-Documentation-10B981?logo=githubpages&logoColor=white)](https://cleanskiier27.github.io/glc/documentation.html)
+
+### 🔗 Reference Links
+
+- **README Source:** https://github.com/Cleanskiier27/glc/blob/main/README.md
+- **Documentation Index:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md
+- **Git Hooks Guide:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md
+- **Website Preview Workflow:** https://github.com/Cleanskiier27/glc/blob/main/.github/workflows/website-preview.yml
+
+## 🧾 Space Economy Tax Research and Policy Hub
+
+**Space Economy Tax** is a focused repository for documenting, visualizing, and exploring the emerging policy and operational landscape around space commerce, orbital activity, and frontier economic systems.
 
 ### 🎯 Live Demo & Video
 **Visit Now:** https://networkbuster-mez5d7bmv-networkbuster.vercel.app
@@ -56,6 +70,16 @@ npm run preview:viewer:open
 
 Indexed docs page: http://localhost:3000/documentation.html
 
+### Regenerate the Docs Index
+
+The docs portal uses a generated index file so new documentation pages are discoverable without editing the JSON manually.
+
+```bash
+npm run docs:index
+```
+
+This rebuilds [web-app/docs-index.json](web-app/docs-index.json) from the repository docs content.
+
 ## 🔗 Preciseliens Integration
 
 This repository includes a connected Preciseliens model-suite workspace and sync automation.
@@ -84,7 +108,7 @@ GitHub Actions workflow:
 
 - [challengerepo/.github/workflows/source-model-suite.yml](challengerepo/.github/workflows/source-model-suite.yml)
 
-## 🥇 Why NetworkBuster Wins
+## 🧠 Why Space Economy Tax Matters
 
 ### Four Complete Applications
 - 📡 **Real-Time Overlay** - Advanced 3D visualization with React + Three.js
@@ -118,8 +142,8 @@ Visit: https://networkbuster-mez5d7bmv-networkbuster.vercel.app
 
 ### Clone & Run Locally
 ```bash
-git clone https://github.com/NetworkBuster/networkbuster.net.git
-cd networkbuster.net
+git clone https://github.com/Cleanskiier27/glc.git
+cd glc
 npm install
 npm start
 ```

@@ -11,6 +11,20 @@
 **Execution:** Automatic on git events  
 **Status:** ✅ Active
 
+## 🖼️ Hook Visual References
+
+[![Documentation Index](https://img.shields.io/badge/docs-Index-6F42C1?logo=readthedocs&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md)
+[![Hidden Tools](https://img.shields.io/badge/page-02%20Hidden%20Tools-2563EB?logo=github&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/02-hidden-tools.md)
+[![Preview Workflow](https://img.shields.io/badge/workflow-Website%20Preview-10B981?logo=githubactions&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.github/workflows/website-preview.yml)
+[![Docs Preview](https://img.shields.io/badge/preview-Documentation-F97316?logo=githubpages&logoColor=white)](https://cleanskiier27.github.io/glc/documentation.html)
+
+## 🔗 Related References
+
+- **Documentation Index:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md
+- **Hidden Tools & Scripts:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/02-hidden-tools.md
+- **Repository README:** https://github.com/Cleanskiier27/glc/blob/main/README.md
+- **Preview Build Script:** https://github.com/Cleanskiier27/glc/blob/main/scripts/build-web-preview.mjs
+
 ---
 
 ## 1️⃣ Pre-Commit Hook

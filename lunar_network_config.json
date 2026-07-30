@@ -1,0 +1,8 @@
+{
+  "base_name": "Moonbase Alpha",
+  "location": "Shackleton Crater",
+  "uplink_frequency": "Ka-band",
+  "backbone_speed": "400 Gbps",
+  "earth_relay": "Deep Space Network Node 1",
+  "mars_relay": "Orbital Station Cloud One"
+}

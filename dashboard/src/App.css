@@ -11,6 +11,17 @@ h1 {
   margin-bottom: 30px;
 }
 
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.app-title-icon {
+  font-size: 32px;
+}
+
 .specs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

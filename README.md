@@ -4,6 +4,20 @@
 ![Focus](https://img.shields.io/badge/focus-Space%20Economy%20Tax-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## 🖼️ Visual Docs & Quick References
+
+[![README Guide](https://img.shields.io/badge/guide-README-0A66C2?logo=github&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/README.md)
+[![Docs Index](https://img.shields.io/badge/docs-Index-6F42C1?logo=readthedocs&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md)
+[![Git Hooks](https://img.shields.io/badge/automation-Git%20Hooks-F59E0B?logo=git&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md)
+[![Docs Preview](https://img.shields.io/badge/preview-Documentation-10B981?logo=githubpages&logoColor=white)](https://cleanskiier27.github.io/glc/documentation.html)
+
+### 🔗 Reference Links
+
+- **README Source:** https://github.com/Cleanskiier27/glc/blob/main/README.md
+- **Documentation Index:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md
+- **Git Hooks Guide:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md
+- **Website Preview Workflow:** https://github.com/Cleanskiier27/glc/blob/main/.github/workflows/website-preview.yml
+
 ## 🧾 Space Economy Tax Research and Policy Hub
 
 **Space Economy Tax** is a focused repository for documenting, visualizing, and exploring the emerging policy and operational landscape around space commerce, orbital activity, and frontier economic systems.

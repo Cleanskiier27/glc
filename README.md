@@ -1,196 +1,76 @@
-# 🛰️ Space Economy Tax
+# 🛰️ Space Economy Tax (glc)
 
-![Project Status](https://img.shields.io/badge/status-Active-brightgreen.svg)
-![Focus](https://img.shields.io/badge/focus-Space%20Economy%20Tax-blue.svg)
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 🖼️ Visual Docs & Quick References
+Space Economy Tax is a repository for policy-focused web experiences, documentation, and supporting tooling around space economy research.
 
-[![README Guide](https://img.shields.io/badge/guide-README-0A66C2?logo=github&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/README.md)
-[![Docs Index](https://img.shields.io/badge/docs-Index-6F42C1?logo=readthedocs&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md)
-[![Git Hooks](https://img.shields.io/badge/automation-Git%20Hooks-F59E0B?logo=git&logoColor=white)](https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md)
-[![Docs Preview](https://img.shields.io/badge/preview-Documentation-10B981?logo=githubpages&logoColor=white)](https://cleanskiier27.github.io/glc/documentation.html)
+## Quick Links
 
-### 🔗 Reference Links
+- Main README: [README.md](README.md)
+- Documentation index source: [.azure/documentation/00-index.md](.azure/documentation/00-index.md)
+- Git hooks guide: [.azure/documentation/07-git-hooks.md](.azure/documentation/07-git-hooks.md)
+- Website preview workflow: [.github/workflows/website-preview.yml](.github/workflows/website-preview.yml)
 
-- **README Source:** https://github.com/Cleanskiier27/glc/blob/main/README.md
-- **Documentation Index:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/00-index.md
-- **Git Hooks Guide:** https://github.com/Cleanskiier27/glc/blob/main/.azure/documentation/07-git-hooks.md
-- **Website Preview Workflow:** https://github.com/Cleanskiier27/glc/blob/main/.github/workflows/website-preview.yml
+## Live Preview
 
-## 🧾 Space Economy Tax Research and Policy Hub
+- GitHub Pages: https://cleanskiier27.github.io/glc/
+- Documentation portal: https://cleanskiier27.github.io/glc/documentation.html
+- Vercel app: https://networkbuster-mez5d7bmv-networkbuster.vercel.app
 
-**Space Economy Tax** is a focused repository for documenting, visualizing, and exploring the emerging policy and operational landscape around space commerce, orbital activity, and frontier economic systems.
+## Local Development
 
-### 🎯 Live Demo & Video
-**Visit Now:** https://networkbuster-mez5d7bmv-networkbuster.vercel.app
+### Requirements
 
-**📺 Watch on YouTube:** https://www.youtube.com/channel/daypirate1/networkbuster
+- Node.js `24.x`
+- npm `>=10`
 
-## 👀 Website Preview
-
-This repository now includes a GitHub Pages preview pipeline so website changes can be previewed directly from the repo.
-
-- **Workflow:** [website-preview.yml](.github/workflows/website-preview.yml)
-- **Build Script:** [build-web-preview.mjs](scripts/build-web-preview.mjs)
-- **Viewer Script:** [preview-viewer.mjs](scripts/preview-viewer.mjs)
-- **Preview Source Directory:** [web-app](web-app)
-
-### How Preview Works
-
-1. Push to `main` (or run the workflow manually).
-2. GitHub Actions builds preview assets and indexed docs.
-3. The workflow publishes `web-app` to the `gh-pages` branch.
-4. In GitHub repo settings, set Pages source to `Deploy from a branch` -> `gh-pages` / `/ (root)`.
-
-### Published Preview URLs
-
-- **GitHub Pages Site:** https://cleanskiier27.github.io/glc/
-- **Indexed Docs Page:** https://cleanskiier27.github.io/glc/documentation.html
-
-### Local Preview
+### Run locally
 
 ```bash
-npm run preview:repo
+npm install
+npm start
 ```
 
-### Automated Preview Viewer
+Server default: `http://localhost:3000`
 
-In another terminal while the server is running:
-
-```bash
-npm run preview:viewer
-```
-
-To auto-open the indexed docs page in your default browser:
+### Useful scripts
 
 ```bash
+npm run dev                # Start with Node watch mode
+npm run docs:index         # Regenerate web-app/docs-index.json
+npm run preview:build      # Build web preview assets
+npm run preview:repo       # Build preview assets, then run server
+npm run preview:viewer     # Print preview links
 npm run preview:viewer:open
 ```
 
-Indexed docs page: http://localhost:3000/documentation.html
+## Repository Areas
 
-### Regenerate the Docs Index
+- `web-app/` — static and generated preview content
+- `dashboard/` — dashboard application
+- `blog/` — blog-related assets/content
+- `api/` — backend API/server-related code
+- `.azure/documentation/` — project documentation corpus
+- `scripts/` — helper scripts for docs/preview workflows
 
-The docs portal uses a generated index file so new documentation pages are discoverable without editing the JSON manually.
+## Preciseliens Integration
 
-```bash
-npm run docs:index
-```
+This repository includes an integrated model-suite workspace and sync automation.
 
-This rebuilds [web-app/docs-index.json](web-app/docs-index.json) from the repository docs content.
+- Source repository: https://github.com/Cleanskiier27/Preciseliens
+- Integrated workspace: [challengerepo/preciseliens-money-main](challengerepo/preciseliens-money-main)
+- Model suite README: [challengerepo/integration/model-suite/README.md](challengerepo/integration/model-suite/README.md)
 
-## 🔗 Preciseliens Integration
-
-This repository includes a connected Preciseliens model-suite workspace and sync automation.
-
-- **Preciseliens Source Repo:** https://github.com/Cleanskiier27/Preciseliens
-- **Integrated Workspace:** [challengerepo/preciseliens-money-main](challengerepo/preciseliens-money-main)
-- **Model Suite Readme:** [challengerepo/integration/model-suite/README.md](challengerepo/integration/model-suite/README.md)
-
-### Automation Commands
-
-Use these scripts to sync/update the model suite from Preciseliens.
-
-Windows PowerShell:
+Sync commands:
 
 ```powershell
 pwsh ./challengerepo/scripts/source-model-suite.ps1
 ```
 
-Linux/macOS:
-
 ```bash
 bash ./challengerepo/scripts/source-model-suite.sh
 ```
 
-GitHub Actions workflow:
-
+Workflow:
 - [challengerepo/.github/workflows/source-model-suite.yml](challengerepo/.github/workflows/source-model-suite.yml)
-
-## 🧠 Why Space Economy Tax Matters
-
-### Four Complete Applications
-- 📡 **Real-Time Overlay** - Advanced 3D visualization with React + Three.js
-- 🎨 **Dashboard** - Interactive metrics and specifications viewer
-- 📝 **Blog** - Research updates and insights
-- 📚 **Documentation** - Complete technical guides and APIs
-
-### Enterprise Features
-✅ Real-time 3D visualization  
-✅ Interactive dashboards  
-✅ Automatic branch synchronization  
-✅ GitHub Actions CI/CD  
-✅ Vercel global deployment  
-✅ Production + staging environments  
-✅ Git hooks for validation  
-✅ Mobile-responsive design  
-
-### Competition Results
-| Category | Achievement |
-|----------|-------------|
-| **Innovation** | 🥇 Winner |
-| **Technology** | 🥇 Winner |
-| **Deployment** | 🥇 Winner |
-| **Uptime** | 99.99% |
-| **Response Time** | <100ms |
-
-## 🚀 Get Started
-
-### View Live Demo
-Visit: https://networkbuster-mez5d7bmv-networkbuster.vercel.app
-
-### Clone & Run Locally
-```bash
-git clone https://github.com/Cleanskiier27/glc.git
-cd glc
-npm install
-npm start
-```
-
-## 📱 Services Available
-
-| Service | URL |
-|---------|-----|
-| Main Portal | / |
-| Overlay App | /overlay-app.html |
-| Real-Time Overlay | /overlay |
-| Dashboard | /dashboard |
-| Blog | /blog |
-| Documentation | /documentation.html |
-| About | /about.html |
-| Projects | /projects.html |
-| Technology | /technology.html |
-| Contact | /contact.html |
-
-## 🔧 Technology Stack
-
-- **Frontend:** React 18, Vite, Three.js, Framer Motion
-- **Backend:** Node.js 24.x, Express.js
-- **Deployment:** Vercel Edge Network
-- **Automation:** GitHub Actions, Git Hooks
-
-## 📈 Why We're Different
-
-- **5x Faster** - Vite build system
-- **Global Scale** - Vercel CDN in 100+ countries
-- **Fully Automated** - GitHub Actions CI/CD
-- **Mobile Ready** - Responsive on all devices
-- **Enterprise Grade** - HTTPS, security, monitoring
-- **Cost Effective** - Serverless pricing model
-
-## 📊 System Status
-
-| Metric | Status |
-|--------|--------|
-| **Uptime** | 99.99% ✅ |
-| **Deployment** | Production ✅ |
-| **Branches** | Main + Staging ✅ |
-| **Automation** | 100% Active ✅ |
-| **Version** | 1.0.1 ✅ |
-
----
-
-**Last Updated**: December 3, 2025  
-**Version**: 1.0.0  
-**Status**: Active Development - Documentation Phase

@@ -24,7 +24,10 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🚀 NetworkBuster Dashboard</h1>
+      <h1 className="app-title">
+        <span className="codicon codicon-rocket app-title-icon" aria-hidden="true"></span>
+        <span>NetworkBuster Dashboard</span>
+      </h1>
       <div className="specs-grid">
         {specs && Object.entries(specs).map(([key, value]) => (
           <div key={key} className="spec-card">

@@ -31,6 +31,8 @@ The project is organized into two main directories:
 *   `frontend/`: Contains the Frontend application code.
 *   `backend/`: Contains the Node.js/Express server code to proxy Google Cloud API calls.
 
+See [tools.md](./tools.md) for a full list of the tools, frameworks, and Google Cloud services used in this project.
+
 ## Backend Environment Variables
 
 The `backend/.env.local` file is automatically generated when you download this application.

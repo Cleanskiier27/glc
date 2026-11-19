@@ -1,0 +1,9 @@
+luna-recycle-final, assembled 2026-11-19 12:45
+
+(root)                        Cleanskiier27/luna.eu, origin/main at c416425
+nasa-luna-recycle-challenge/  Cleanskiier27/nasa-luna-recycle-challenge, main at 6cdab1a
+NASA-LUNARECYCLE/             Cleanskiier27/NASA-LUNARECYCLE, main at 76e3acb
+real-time-overlay/            overlay app with the Bluetooth map (local working copy; scan data not included)
+
+E:\Luna-site was not copied separately: every file in it is already in luna.eu origin/main,
+which also has a newer GITREPOVSLOCAL/directory.html.
